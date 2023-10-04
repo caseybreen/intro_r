@@ -16,7 +16,9 @@ format:
 
     -   Friday, 9:30am - 12:30pm
 
--   Break every hour
+-   Course materials available from:
+
+    -   [www.github.com/caseybreen/intro_r](www.github.com/caseybreen/intro_r)
 
 ## Course goals
 
@@ -70,12 +72,44 @@ format:
 
 -   Publication-ready data visualizations
 
+## Data Visualization 
+
+```{r, echo=FALSE, out.width='100%', fig.align='center'}
+knitr::include_graphics("mobile_usage_prediction_map_nigeria.png")
+```
+
+
+## Easy to simulate + plot data {.smaller}
+
+```{r}
+library(tidyverse)
+```
+
+
+```{r, fig.width=5, fig.height = 5, fig.align='center'}
+#| echo: true
+#| 
+# Generate random data for x
+x <- rnorm(n = 3000)
+y <- 0.8 * x + rnorm(3000, 0, sqrt(1 - 0.8^2))
+# Create data.frame
+data_df <- data.frame(x = x, y = y)
+# Generate df 
+data_df %>% 
+  ggplot(aes(x = x, y = y)) + 
+  geom_point(alpha = 0.2) + 
+  theme_classic()
+```
+
+
 ## RStudio Panes
 
 ```{r, echo=FALSE, fig.width=10, fig.height=7}
 
 knitr::include_graphics("rstudio_layout.png")
 ```
+
+
 
 ## Quarto Document {.smaller}
 
