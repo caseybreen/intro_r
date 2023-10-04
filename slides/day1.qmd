@@ -1,0 +1,595 @@
+---
+title: "Introduction to R"
+author: "Casey Breen"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+format:
+  revealjs:
+    slide-number: true
+    show-slide-number: all
+---
+
+## Welcome to "Intro to R"
+
+-   Two sessions:
+
+    -   Thursday, 1pm - 4pm
+
+    -   Friday, 9:30am - 12:30pm
+
+-   Break every hour
+
+## Course goals
+
+-   The value of R
+
+. . .
+
+-   Install R and RStudio
+
+. . .
+
+-   Basic understanding of data manipulation + visualization
+
+## Course agenda {.smaller}
+
+-   **Session 1**
+
+    -   Introduction + Installing R and RStudio
+
+    -   Overview of Rstudio interface
+
+    -   Basic data formats
+
+    -   Basic syntax and data types
+
+-   **Session 2**
+
+    -   Data manipulation (dplyr)
+
+    -   Data visualization (ggplot2)
+
+    -   Best practices, general Q&A
+
+    -   Other resources
+
+## Downloading R and RStudio
+
+-   R is a statistical programming language
+
+    -   Download: [https://cloud.r-project.org](https://cloud.r-project.org/)
+
+-   RStudio is an integrated development environment (IDE) for R programming
+
+    -   Download: <http://www.rstudio.com/download>
+
+## Why R?
+
+-   Free, open Source
+
+-   Powerful language for data manipulation, statistical analysis
+
+-   Publication-ready data visualizations
+
+## RStudio Panes
+
+```{r, echo=FALSE, fig.width=10, fig.height=7}
+
+knitr::include_graphics("rstudio_layout.png")
+```
+
+## Quarto Document {.smaller}
+
+::: columns
+::: {.column width="40%"}
+-   Notebook-Style Layout: Supports interactive code and text chunks.
+
+    -   Code Chunks: Segments for code execution
+
+    -   Text Chunks: Annotations or explanations in Markdown format.
+
+<!-- -->
+
+-   Inline Output: Figures and code output display directly below the corresponding code chunk
+:::
+
+::: {.column width="10%"}
+:::
+
+::: {.column width="50%"}
+```{r, echo=FALSE, fig.width=10, fig.height=7}
+
+knitr::include_graphics("quarto_doc.png")
+
+```
+:::
+:::
+
+## Live Coding Session 1: Creating new Quarto file
+
+-   I'll demo first; please pay attention
+
+## You turn
+
+-   Please create a quarto notebook
+
+-   You can use this notebook for the rest of this session
+
+-   Add a new code chunk
+
+    -   macOS: `Cmd` + `Option` + `I`
+
+    -   Windows/Linux: `Ctrl` + `Alt` + `I`
+
+## Objects  {.smaller}
+
+-   Everything in R is an object
+
+```{r}
+#| echo: true
+## Objects in R
+
+## Numeric like `1`, `2.5`
+x <- 2.5
+  
+## Character: Text strings like `"hello"`
+y <- "hello"
+
+## Boolean: `TRUE`, `FALSE`
+z <- TRUE
+
+## Vectors
+vec1 <- c(1, 2, 3)
+vec2 <- c("a", "b", "c")
+
+## data.frames 
+df <- data.frame(vec1, vec2)
+
+print(df)
+
+```
+
+## Functions  
+
+-   Functions are a special type of objects
+
+-   Built-in "base" functions
+
+```{r}
+#| echo: true
+## Functions in R
+result_sqrt <- sqrt(25)
+result_sqrt
+```
+
+-   User functions
+
+```{r}
+#| echo: true
+# User-Defined Functions: Custom functions
+my_function <- function(a, b) {
+  return(a^2 + b)
+}
+
+my_function(2, 3)
+```
+
+## Installing packages  {.smaller}
+
+-   Packages are set of code downloaded generally from the Comprehensive R Archive Network (CRAN)
+
+-   Packages include custom function *other people wrote*
+
+::: columns
+::: {.column width="40%"}
+**Install** new packages
+
+```{r}
+#| echo: true
+#| eval: false
+install.packages("tidyverse")
+```
+
+**Library**: Load installed packages
+
+```{r}
+#| echo: true
+#| eval: false
+library(tidyverse)
+```
+:::
+
+::: {.column width="50%"}
+-   Analogy - installing app on smartphone
+
+    -   Only have to install once
+
+    -   Must open up every time
+:::
+:::
+
+## Best practices for running code 
+
+-   Run code in a quarto document (or script, or R notebook)
+
+    -   Exception: install packages, quick checks
+
+-   Leave comments in your code so you can remember (or document code in text chunks)
+
+-   To run a line of code from quarto doc
+
+    -   **`Ctrl + Enter`** (Windows/Linux) or **`Cmd + Enter`** (Mac).
+
+-   To run a full code chunk
+
+    -   **`Ctrl + Shift + Enter`** (Windows/Linux) or **`Cmd + Shift + Enter`** (Mac).
+
+## Run the following code 
+
+1.  Create a new code cell
+2.  Create a
+
+```{r}
+#| echo: true
+
+x <- 1 
+
+cat("Thank you for attending R session number", x, "!")
+```
+
+## Break
+
+10 minute break
+
+## Basic Syntax  -- Operators 
+
+```{r}
+#| echo: true
+
+## R as a calculator (# adds a comment)
+3 * 3
+
+## Division 
+12/4 
+
+## Subtraction 
+100-12
+
+## Exponents (10^2)
+10 ** 2
+```
+
+## Basic Syntax  -- Comparisons   
+
+```{r}
+#| echo: true
+
+## Logical operators 
+
+10 == 10
+
+9 == 10
+
+9 < 10
+```
+
+## Data types 
+
+There are lots of data types
+
+```{r}
+#| echo: true
+
+## defining a vector 
+vector <- c(1, 2, 3, 4, 5)
+
+```
+
+Data frames
+
+```{r}
+#| echo: true
+# Create a data frame
+example_df <- data.frame(
+  ID = c(1, 2, 3, 4),
+  Name = c("Alice", "Bob", "Charlie", "David"),
+  Age = c(25, 30, 35, 40),
+  Score = c(90, 85, 88, 76)
+)
+
+# Print the data frame
+print(example_df)
+```
+
+## **Generating Sequences in R**
+
+```{r}
+#| echo: true
+## Basic 
+c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+
+```
+
+-   Colon operator, creates sequences with increments of 1
+
+```{r}
+#| echo: true
+c(1:10)
+```
+
+-   **`seq()`** Function: More flexible and allows you to specify the **`start`**, **`end`**, and **`by`** parameters.
+
+```{r}
+#| echo: true
+## seq 1-10, by = 2
+seq(1, 10, by = 2)
+```
+
+## Basic functions 
+
+```{r}
+#| echo: true
+
+## generate random draws from a standard normal distribution  
+random_draws <- rnorm(n = 5,
+      mean = 0,
+      sd = 1)
+
+## find the mean 
+mean(random_draws)
+
+## find the median
+median(random_draws)
+
+## find the standard deviation 
+sd(random_draws)
+```
+
+## In class-exercise 1 
+
+1.  Write R code to calculate the square of 7
+2.  Write a logical expression on whether 10 is greater than 11
+3.  Write a logical expression testing whether 10 is *not* greater than 11
+4.  Generate vectors containing the numbers 100, 101, 102, 103, 104, and 105 using 3 different methods
+5.  Generate a sequences of all **even** numbers between 0 and 100
+6.  Create a new variable `z` as the product of variables `x` and `y.` Assign `x` and `y` to be arbitrary integers.
+
+## Solutions #2   {.smaller}
+
+```{r}
+# Calculate the square of 7
+7^2
+
+# Logical expression on whether 10 is greater than 11
+10 > 11
+
+# Logical expression testing whether 10 is not greater than 11
+!(10 > 11)
+
+# Generate vectors containing numbers 100 to 105 using 3 different methods
+vec1 <- c(100, 101, 102, 103, 104, 105)
+vec2 <- 100:105
+vec3 <- seq(100, 105)
+
+# Generate a sequence of all even numbers between 0 and 100
+seq(0, 100, by = 2)
+
+# Create a new variable z as the product of variables x and y
+x <- 5
+y <- 7
+z <- x * y
+```
+
+## In-class exercise 2 
+
+1.  Generate a sample of 1,000 draws from a normal distribution with mean = 10 and sd = 2
+2.  What's the mean of this sample?
+3.  What's the difference between mean of the sample and the expected value of the mean?
+4.  Can you calculate a z-score?
+
+$$
+ z score = \frac{\text{sample mean} - \text{population mean}}{\text{population sd} / \sqrt{\text{sample size}}}
+$$
+
+## Solutions 2  {.smaller}
+
+```{r}
+#| echo: true
+
+# Generate a sample of 1,000 draws from a normal distribution with mean = 10 and sd = 2
+sample_data <- rnorm(1000, mean = 10, sd = 2)
+
+# Calculate the mean of this sample
+sample_mean <- mean(sample_data)
+
+# Calculate the difference between the mean of the sample and the expected value of the mean
+difference <- abs(sample_mean - 10)
+
+# Calculate the Z-score for the sample mean
+population_mean <- 10  # Expected value of the mean
+population_sd <- 2  # Standard deviation
+sample_size <- length(sample_data)  # Sample size
+
+z_score <- (sample_mean - population_mean) / (population_sd / sqrt(sample_size))
+
+# Print results
+print(paste("Sample mean:", round(sample_mean, 2)))
+print(paste("Difference from expected mean:", round(difference, 2)))
+print(paste("Z-score:", round(z_score, 2)))
+```
+
+## Break --- Tea and Cake 
+
+## Indexing Vectors 
+
+-   Basic indexing, specify position
+
+```{r}
+#| echo: true
+
+vec <- c(1, 2, 3, 4, 5)
+first_element <- vec[1]
+third_element <- vec[3]
+```
+
+-   Conditional indexing, specify position
+
+```{r}
+#| echo: true
+
+vec <- seq(5, 33, by = 2)
+vec[vec > 25]
+```
+
+## Working with data.frames 
+
+-   Data frames are a key part of the data structure
+
+-   Data frames are structured as rows (observations) and columns (variables)
+
+```{r}
+#| echo: true
+test_scores <- data.frame(
+  id = c(1, 2, 3, 4, 5),
+  name = c("Alice", "Bob", "Carol", "Dave", "Emily"),
+  age = c(25, 30, 22, 28, 24),
+  gender = c("F", "M", "F", "M", "F"),
+  score = c(90, 85, 88, 92, 89)
+)
+
+knitr::kable(df)
+```
+
+## Working with data.frames 
+
+-   `head()`- looks at top rows of the data.frame
+
+-   \$ operator - access a column as a vector
+
+```{r}
+#| echo: true
+#| 
+## print first two rows  first row 
+head(test_scores, 2)
+
+## access name column 
+test_scores$name
+
+## all rows, columns 1-3 
+test_scores[,1:3]
+
+## all columns, rows 4-5 
+test_scores[4:5,]
+```
+
+## Subsetting data.frames 
+
+-   **Methods**:
+
+    -   **`$`**: Single column by name.
+
+    -   **`df[i, j]`**: Row **`i`** and column **`j`**.
+
+    -   **`df[i:j, k:l]`**: Rows **`i`** to **`j`** and columns **`k`** to **`l`**.
+
+-   **Conditional Subsetting**: **`df[df$age > 25, ]`**.
+
+## Quiz 
+
+Which rows and will this return?
+
+```{r}
+#| echo: true
+#| eval: false
+test_scores[1:3,]
+```
+
+-   Which rows and which columns will this return?
+
+```{r}
+#| echo: true
+#| eval: false
+test_scores[test_scores$score >= 90, ]
+```
+
+## Answers 
+
+```{r}
+#| echo: true
+
+test_scores[test_scores$score >= 90, ]
+```
+
+```{r}
+#| echo: true
+test_scores[test_scores$score >= 90, ]
+
+```
+
+## Explore data.frame characteristics 
+
+Check number of rows
+
+```{r}
+#| echo: true
+## check number of rows (observations)
+nrow(test_scores)
+```
+
+\
+Check number of columns
+
+```{r}
+#| echo: true
+## check number of columns (variables)
+ncol(test_scores)
+```
+
+Check column names
+
+```{r}
+#| echo: true
+names(test_scores)
+```
+
+## Reading in data 
+
+#### Common Formats
+
+-   CSV, Excel, TXT
+
+#### Key Functions
+
+-   **`read.csv()`**: Read CSV files
+
+    -   Faster alternatives: `read_csv` from `tidyverse` and `fread()` from `data.table`
+
+-   **`read.table()`**: Read text files
+
+-   **`readxl::read_excel()`**: Read Excel files
+
+```{r}
+#| eval: false 
+#| echo: true 
+## read in CSV file 
+df <- read.csv("/path/to/your/data.csv")
+
+## read in stata file 
+library(haven)
+data <- read_dta("path/to/file.dta")
+```
+
+## Assignment 
+
+-   Let's work with a real-world dataset!
+
+    -   CenSoc-DMF, individual-level mortality dataset
+
+    -   <https://shorturl.at/gnBQS>
+
+-   Please download the Harvard Data Verse
+
+## Questions 
+
+1.  Read in the dataset using `read_csv()`
+2.  How many columns does that dataset have?
+3.  How many rows the dataset have?
