@@ -1,9 +1,11 @@
-## Introduction to R 
+## Introduction to R
 
-Please find resources for University of Oxford Sociology Department's "Introduction to R."
+This repository contains the materials for a two-session "Introduction to R" course at the University of Oxford.
 
-This is a two-day course with two 3-hour sessions (6 hours total).
+Each session is approximately 3 hours.
 
-Day 1
+## Materials  
 
-Slides (PDF) \| Assignment (PDF) \| Solutions (PDF)
+Session 1
+
+[Slides Session 1](https://github.com/caseybreen/intro_r/blob/main/slides/intro_r_day1.pdf) \| [Problem Set 1](https://github.com/caseybreen/intro_r/blob/main/problem_sets/problem_set1.pdf)\| [Problem Set 1 Solutions](https://github.com/caseybreen/intro_r/blob/main/problem_sets/problem_set1_solutions.pdf)

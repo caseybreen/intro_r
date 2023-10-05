@@ -167,7 +167,6 @@ mean_sim_data_10000 <- mean(sim_data_10000)
 
 ## 
 mean_sim_data_10000 - 10
-
 ```
 
 ***Answer**: The difference between the sample mean and the population mean decreased as we increased our sample size. This is because as our sample size increases, the mean of the sample tends towards the population mean. This is a fundamental concept in statistics: the law of large numbers.*
