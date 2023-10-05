@@ -1,5 +1,6 @@
 ---
 title: "Introduction to R"
+subtitle: "Department of Sociology, University of Oxford"
 author: "Casey Breen"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 format:
@@ -8,7 +9,7 @@ format:
     show-slide-number: all
 ---
 
-## Welcome to "Intro to R"
+## Welcome to "Intro to `R`"
 
 -   Two sessions:
 
@@ -22,11 +23,15 @@ format:
 
 ## Course goals
 
--   The value of R
+-   Why `R` is a powerful tool for social science research
 
 . . .
 
--   Install R and RStudio
+-   Install `R` and `RStudio`
+
+. . .
+
+-   Introduction to `R` syntax and data types
 
 . . .
 
@@ -36,48 +41,49 @@ format:
 
 -   **Session 1**
 
-    -   Introduction + Installing R and RStudio
+    -   Introduction + installing `R` and `RStudio`
 
-    -   Overview of Rstudio interface
-
-    -   Basic data formats
+    -   Overview of `RStudio` interface + `R` scripts, notebooks, quarto
 
     -   Basic syntax and data types
 
+    -   Data import and export
+
 -   **Session 2**
 
-    -   Data manipulation (dplyr)
+    -   Data manipulation (`dplyr`)
 
-    -   Data visualization (ggplot2)
+    -   Data visualization (`ggplot2`)
 
-    -   Best practices, general Q&A
+    -   Best practices: coding style, commenting, and documentation
 
-    -   Other resources
+    -   Resources for self-teaching
 
-## Downloading R and RStudio
+## R and RStudio
 
 -   R is a statistical programming language
 
     -   Download: [https://cloud.r-project.org](https://cloud.r-project.org/)
 
--   RStudio is an integrated development environment (IDE) for R programming
+-   RStudio is an integrated development environment (IDE) for `R` programming
 
     -   Download: <http://www.rstudio.com/download>
 
 ## Why R?
 
--   Free, open Source
+-   Free, open source --- great for reproducibility and open science
 
 -   Powerful language for data manipulation, statistical analysis
 
 -   Publication-ready data visualizations
 
-## Data Visualization 
+-   Well supported, excellent community
+
+## Data visualization
 
 ```{r, echo=FALSE, out.width='100%', fig.align='center'}
 knitr::include_graphics("mobile_usage_prediction_map_nigeria.png")
 ```
-
 
 ## Easy to simulate + plot data {.smaller}
 
@@ -85,22 +91,19 @@ knitr::include_graphics("mobile_usage_prediction_map_nigeria.png")
 library(tidyverse)
 ```
 
-
-```{r, fig.width=5, fig.height = 5, fig.align='center'}
+```{r, fig.width=4, fig.height = 4, fig.align='center'}
 #| echo: true
-#| 
 # Generate random data for x
-x <- rnorm(n = 3000)
-y <- 0.8 * x + rnorm(3000, 0, sqrt(1 - 0.8^2))
+x <- rnorm(n = 10000)
+y <- 0.8 * x + rnorm(10000, 0, sqrt(1 - 0.8^2))
 # Create data.frame
 data_df <- data.frame(x = x, y = y)
 # Generate df 
 data_df %>% 
   ggplot(aes(x = x, y = y)) + 
-  geom_point(alpha = 0.2) + 
+  geom_point(alpha = 0.1) + 
   theme_classic()
 ```
-
 
 ## RStudio Panes
 
@@ -109,7 +112,21 @@ data_df %>%
 knitr::include_graphics("rstudio_layout.png")
 ```
 
+## R Scripts, R-Notebooks
 
+-   **Scripts**:
+
+    -   Just code
+
+    -   Ideal for simple tasks (and multi-script pipelines)
+
+-   **Notebooks** (Quarto, R Notebook):
+
+    -   Integrated code, text, and outputs (great for documentation!)
+
+    -   Interactive
+
+    -   We will focus on notebooks
 
 ## Quarto Document {.smaller}
 
@@ -144,20 +161,33 @@ knitr::include_graphics("quarto_doc.png")
 
 ## You turn
 
--   Please create a quarto notebook
+-   Please create a quarto document
 
--   You can use this notebook for the rest of this session
+-   You can use this document for the rest of this session
 
 -   Add a new code chunk
+
+    -   click + point: `Insert -> Executable cell -> R`
 
     -   macOS: `Cmd` + `Option` + `I`
 
     -   Windows/Linux: `Ctrl` + `Alt` + `I`
 
-## Objects  {.smaller}
+## Objects {.smaller}
 
+::: columns
+::: {.column width="50%"}
 -   Everything in R is an object
+    -   **Vectors**: Ordered collection of same type.
 
+    -   **Data Frames**: Table of columns and rows.
+
+    -   **Function**: Reusable code block.
+
+    -   **List**: Ordered collection of objects.
+:::
+
+::: {.column width="50%"}
 ```{r}
 #| echo: true
 ## Objects in R
@@ -177,14 +207,11 @@ vec2 <- c("a", "b", "c")
 
 ## data.frames 
 df <- data.frame(vec1, vec2)
-
-print(df)
-
 ```
+:::
+:::
 
-## Functions  
-
--   Functions are a special type of objects
+## Functions
 
 -   Built-in "base" functions
 
@@ -195,7 +222,7 @@ result_sqrt <- sqrt(25)
 result_sqrt
 ```
 
--   User functions
+-   Custom, user-defined functions
 
 ```{r}
 #| echo: true
@@ -207,15 +234,17 @@ my_function <- function(a, b) {
 my_function(2, 3)
 ```
 
-## Installing packages  {.smaller}
+-   Functions from packages
 
--   Packages are set of code downloaded generally from the Comprehensive R Archive Network (CRAN)
-
--   Packages include custom function *other people wrote*
+## Installing packages {.smaller}
 
 ::: columns
 ::: {.column width="40%"}
-**Install** new packages
+-   Packages: pre-built code and functions.
+
+-   Packages are generally installed from the Comprehensive R Archive Network (CRAN)
+
+**Install:** new packages
 
 ```{r}
 #| echo: true
@@ -223,7 +252,7 @@ my_function(2, 3)
 install.packages("tidyverse")
 ```
 
-**Library**: Load installed packages
+**Library**: load installed packages
 
 ```{r}
 #| echo: true
@@ -233,39 +262,42 @@ library(tidyverse)
 :::
 
 ::: {.column width="50%"}
--   Analogy - installing app on smartphone
-
-    -   Only have to install once
-
-    -   Must open up every time
+```{r, echo=FALSE, fig.width=6, fig.height=10, fig.cap = "YaRrr! The Pirates Guide to R. Nathaniel D. Phillips, 2018."}
+knitr::include_graphics("lightbulb_analogy.png")
+```
 :::
 :::
 
-## Best practices for running code 
+## Running code
 
 -   Run code in a quarto document (or script, or R notebook)
 
-    -   Exception: install packages, quick checks
+    -   Exception: install packages, quick checks in console
 
--   Leave comments in your code so you can remember (or document code in text chunks)
+-   To run a single line of code
 
--   To run a line of code from quarto doc
+    -   Cursor over line, **`Ctrl + Enter`** (Windows/Linux) or **`Cmd + Enter`** (Mac).
 
-    -   **`Ctrl + Enter`** (Windows/Linux) or **`Cmd + Enter`** (Mac).
-
--   To run a full code chunk
+-   To run a full code chunk (or script)
 
     -   **`Ctrl + Shift + Enter`** (Windows/Linux) or **`Cmd + Shift + Enter`** (Mac).
 
-## Run the following code 
+## Your Turn
 
-1.  Create a new code cell
-2.  Create a
+-   Create a new code cell in `quarto` document
+
+    -   (`insert -> executable cell -> R`)
+
+-   Run each line one at a time
+
+-   Run the full code chunk
 
 ```{r}
 #| echo: true
 
 x <- 1 
+
+y <- (x + 1)^3
 
 cat("Thank you for attending R session number", x, "!")
 ```
@@ -274,7 +306,37 @@ cat("Thank you for attending R session number", x, "!")
 
 10 minute break
 
-## Basic Syntax  -- Operators 
+## Basic Syntax -- Assignment
+
+-   Use **`<-`** or `=` for assignment
+
+    -   `<-` is preferred and advised for readability
+
+-   Formally, assignment means "assign the result of the operation on the right to object on the left"
+
+```{r}
+## Add comments 
+
+x <- 7 # assigns 7 to x 
+
+## Quesiton: what does this do? 
+y <- x <- 25
+```
+
+## Basic Syntax -- Comments
+
+-   Use **`#`** to start a single-line comment
+
+-   Include lots of comments when you're writing code
+
+```{r}
+## Add comments 
+
+x <- 7 # assigns 1 to x
+x <- 12
+```
+
+## Basic Syntax -- Operators
 
 ```{r}
 #| echo: true
@@ -292,8 +354,21 @@ cat("Thank you for attending R session number", x, "!")
 10 ** 2
 ```
 
-## Basic Syntax  -- Comparisons   
+## Basic Syntax -- Comparisons {.smaller}
 
+::: columns
+::: {.column width="50%"}
+```{r}
+data <- data.frame(
+  Operator = c("AND", "OR", "NOT", "Equal", "Not Equal", "Greater/Less Than", "Greater/Less Than or Equal", "Element-wise In"),
+  Symbol = c("&", "|", "!", "==", "!=", "> or <", ">= or <=", "%in%")
+)
+
+knitr::kable(data)
+```
+:::
+
+::: {.column width="50%"}
 ```{r}
 #| echo: true
 
@@ -304,34 +379,77 @@ cat("Thank you for attending R session number", x, "!")
 9 == 10
 
 9 < 10
+
+"apple" %in% c("bananas", "oranges")
+
+"apple" %in% "bananas" | "apple" %in% "apple" 
+
+"apple" %in% "bananas" & "apple" %in% "apple" 
+
+
 ```
+:::
+:::
 
-## Data types 
+## Data structures
 
-There are lots of data types
+-   There are lots of data structures; we'll focus on `vectors` and `data.frames`.
+
+    -   `Vectors`: One-dimensional arrays that hold elements of a single data type (e.g., all numeric or all character).
+
+    -   `Data Frames`: Two-dimensional tables where each column can have a different data type; essentially a list of vectors of equal length.
+
+## `Vectors` and `data frames`  {.smaller}
+
+-   `Vector` example
 
 ```{r}
 #| echo: true
 
-## defining a vector 
-vector <- c(1, 2, 3, 4, 5)
+## Vector Example 
+vec_example <- c(1, 2, 3, 4, 5)
 
+print(vec_example)
 ```
 
-Data frames
+-   `Data frame` example
 
 ```{r}
 #| echo: true
-# Create a data frame
+# Data.frame example 
 example_df <- data.frame(
   ID = c(1, 2, 3, 4),
   Name = c("Alice", "Bob", "Charlie", "David"),
   Age = c(25, 30, 35, 40),
   Score = c(90, 85, 88, 76)
 )
+```
 
+```{r}
 # Print the data frame
-print(example_df)
+knitr::kable(example_df)
+```
+
+## Data types 
+
+-   Numeric: Used for numerical values like integers or decimals.
+
+-   Character: Holds text and alphanumeric characters.
+
+-   Logical: Represents binary values - TRUE or FALSE.
+
+-   **Note**: each vector or data.frame column can only contain one data.type
+
+```{r}
+#| echo: true
+## generate vectors 
+vec <- c(1, 2, 3)
+vec1 <- c("a", "b", "c")
+
+## check type 
+class(vec1)
+class(vec2)
+
 ```
 
 ## **Generating Sequences in R**
@@ -343,7 +461,7 @@ c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 
 ```
 
--   Colon operator, creates sequences with increments of 1
+-   Colon operator (`:`), creates sequences with increments of 1
 
 ```{r}
 #| echo: true
@@ -358,7 +476,17 @@ c(1:10)
 seq(1, 10, by = 2)
 ```
 
-## Basic functions 
+## Basic functions
+
+-   Function: Input arguments, performs operations on them, and returns a result
+
+-   For each of the below functions, what are the:
+
+    -   Input arguments?
+
+    -   Operations performed?
+
+    -   Results?
 
 ```{r}
 #| echo: true
@@ -378,82 +506,114 @@ median(random_draws)
 sd(random_draws)
 ```
 
-## In class-exercise 1 
+## In class exercise 1 
 
-1.  Write R code to calculate the square of 7
-2.  Write a logical expression on whether 10 is greater than 11
-3.  Write a logical expression testing whether 10 is *not* greater than 11
-4.  Generate vectors containing the numbers 100, 101, 102, 103, 104, and 105 using 3 different methods
-5.  Generate a sequences of all **even** numbers between 0 and 100
-6.  Create a new variable `z` as the product of variables `x` and `y.` Assign `x` and `y` to be arbitrary integers.
+1.  Assign `x` and `y` to take values 3 and 4.
+2.  Create a new variable `z` as the product of variables `x` and `y.`
+3.  Write code to calculate the square of 3. Assign this to a variable `three_squared`.
+4.  Write a logical expression on whether `x` is greater than 10. When might you need to filter data based on a condition?
+5.  Write a logical expression testing whether `x` is *not* greater than 10.
 
-## Solutions #2   {.smaller}
+## Solutions #1 {.smaller}
 
 ```{r}
-# Calculate the square of 7
-7^2
-
-# Logical expression on whether 10 is greater than 11
-10 > 11
-
-# Logical expression testing whether 10 is not greater than 11
-!(10 > 11)
-
-# Generate vectors containing numbers 100 to 105 using 3 different methods
-vec1 <- c(100, 101, 102, 103, 104, 105)
-vec2 <- 100:105
-vec3 <- seq(100, 105)
-
-# Generate a sequence of all even numbers between 0 and 100
-seq(0, 100, by = 2)
+# Assign x and y to take values 3 and 4
+x <- 3
+y <- 4
 
 # Create a new variable z as the product of variables x and y
-x <- 5
-y <- 7
 z <- x * y
+
+# Write code to calculate the square of 3 and assign it to a variable three_squared
+three_squared <- 3^2
+
+# Write a logical expression to check if x is greater than 10
+is_x_greater_than_10 <- x > 10
+
+# Write a logical expression to check if x is not greater than 10
+is_x_not_greater_than_10 <- x <= 10
 ```
 
-## In-class exercise 2 
+## In class exercise 2 
 
-1.  Generate a sample of 1,000 draws from a normal distribution with mean = 10 and sd = 2
-2.  What's the mean of this sample?
-3.  What's the difference between mean of the sample and the expected value of the mean?
-4.  Can you calculate a z-score?
+1.  Generate vectors containing the numbers 100, 101, 102, 103, 104, and 105 using 3 different methods (e.g., **`c()`**, **`seq()`**, **`:`**). In what scenarios might each method be most convenient?
+2.  Generate a sequences of all **even** numbers between 0 and 100.
+3.  Create a descending sequence of numbers from 100 to 1, and assign it to a variable.
 
-$$
- z score = \frac{\text{sample mean} - \text{population mean}}{\text{population sd} / \sqrt{\text{sample size}}}
-$$
+```{r}
+# Generate a vector using c() method
+vector_c <- c(100, 101, 102, 103, 104, 105)
+# Use when numbers are not in a simple sequence or pattern
 
-## Solutions 2  {.smaller}
+# Generate a vector using seq() method
+vector_seq <- seq(100, 105, by = 1)
+# Use when numbers follow a pattern but not necessarily just increment by 1
+
+# Generate a vector using : operator
+vector_colon <- c(100:105) 
+# Use when numbers increment by 1
+
+# Generate a sequence of all even numbers between 0 and 100
+even_seq <- seq(0, 100, by = 2)
+
+# Create a descending sequence of numbers from 100 to 1
+desc_seq <- seq(100, 1, by = -1)
+```
+
+## In class exercise 3
+
+### Data generation and basic statistical analysis
+
+1.  Generate a sample of 100 observations drawn from a normal distribution with a mean of 10 and a standard deviation of 2. How is this type of random sampling useful in statistical analysis?
+
+2.  Calculate the mean of this generated sample. How does this sample mean relate to the population mean of the distribution?
+
+3.  Calculate the difference between the sample mean and the population mean. Why the discrepancy?
+
+4.  Repeat steps 1\--3 with a sample of 10,000. Did the difference between the sample mean and the population mean decrease? Will this always be the case?
+
+```{r}
+# $$
+#  z score = \frac{\text{sample mean} - \text{population mean}}{\text{population sd} / \sqrt{\text{sample size}}}
+# $$
+```
+
+## Solutions: Exercise 3  {.smaller}
 
 ```{r}
 #| echo: true
 
 # Generate a sample of 1,000 draws from a normal distribution with mean = 10 and sd = 2
-sample_data <- rnorm(1000, mean = 10, sd = 2)
+sample_data_100 <- rnorm(100, 
+                     mean = 10,
+                     sd = 2)
 
 # Calculate the mean of this sample
-sample_mean <- mean(sample_data)
+sample_mean_100 <- mean(sample_data_100)
 
 # Calculate the difference between the mean of the sample and the expected value of the mean
-difference <- abs(sample_mean - 10)
+difference_100 <- abs(sample_mean_100 - 10)
+
+difference_100
 
 # Calculate the Z-score for the sample mean
-population_mean <- 10  # Expected value of the mean
-population_sd <- 2  # Standard deviation
-sample_size <- length(sample_data)  # Sample size
+sample_data_10000 <- rnorm(10000, 
+                     mean = 10,
+                     sd = 2)
 
-z_score <- (sample_mean - population_mean) / (population_sd / sqrt(sample_size))
+# Calculate the mean of this sample
+sample_data_10000 <- mean(sample_data_10000)
 
-# Print results
-print(paste("Sample mean:", round(sample_mean, 2)))
-print(paste("Difference from expected mean:", round(difference, 2)))
-print(paste("Z-score:", round(z_score, 2)))
+# Calculate the difference between the mean of the sample and the expected value of the mean
+sample_data_10000 <- abs(sample_data_10000 - 10)
+
+sample_data_10000
+
 ```
 
-## Break --- Tea and Cake 
+## Break --- Tea and Cake
 
-## Indexing Vectors 
+## Indexing vectors
 
 -   Basic indexing, specify position
 
@@ -474,11 +634,11 @@ vec <- seq(5, 33, by = 2)
 vec[vec > 25]
 ```
 
-## Working with data.frames 
+## Working with `data frames`
 
--   Data frames are a key part of the data structure
+-   `Data frames` are the most common and versatile data structure in `R`
 
--   Data frames are structured as rows (observations) and columns (variables)
+-   `Data frames` are structured as rows (observations) and columns (variables)
 
 ```{r}
 #| echo: true
@@ -493,7 +653,7 @@ test_scores <- data.frame(
 knitr::kable(df)
 ```
 
-## Working with data.frames 
+## Working with data.frames
 
 -   `head()`- looks at top rows of the data.frame
 
@@ -515,7 +675,7 @@ test_scores[,1:3]
 test_scores[4:5,]
 ```
 
-## Subsetting data.frames 
+## Subsetting data.frames
 
 -   **Methods**:
 
@@ -527,7 +687,7 @@ test_scores[4:5,]
 
 -   **Conditional Subsetting**: **`df[df$age > 25, ]`**.
 
-## Quiz 
+## Quiz
 
 Which rows and will this return?
 
@@ -545,7 +705,7 @@ test_scores[1:3,]
 test_scores[test_scores$score >= 90, ]
 ```
 
-## Answers 
+## Answers
 
 ```{r}
 #| echo: true
@@ -559,7 +719,7 @@ test_scores[test_scores$score >= 90, ]
 
 ```
 
-## Explore data.frame characteristics 
+## Explore `data frame` characteristics
 
 Check number of rows
 
@@ -585,7 +745,7 @@ Check column names
 names(test_scores)
 ```
 
-## Reading in data 
+## Reading in data  {.smaller}
 
 #### Common Formats
 
@@ -606,24 +766,54 @@ names(test_scores)
 #| echo: true 
 ## read in CSV file 
 df <- read.csv("/path/to/your/data.csv")
+df <- read_csv("/path/to/your/data.csv") ## faster
+
 
 ## read in stata file 
 library(haven)
 data <- read_dta("path/to/file.dta")
 ```
 
-## Assignment 
+## In-class Exercise 4 
 
--   Let's work with a real-world dataset!
+-   Let's work with a real-world, social science dataset
 
-    -   CenSoc-DMF, individual-level mortality dataset
+    -   CenSoc-Numident, individual-level mortality dataset
 
     -   <https://shorturl.at/gnBQS>
 
--   Please download the Harvard Data Verse
+-   Please download the CenSoc-Numident Demo file (.csv) and code (pdf) bookfrom the Harvard DataVerse
 
-## Questions 
+## In-class Exercise 4 (cont.) 
 
-1.  Read in the dataset using `read_csv()`
-2.  How many columns does that dataset have?
-3.  How many rows the dataset have?
+1.  Install and library the `tidyverse` package.
+2.  Read in the dataset using `read_csv()` from the `tidyverse` package.
+3.  How many columns does that dataset have?
+4.  How many rows the dataset have?
+5.  What are the column names? What type of research question could we use this dataset for?
+
+## Exercise 4 Solutions 
+
+```{r}
+#| eval: false 
+#| echo: true 
+
+1. ## install packages 
+install.packages(tidyverse)
+
+## library tidyverse 
+library(tidyverse)
+
+2. ## read in data 
+censoc_numident <- read_csv("/path/to/censoc_numident_demo_dataset.csv")
+
+3. ## nrows 
+nrow(censoc_numident)
+
+4. ## ncols 
+ncols(censoc_numident)
+
+5. ## column names 
+names(censoc_numident)
+
+```
