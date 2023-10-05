@@ -306,7 +306,7 @@ cat("Thank you for attending R session number", x, "!")
 
 10 minute break
 
-## Basic Syntax -- Assignment
+## Basic Syntax: assignment
 
 -   Use **`<-`** or `=` for assignment
 
@@ -315,6 +315,7 @@ cat("Thank you for attending R session number", x, "!")
 -   Formally, assignment means "assign the result of the operation on the right to object on the left"
 
 ```{r}
+#| echo: true
 ## Add comments 
 
 x <- 7 # assigns 7 to x 
@@ -323,20 +324,21 @@ x <- 7 # assigns 7 to x
 y <- x <- 25
 ```
 
-## Basic Syntax -- Comments
+## Basic Syntax: comments
 
 -   Use **`#`** to start a single-line comment
 
 -   Include lots of comments when you're writing code
 
 ```{r}
+#| echo: true
 ## Add comments 
 
 x <- 7 # assigns 1 to x
 x <- 12
 ```
 
-## Basic Syntax -- Operators
+## Basic syntax: operators
 
 ```{r}
 #| echo: true
@@ -354,7 +356,7 @@ x <- 12
 10 ** 2
 ```
 
-## Basic Syntax -- Comparisons {.smaller}
+## Basic syntax: comparisons {.smaller}
 
 ::: columns
 ::: {.column width="50%"}
@@ -393,7 +395,7 @@ knitr::kable(data)
 
 ## Data structures
 
--   There are lots of data structures; we'll focus on `vectors` and `data.frames`.
+-   There are lots of data structures; we'll focus on `vectors` and `data frames`.
 
     -   `Vectors`: One-dimensional arrays that hold elements of a single data type (e.g., all numeric or all character).
 
@@ -430,15 +432,15 @@ example_df <- data.frame(
 knitr::kable(example_df)
 ```
 
-## Data types 
+## Data types  {.smaller}
 
--   Numeric: Used for numerical values like integers or decimals.
+-   Each `vector` or `data frame` column can only contain one data type:
 
--   Character: Holds text and alphanumeric characters.
+    -   `Numeric`: Used for numerical values like integers or decimals.
 
--   Logical: Represents binary values - TRUE or FALSE.
+    -   `Character`: Holds text and alphanumeric characters.
 
--   **Note**: each vector or data.frame column can only contain one data.type
+    -   `Logical`: Represents binary values - TRUE or FALSE.
 
 ```{r}
 #| echo: true
@@ -476,7 +478,7 @@ c(1:10)
 seq(1, 10, by = 2)
 ```
 
-## Basic functions
+## Basic functions   {.smaller}
 
 -   Function: Input arguments, performs operations on them, and returns a result
 
@@ -506,7 +508,7 @@ median(random_draws)
 sd(random_draws)
 ```
 
-## In class exercise 1 
+## In-class exercise 1 
 
 1.  Assign `x` and `y` to take values 3 and 4.
 2.  Create a new variable `z` as the product of variables `x` and `y.`
@@ -514,9 +516,11 @@ sd(random_draws)
 4.  Write a logical expression on whether `x` is greater than 10. When might you need to filter data based on a condition?
 5.  Write a logical expression testing whether `x` is *not* greater than 10.
 
-## Solutions #1 {.smaller}
+## Exercise 1 solutions {.smaller}
 
 ```{r}
+#| echo: true
+#| 
 # Assign x and y to take values 3 and 4
 x <- 3
 y <- 4
@@ -525,22 +529,25 @@ y <- 4
 z <- x * y
 
 # Write code to calculate the square of 3 and assign it to a variable three_squared
-three_squared <- 3^2
+3^2
 
 # Write a logical expression to check if x is greater than 10
-is_x_greater_than_10 <- x > 10
+x > 10
 
 # Write a logical expression to check if x is not greater than 10
-is_x_not_greater_than_10 <- x <= 10
+x <= 10
 ```
 
-## In class exercise 2 
+## In-class exercise 2 
 
 1.  Generate vectors containing the numbers 100, 101, 102, 103, 104, and 105 using 3 different methods (e.g., **`c()`**, **`seq()`**, **`:`**). In what scenarios might each method be most convenient?
 2.  Generate a sequences of all **even** numbers between 0 and 100.
 3.  Create a descending sequence of numbers from 100 to 1, and assign it to a variable.
 
+## Exercise 2 solutions
+
 ```{r}
+#| echo: true
 # Generate a vector using c() method
 vector_c <- c(100, 101, 102, 103, 104, 105)
 # Use when numbers are not in a simple sequence or pattern
@@ -560,9 +567,7 @@ even_seq <- seq(0, 100, by = 2)
 desc_seq <- seq(100, 1, by = -1)
 ```
 
-## In class exercise 3
-
-### Data generation and basic statistical analysis
+## In-class exercise 3   {.smaller}
 
 1.  Generate a sample of 100 observations drawn from a normal distribution with a mean of 10 and a standard deviation of 2. How is this type of random sampling useful in statistical analysis?
 
@@ -578,7 +583,7 @@ desc_seq <- seq(100, 1, by = -1)
 # $$
 ```
 
-## Solutions: Exercise 3  {.smaller}
+## Exercise 3 solutions {.smaller}
 
 ```{r}
 #| echo: true
@@ -611,7 +616,11 @@ sample_data_10000
 
 ```
 
-## Break --- Tea and Cake
+## Break
+
+-   10 minutes
+
+-   Tea + cake
 
 ## Indexing vectors
 
@@ -634,7 +643,7 @@ vec <- seq(5, 33, by = 2)
 vec[vec > 25]
 ```
 
-## Working with `data frames`
+## Working with `data frames`    {.smaller}
 
 -   `Data frames` are the most common and versatile data structure in `R`
 
@@ -650,14 +659,14 @@ test_scores <- data.frame(
   score = c(90, 85, 88, 92, 89)
 )
 
-knitr::kable(df)
+knitr::kable(test_scores)
 ```
 
-## Working with data.frames
+## Working with `data frames`
 
--   `head()`- looks at top rows of the data.frame
+-   `head()`- looks at top rows of the `data frame`
 
--   \$ operator - access a column as a vector
+-   \$ operator - access a column as a `vector`
 
 ```{r}
 #| echo: true
@@ -675,7 +684,7 @@ test_scores[,1:3]
 test_scores[4:5,]
 ```
 
-## Subsetting data.frames
+## Subsetting `data frames`
 
 -   **Methods**:
 
@@ -817,3 +826,11 @@ ncols(censoc_numident)
 names(censoc_numident)
 
 ```
+
+## Thank you 
+
+-   Session tomorrow: 9:30am -- 12:30pm
+
+-   Please try to finish exercises in advance
+
+-   Questions: casey.breen\@sociology.ox.ac.uk

@@ -705,7 +705,7 @@ Casey Breen
 <p>10 minute break</p>
 </section>
 <section id="basic-syntax-assignment" class="slide level2">
-<h2>Basic Syntax – Assignment</h2>
+<h2>Basic Syntax: assignment</h2>
 <ul>
 <li><p>Use <strong><code>&lt;-</code></strong> or <code>=</code> for assignment</p>
 <ul>
@@ -713,41 +713,55 @@ Casey Breen
 </ul></li>
 <li><p>Formally, assignment means “assign the result of the operation on the right to object on the left”</p></li>
 </ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="do">## Add comments </span></span>
+<span id="cb11-2"><a href="#cb11-2"></a></span>
+<span id="cb11-3"><a href="#cb11-3"></a>x <span class="ot">&lt;-</span> <span class="dv">7</span> <span class="co"># assigns 7 to x </span></span>
+<span id="cb11-4"><a href="#cb11-4"></a></span>
+<span id="cb11-5"><a href="#cb11-5"></a><span class="do">## Quesiton: what does this do? </span></span>
+<span id="cb11-6"><a href="#cb11-6"></a>y <span class="ot">&lt;-</span> x <span class="ot">&lt;-</span> <span class="dv">25</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="basic-syntax-comments" class="slide level2">
-<h2>Basic Syntax – Comments</h2>
+<h2>Basic Syntax: comments</h2>
 <ul>
 <li><p>Use <strong><code>#</code></strong> to start a single-line comment</p></li>
 <li><p>Include lots of comments when you’re writing code</p></li>
 </ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="do">## Add comments </span></span>
+<span id="cb12-2"><a href="#cb12-2"></a></span>
+<span id="cb12-3"><a href="#cb12-3"></a>x <span class="ot">&lt;-</span> <span class="dv">7</span> <span class="co"># assigns 1 to x</span></span>
+<span id="cb12-4"><a href="#cb12-4"></a>x <span class="ot">&lt;-</span> <span class="dv">12</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="basic-syntax-operators" class="slide level2">
-<h2>Basic Syntax – Operators</h2>
+<h2>Basic syntax: operators</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="do">## R as a calculator (# adds a comment)</span></span>
-<span id="cb11-2"><a href="#cb11-2"></a><span class="dv">3</span> <span class="sc">*</span> <span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="do">## R as a calculator (# adds a comment)</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a><span class="dv">3</span> <span class="sc">*</span> <span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 9</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="do">## Division </span></span>
-<span id="cb13-2"><a href="#cb13-2"></a><span class="dv">12</span><span class="sc">/</span><span class="dv">4</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="do">## Division </span></span>
+<span id="cb15-2"><a href="#cb15-2"></a><span class="dv">12</span><span class="sc">/</span><span class="dv">4</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="do">## Subtraction </span></span>
-<span id="cb15-2"><a href="#cb15-2"></a><span class="dv">100-12</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="do">## Subtraction </span></span>
+<span id="cb17-2"><a href="#cb17-2"></a><span class="dv">100-12</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 88</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="do">## Exponents (10^2)</span></span>
-<span id="cb17-2"><a href="#cb17-2"></a><span class="dv">10</span> <span class="sc">**</span> <span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="do">## Exponents (10^2)</span></span>
+<span id="cb19-2"><a href="#cb19-2"></a><span class="dv">10</span> <span class="sc">**</span> <span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 100</code></pre>
 </div>
 </div>
 </section>
 <section id="basic-syntax-comparisons" class="slide level2 smaller">
-<h2>Basic Syntax – Comparisons</h2>
+<h2>Basic syntax: comparisons</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
@@ -798,29 +812,29 @@ Casey Breen
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="do">## Logical operators </span></span>
-<span id="cb19-2"><a href="#cb19-2"></a></span>
-<span id="cb19-3"><a href="#cb19-3"></a><span class="dv">10</span> <span class="sc">==</span> <span class="dv">10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="do">## Logical operators </span></span>
+<span id="cb21-2"><a href="#cb21-2"></a></span>
+<span id="cb21-3"><a href="#cb21-3"></a><span class="dv">10</span> <span class="sc">==</span> <span class="dv">10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="dv">9</span> <span class="sc">==</span> <span class="dv">10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="dv">9</span> <span class="sc">==</span> <span class="dv">10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] FALSE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="dv">9</span> <span class="sc">&lt;</span> <span class="dv">10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="dv">9</span> <span class="sc">&lt;</span> <span class="dv">10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="st">"apple"</span> <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"bananas"</span>, <span class="st">"oranges"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a><span class="st">"apple"</span> <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"bananas"</span>, <span class="st">"oranges"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] FALSE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a><span class="st">"apple"</span> <span class="sc">%in%</span> <span class="st">"bananas"</span> <span class="sc">|</span> <span class="st">"apple"</span> <span class="sc">%in%</span> <span class="st">"apple"</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a><span class="st">"apple"</span> <span class="sc">%in%</span> <span class="st">"bananas"</span> <span class="sc">|</span> <span class="st">"apple"</span> <span class="sc">%in%</span> <span class="st">"apple"</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a><span class="st">"apple"</span> <span class="sc">%in%</span> <span class="st">"bananas"</span> <span class="sc">&amp;</span> <span class="st">"apple"</span> <span class="sc">%in%</span> <span class="st">"apple"</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a><span class="st">"apple"</span> <span class="sc">%in%</span> <span class="st">"bananas"</span> <span class="sc">&amp;</span> <span class="st">"apple"</span> <span class="sc">%in%</span> <span class="st">"apple"</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] FALSE</code></pre>
 </div>
@@ -831,7 +845,7 @@ Casey Breen
 <section id="data-structures" class="slide level2">
 <h2>Data structures</h2>
 <ul>
-<li><p>There are lots of data structures; we’ll focus on <code>vectors</code> and <code>data.frames</code>.</p>
+<li><p>There are lots of data structures; we’ll focus on <code>vectors</code> and <code>data frames</code>.</p>
 <ul>
 <li><p><code>Vectors</code>: One-dimensional arrays that hold elements of a single data type (e.g., all numeric or all character).</p></li>
 <li><p><code>Data Frames</code>: Two-dimensional tables where each column can have a different data type; essentially a list of vectors of equal length.</p></li>
@@ -844,10 +858,10 @@ Casey Breen
 <li><code>Vector</code> example</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a><span class="do">## Vector Example </span></span>
-<span id="cb31-2"><a href="#cb31-2"></a>vec_example <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>)</span>
-<span id="cb31-3"><a href="#cb31-3"></a></span>
-<span id="cb31-4"><a href="#cb31-4"></a><span class="fu">print</span>(vec_example)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a><span class="do">## Vector Example </span></span>
+<span id="cb33-2"><a href="#cb33-2"></a>vec_example <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>)</span>
+<span id="cb33-3"><a href="#cb33-3"></a></span>
+<span id="cb33-4"><a href="#cb33-4"></a><span class="fu">print</span>(vec_example)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1 2 3 4 5</code></pre>
 </div>
@@ -856,13 +870,13 @@ Casey Breen
 <li><code>Data frame</code> example</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a><span class="co"># Data.frame example </span></span>
-<span id="cb33-2"><a href="#cb33-2"></a>example_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb33-3"><a href="#cb33-3"></a>  <span class="at">ID =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>),</span>
-<span id="cb33-4"><a href="#cb33-4"></a>  <span class="at">Name =</span> <span class="fu">c</span>(<span class="st">"Alice"</span>, <span class="st">"Bob"</span>, <span class="st">"Charlie"</span>, <span class="st">"David"</span>),</span>
-<span id="cb33-5"><a href="#cb33-5"></a>  <span class="at">Age =</span> <span class="fu">c</span>(<span class="dv">25</span>, <span class="dv">30</span>, <span class="dv">35</span>, <span class="dv">40</span>),</span>
-<span id="cb33-6"><a href="#cb33-6"></a>  <span class="at">Score =</span> <span class="fu">c</span>(<span class="dv">90</span>, <span class="dv">85</span>, <span class="dv">88</span>, <span class="dv">76</span>)</span>
-<span id="cb33-7"><a href="#cb33-7"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a><span class="co"># Data.frame example </span></span>
+<span id="cb35-2"><a href="#cb35-2"></a>example_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb35-3"><a href="#cb35-3"></a>  <span class="at">ID =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>),</span>
+<span id="cb35-4"><a href="#cb35-4"></a>  <span class="at">Name =</span> <span class="fu">c</span>(<span class="st">"Alice"</span>, <span class="st">"Bob"</span>, <span class="st">"Charlie"</span>, <span class="st">"David"</span>),</span>
+<span id="cb35-5"><a href="#cb35-5"></a>  <span class="at">Age =</span> <span class="fu">c</span>(<span class="dv">25</span>, <span class="dv">30</span>, <span class="dv">35</span>, <span class="dv">40</span>),</span>
+<span id="cb35-6"><a href="#cb35-6"></a>  <span class="at">Score =</span> <span class="fu">c</span>(<span class="dv">90</span>, <span class="dv">85</span>, <span class="dv">88</span>, <span class="dv">76</span>)</span>
+<span id="cb35-7"><a href="#cb35-7"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
 <div class="cell-output-display">
@@ -905,25 +919,27 @@ Casey Breen
 </div>
 </div>
 </section>
-<section id="data-types" class="slide level2">
+<section id="data-types" class="slide level2 smaller">
 <h2>Data types</h2>
 <ul>
-<li><p>Numeric: Used for numerical values like integers or decimals.</p></li>
-<li><p>Character: Holds text and alphanumeric characters.</p></li>
-<li><p>Logical: Represents binary values - TRUE or FALSE.</p></li>
-<li><p><strong>Note</strong>: each vector or data.frame column can only contain one data.type</p></li>
+<li><p>Each <code>vector</code> or <code>data frame</code> column can only contain one data type:</p>
+<ul>
+<li><p><code>Numeric</code>: Used for numerical values like integers or decimals.</p></li>
+<li><p><code>Character</code>: Holds text and alphanumeric characters.</p></li>
+<li><p><code>Logical</code>: Represents binary values - TRUE or FALSE.</p></li>
+</ul></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a><span class="do">## generate vectors </span></span>
-<span id="cb34-2"><a href="#cb34-2"></a>vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
-<span id="cb34-3"><a href="#cb34-3"></a>vec1 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>)</span>
-<span id="cb34-4"><a href="#cb34-4"></a></span>
-<span id="cb34-5"><a href="#cb34-5"></a><span class="do">## check type </span></span>
-<span id="cb34-6"><a href="#cb34-6"></a><span class="fu">class</span>(vec1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a><span class="do">## generate vectors </span></span>
+<span id="cb36-2"><a href="#cb36-2"></a>vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
+<span id="cb36-3"><a href="#cb36-3"></a>vec1 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>)</span>
+<span id="cb36-4"><a href="#cb36-4"></a></span>
+<span id="cb36-5"><a href="#cb36-5"></a><span class="do">## check type </span></span>
+<span id="cb36-6"><a href="#cb36-6"></a><span class="fu">class</span>(vec1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "character"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a><span class="fu">class</span>(vec2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a><span class="fu">class</span>(vec2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "character"</code></pre>
 </div>
@@ -932,8 +948,8 @@ Casey Breen
 <section id="generating-sequences-in-r" class="slide level2">
 <h2><strong>Generating Sequences in R</strong></h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a><span class="do">## Basic </span></span>
-<span id="cb38-2"><a href="#cb38-2"></a><span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a><span class="do">## Basic </span></span>
+<span id="cb40-2"><a href="#cb40-2"></a><span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
 </div>
@@ -942,7 +958,7 @@ Casey Breen
 <li>Colon operator (<code>:</code>), creates sequences with increments of 1</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a><span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a><span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
 </div>
@@ -951,14 +967,14 @@ Casey Breen
 <li><strong><code>seq()</code></strong> Function: More flexible and allows you to specify the <strong><code>start</code></strong>, <strong><code>end</code></strong>, and <strong><code>by</code></strong> parameters.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a><span class="do">## seq 1-10, by = 2</span></span>
-<span id="cb42-2"><a href="#cb42-2"></a><span class="fu">seq</span>(<span class="dv">1</span>, <span class="dv">10</span>, <span class="at">by =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1"></a><span class="do">## seq 1-10, by = 2</span></span>
+<span id="cb44-2"><a href="#cb44-2"></a><span class="fu">seq</span>(<span class="dv">1</span>, <span class="dv">10</span>, <span class="at">by =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1 3 5 7 9</code></pre>
 </div>
 </div>
 </section>
-<section id="basic-functions" class="slide level2">
+<section id="basic-functions" class="slide level2 smaller">
 <h2>Basic functions</h2>
 <ul>
 <li><p>Function: Input arguments, performs operations on them, and returns a result</p></li>
@@ -970,30 +986,30 @@ Casey Breen
 </ul></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1"></a><span class="do">## generate random draws from a standard normal distribution  </span></span>
-<span id="cb44-2"><a href="#cb44-2"></a>random_draws <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">5</span>,</span>
-<span id="cb44-3"><a href="#cb44-3"></a>      <span class="at">mean =</span> <span class="dv">0</span>,</span>
-<span id="cb44-4"><a href="#cb44-4"></a>      <span class="at">sd =</span> <span class="dv">1</span>)</span>
-<span id="cb44-5"><a href="#cb44-5"></a></span>
-<span id="cb44-6"><a href="#cb44-6"></a><span class="do">## find the mean </span></span>
-<span id="cb44-7"><a href="#cb44-7"></a><span class="fu">mean</span>(random_draws)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1"></a><span class="do">## generate random draws from a standard normal distribution  </span></span>
+<span id="cb46-2"><a href="#cb46-2"></a>random_draws <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">5</span>,</span>
+<span id="cb46-3"><a href="#cb46-3"></a>      <span class="at">mean =</span> <span class="dv">0</span>,</span>
+<span id="cb46-4"><a href="#cb46-4"></a>      <span class="at">sd =</span> <span class="dv">1</span>)</span>
+<span id="cb46-5"><a href="#cb46-5"></a></span>
+<span id="cb46-6"><a href="#cb46-6"></a><span class="do">## find the mean </span></span>
+<span id="cb46-7"><a href="#cb46-7"></a><span class="fu">mean</span>(random_draws)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.6175028</code></pre>
+<pre><code>[1] -0.0343441</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1"></a><span class="do">## find the median</span></span>
-<span id="cb46-2"><a href="#cb46-2"></a><span class="fu">median</span>(random_draws)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1"></a><span class="do">## find the median</span></span>
+<span id="cb48-2"><a href="#cb48-2"></a><span class="fu">median</span>(random_draws)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.5131512</code></pre>
+<pre><code>[1] -0.1551556</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1"></a><span class="do">## find the standard deviation </span></span>
-<span id="cb48-2"><a href="#cb48-2"></a><span class="fu">sd</span>(random_draws)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1"></a><span class="do">## find the standard deviation </span></span>
+<span id="cb50-2"><a href="#cb50-2"></a><span class="fu">sd</span>(random_draws)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 1.060994</code></pre>
+<pre><code>[1] 0.6595093</code></pre>
 </div>
 </div>
 </section>
 <section id="in-class-exercise-1" class="slide level2">
-<h2>In class exercise 1</h2>
+<h2>In-class exercise 1</h2>
 <ol type="1">
 <li>Assign <code>x</code> and <code>y</code> to take values 3 and 4.</li>
 <li>Create a new variable <code>z</code> as the product of variables <code>x</code> and <code>y.</code></li>
@@ -1002,20 +1018,65 @@ Casey Breen
 <li>Write a logical expression testing whether <code>x</code> is <em>not</em> greater than 10.</li>
 </ol>
 </section>
-<section id="solutions-1" class="slide level2 smaller">
-<h2>Solutions #1</h2>
+<section id="exercise-1-solutions" class="slide level2 smaller">
+<h2>Exercise 1 solutions</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1"></a><span class="co"># Assign x and y to take values 3 and 4</span></span>
+<span id="cb52-2"><a href="#cb52-2"></a>x <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb52-3"><a href="#cb52-3"></a>y <span class="ot">&lt;-</span> <span class="dv">4</span></span>
+<span id="cb52-4"><a href="#cb52-4"></a></span>
+<span id="cb52-5"><a href="#cb52-5"></a><span class="co"># Create a new variable z as the product of variables x and y</span></span>
+<span id="cb52-6"><a href="#cb52-6"></a>z <span class="ot">&lt;-</span> x <span class="sc">*</span> y</span>
+<span id="cb52-7"><a href="#cb52-7"></a></span>
+<span id="cb52-8"><a href="#cb52-8"></a><span class="co"># Write code to calculate the square of 3 and assign it to a variable three_squared</span></span>
+<span id="cb52-9"><a href="#cb52-9"></a><span class="dv">3</span><span class="sc">^</span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 9</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1"></a><span class="co"># Write a logical expression to check if x is greater than 10</span></span>
+<span id="cb54-2"><a href="#cb54-2"></a>x <span class="sc">&gt;</span> <span class="dv">10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1"></a><span class="co"># Write a logical expression to check if x is not greater than 10</span></span>
+<span id="cb56-2"><a href="#cb56-2"></a>x <span class="sc">&lt;=</span> <span class="dv">10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
 </section>
 <section id="in-class-exercise-2" class="slide level2">
-<h2>In class exercise 2</h2>
+<h2>In-class exercise 2</h2>
 <ol type="1">
 <li>Generate vectors containing the numbers 100, 101, 102, 103, 104, and 105 using 3 different methods (e.g., <strong><code>c()</code></strong>, <strong><code>seq()</code></strong>, <strong><code>:</code></strong>). In what scenarios might each method be most convenient?</li>
 <li>Generate a sequences of all <strong>even</strong> numbers between 0 and 100.</li>
 <li>Create a descending sequence of numbers from 100 to 1, and assign it to a variable.</li>
 </ol>
 </section>
-<section id="in-class-exercise-3" class="slide level2">
-<h2>In class exercise 3</h2>
-<h3 id="data-generation-and-basic-statistical-analysis">Data generation and basic statistical analysis</h3>
+<section id="exercise-2-solutions" class="slide level2">
+<h2>Exercise 2 solutions</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1"></a><span class="co"># Generate a vector using c() method</span></span>
+<span id="cb58-2"><a href="#cb58-2"></a>vector_c <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">101</span>, <span class="dv">102</span>, <span class="dv">103</span>, <span class="dv">104</span>, <span class="dv">105</span>)</span>
+<span id="cb58-3"><a href="#cb58-3"></a><span class="co"># Use when numbers are not in a simple sequence or pattern</span></span>
+<span id="cb58-4"><a href="#cb58-4"></a></span>
+<span id="cb58-5"><a href="#cb58-5"></a><span class="co"># Generate a vector using seq() method</span></span>
+<span id="cb58-6"><a href="#cb58-6"></a>vector_seq <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">100</span>, <span class="dv">105</span>, <span class="at">by =</span> <span class="dv">1</span>)</span>
+<span id="cb58-7"><a href="#cb58-7"></a><span class="co"># Use when numbers follow a pattern but not necessarily just increment by 1</span></span>
+<span id="cb58-8"><a href="#cb58-8"></a></span>
+<span id="cb58-9"><a href="#cb58-9"></a><span class="co"># Generate a vector using : operator</span></span>
+<span id="cb58-10"><a href="#cb58-10"></a>vector_colon <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">100</span><span class="sc">:</span><span class="dv">105</span>) </span>
+<span id="cb58-11"><a href="#cb58-11"></a><span class="co"># Use when numbers increment by 1</span></span>
+<span id="cb58-12"><a href="#cb58-12"></a></span>
+<span id="cb58-13"><a href="#cb58-13"></a><span class="co"># Generate a sequence of all even numbers between 0 and 100</span></span>
+<span id="cb58-14"><a href="#cb58-14"></a>even_seq <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">100</span>, <span class="at">by =</span> <span class="dv">2</span>)</span>
+<span id="cb58-15"><a href="#cb58-15"></a></span>
+<span id="cb58-16"><a href="#cb58-16"></a><span class="co"># Create a descending sequence of numbers from 100 to 1</span></span>
+<span id="cb58-17"><a href="#cb58-17"></a>desc_seq <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">100</span>, <span class="dv">1</span>, <span class="at">by =</span> <span class="sc">-</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="in-class-exercise-3" class="slide level2 smaller">
+<h2>In-class exercise 3</h2>
 <ol type="1">
 <li><p>Generate a sample of 100 observations drawn from a normal distribution with a mean of 10 and a standard deviation of 2. How is this type of random sampling useful in statistical analysis?</p></li>
 <li><p>Calculate the mean of this generated sample. How does this sample mean relate to the population mean of the distribution?</p></li>
@@ -1023,43 +1084,47 @@ Casey Breen
 <li><p>Repeat steps 1--3 with a sample of 10,000. Did the difference between the sample mean and the population mean decrease? Will this always be the case?</p></li>
 </ol>
 </section>
-<section id="solutions-exercise-3" class="slide level2 smaller">
-<h2>Solutions: Exercise 3</h2>
+<section id="exercise-3-solutions" class="slide level2 smaller">
+<h2>Exercise 3 solutions</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1"></a><span class="co"># Generate a sample of 1,000 draws from a normal distribution with mean = 10 and sd = 2</span></span>
-<span id="cb50-2"><a href="#cb50-2"></a>sample_data_100 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, </span>
-<span id="cb50-3"><a href="#cb50-3"></a>                     <span class="at">mean =</span> <span class="dv">10</span>,</span>
-<span id="cb50-4"><a href="#cb50-4"></a>                     <span class="at">sd =</span> <span class="dv">2</span>)</span>
-<span id="cb50-5"><a href="#cb50-5"></a></span>
-<span id="cb50-6"><a href="#cb50-6"></a><span class="co"># Calculate the mean of this sample</span></span>
-<span id="cb50-7"><a href="#cb50-7"></a>sample_mean_100 <span class="ot">&lt;-</span> <span class="fu">mean</span>(sample_data_100)</span>
-<span id="cb50-8"><a href="#cb50-8"></a></span>
-<span id="cb50-9"><a href="#cb50-9"></a><span class="co"># Calculate the difference between the mean of the sample and the expected value of the mean</span></span>
-<span id="cb50-10"><a href="#cb50-10"></a>difference_100 <span class="ot">&lt;-</span> <span class="fu">abs</span>(sample_mean_100 <span class="sc">-</span> <span class="dv">10</span>)</span>
-<span id="cb50-11"><a href="#cb50-11"></a></span>
-<span id="cb50-12"><a href="#cb50-12"></a>difference_100</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1"></a><span class="co"># Generate a sample of 1,000 draws from a normal distribution with mean = 10 and sd = 2</span></span>
+<span id="cb59-2"><a href="#cb59-2"></a>sample_data_100 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, </span>
+<span id="cb59-3"><a href="#cb59-3"></a>                     <span class="at">mean =</span> <span class="dv">10</span>,</span>
+<span id="cb59-4"><a href="#cb59-4"></a>                     <span class="at">sd =</span> <span class="dv">2</span>)</span>
+<span id="cb59-5"><a href="#cb59-5"></a></span>
+<span id="cb59-6"><a href="#cb59-6"></a><span class="co"># Calculate the mean of this sample</span></span>
+<span id="cb59-7"><a href="#cb59-7"></a>sample_mean_100 <span class="ot">&lt;-</span> <span class="fu">mean</span>(sample_data_100)</span>
+<span id="cb59-8"><a href="#cb59-8"></a></span>
+<span id="cb59-9"><a href="#cb59-9"></a><span class="co"># Calculate the difference between the mean of the sample and the expected value of the mean</span></span>
+<span id="cb59-10"><a href="#cb59-10"></a>difference_100 <span class="ot">&lt;-</span> <span class="fu">abs</span>(sample_mean_100 <span class="sc">-</span> <span class="dv">10</span>)</span>
+<span id="cb59-11"><a href="#cb59-11"></a></span>
+<span id="cb59-12"><a href="#cb59-12"></a>difference_100</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.2508095</code></pre>
+<pre><code>[1] 0.2247292</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1"></a><span class="co"># Calculate the Z-score for the sample mean</span></span>
-<span id="cb52-2"><a href="#cb52-2"></a>sample_data_10000 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10000</span>, </span>
-<span id="cb52-3"><a href="#cb52-3"></a>                     <span class="at">mean =</span> <span class="dv">10</span>,</span>
-<span id="cb52-4"><a href="#cb52-4"></a>                     <span class="at">sd =</span> <span class="dv">2</span>)</span>
-<span id="cb52-5"><a href="#cb52-5"></a></span>
-<span id="cb52-6"><a href="#cb52-6"></a><span class="co"># Calculate the mean of this sample</span></span>
-<span id="cb52-7"><a href="#cb52-7"></a>sample_data_10000 <span class="ot">&lt;-</span> <span class="fu">mean</span>(sample_data_10000)</span>
-<span id="cb52-8"><a href="#cb52-8"></a></span>
-<span id="cb52-9"><a href="#cb52-9"></a><span class="co"># Calculate the difference between the mean of the sample and the expected value of the mean</span></span>
-<span id="cb52-10"><a href="#cb52-10"></a>sample_data_10000 <span class="ot">&lt;-</span> <span class="fu">abs</span>(sample_data_10000 <span class="sc">-</span> <span class="dv">10</span>)</span>
-<span id="cb52-11"><a href="#cb52-11"></a></span>
-<span id="cb52-12"><a href="#cb52-12"></a>sample_data_10000</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1"></a><span class="co"># Calculate the Z-score for the sample mean</span></span>
+<span id="cb61-2"><a href="#cb61-2"></a>sample_data_10000 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10000</span>, </span>
+<span id="cb61-3"><a href="#cb61-3"></a>                     <span class="at">mean =</span> <span class="dv">10</span>,</span>
+<span id="cb61-4"><a href="#cb61-4"></a>                     <span class="at">sd =</span> <span class="dv">2</span>)</span>
+<span id="cb61-5"><a href="#cb61-5"></a></span>
+<span id="cb61-6"><a href="#cb61-6"></a><span class="co"># Calculate the mean of this sample</span></span>
+<span id="cb61-7"><a href="#cb61-7"></a>sample_data_10000 <span class="ot">&lt;-</span> <span class="fu">mean</span>(sample_data_10000)</span>
+<span id="cb61-8"><a href="#cb61-8"></a></span>
+<span id="cb61-9"><a href="#cb61-9"></a><span class="co"># Calculate the difference between the mean of the sample and the expected value of the mean</span></span>
+<span id="cb61-10"><a href="#cb61-10"></a>sample_data_10000 <span class="ot">&lt;-</span> <span class="fu">abs</span>(sample_data_10000 <span class="sc">-</span> <span class="dv">10</span>)</span>
+<span id="cb61-11"><a href="#cb61-11"></a></span>
+<span id="cb61-12"><a href="#cb61-12"></a>sample_data_10000</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.01577438</code></pre>
+<pre><code>[1] 0.01523271</code></pre>
 </div>
 </div>
 </section>
-<section id="break-tea-and-cake" class="slide level2">
-<h2>Break — Tea and Cake</h2>
+<section id="break-1" class="slide level2">
+<h2>Break</h2>
+<ul>
+<li><p>10 minutes</p></li>
+<li><p>Tea + cake</p></li>
+</ul>
 </section>
 <section id="indexing-vectors" class="slide level2">
 <h2>Indexing vectors</h2>
@@ -1067,84 +1132,110 @@ Casey Breen
 <li>Basic indexing, specify position</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1"></a>vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>)</span>
-<span id="cb54-2"><a href="#cb54-2"></a>first_element <span class="ot">&lt;-</span> vec[<span class="dv">1</span>]</span>
-<span id="cb54-3"><a href="#cb54-3"></a>third_element <span class="ot">&lt;-</span> vec[<span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1"></a>vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>)</span>
+<span id="cb63-2"><a href="#cb63-2"></a>first_element <span class="ot">&lt;-</span> vec[<span class="dv">1</span>]</span>
+<span id="cb63-3"><a href="#cb63-3"></a>third_element <span class="ot">&lt;-</span> vec[<span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>Conditional indexing, specify position</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1"></a>vec <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">5</span>, <span class="dv">33</span>, <span class="at">by =</span> <span class="dv">2</span>)</span>
-<span id="cb55-2"><a href="#cb55-2"></a>vec[vec <span class="sc">&gt;</span> <span class="dv">25</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1"></a>vec <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">5</span>, <span class="dv">33</span>, <span class="at">by =</span> <span class="dv">2</span>)</span>
+<span id="cb64-2"><a href="#cb64-2"></a>vec[vec <span class="sc">&gt;</span> <span class="dv">25</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 27 29 31 33</code></pre>
 </div>
 </div>
 </section>
-<section id="working-with-data-frames" class="slide level2">
+<section id="working-with-data-frames" class="slide level2 smaller">
 <h2>Working with <code>data frames</code></h2>
 <ul>
 <li><p><code>Data frames</code> are the most common and versatile data structure in <code>R</code></p></li>
 <li><p><code>Data frames</code> are structured as rows (observations) and columns (variables)</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1"></a>test_scores <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb57-2"><a href="#cb57-2"></a>  <span class="at">id =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>),</span>
-<span id="cb57-3"><a href="#cb57-3"></a>  <span class="at">name =</span> <span class="fu">c</span>(<span class="st">"Alice"</span>, <span class="st">"Bob"</span>, <span class="st">"Carol"</span>, <span class="st">"Dave"</span>, <span class="st">"Emily"</span>),</span>
-<span id="cb57-4"><a href="#cb57-4"></a>  <span class="at">age =</span> <span class="fu">c</span>(<span class="dv">25</span>, <span class="dv">30</span>, <span class="dv">22</span>, <span class="dv">28</span>, <span class="dv">24</span>),</span>
-<span id="cb57-5"><a href="#cb57-5"></a>  <span class="at">gender =</span> <span class="fu">c</span>(<span class="st">"F"</span>, <span class="st">"M"</span>, <span class="st">"F"</span>, <span class="st">"M"</span>, <span class="st">"F"</span>),</span>
-<span id="cb57-6"><a href="#cb57-6"></a>  <span class="at">score =</span> <span class="fu">c</span>(<span class="dv">90</span>, <span class="dv">85</span>, <span class="dv">88</span>, <span class="dv">92</span>, <span class="dv">89</span>)</span>
-<span id="cb57-7"><a href="#cb57-7"></a>)</span>
-<span id="cb57-8"><a href="#cb57-8"></a></span>
-<span id="cb57-9"><a href="#cb57-9"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1"></a>test_scores <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb66-2"><a href="#cb66-2"></a>  <span class="at">id =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>),</span>
+<span id="cb66-3"><a href="#cb66-3"></a>  <span class="at">name =</span> <span class="fu">c</span>(<span class="st">"Alice"</span>, <span class="st">"Bob"</span>, <span class="st">"Carol"</span>, <span class="st">"Dave"</span>, <span class="st">"Emily"</span>),</span>
+<span id="cb66-4"><a href="#cb66-4"></a>  <span class="at">age =</span> <span class="fu">c</span>(<span class="dv">25</span>, <span class="dv">30</span>, <span class="dv">22</span>, <span class="dv">28</span>, <span class="dv">24</span>),</span>
+<span id="cb66-5"><a href="#cb66-5"></a>  <span class="at">gender =</span> <span class="fu">c</span>(<span class="st">"F"</span>, <span class="st">"M"</span>, <span class="st">"F"</span>, <span class="st">"M"</span>, <span class="st">"F"</span>),</span>
+<span id="cb66-6"><a href="#cb66-6"></a>  <span class="at">score =</span> <span class="fu">c</span>(<span class="dv">90</span>, <span class="dv">85</span>, <span class="dv">88</span>, <span class="dv">92</span>, <span class="dv">89</span>)</span>
+<span id="cb66-7"><a href="#cb66-7"></a>)</span>
+<span id="cb66-8"><a href="#cb66-8"></a></span>
+<span id="cb66-9"><a href="#cb66-9"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(test_scores)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table>
 <thead>
 <tr class="header">
-<th style="text-align: right;">vec1</th>
-<th style="text-align: left;">vec2</th>
+<th style="text-align: right;">id</th>
+<th style="text-align: left;">name</th>
+<th style="text-align: right;">age</th>
+<th style="text-align: left;">gender</th>
+<th style="text-align: right;">score</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: right;">1</td>
-<td style="text-align: left;">a</td>
+<td style="text-align: left;">Alice</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: left;">F</td>
+<td style="text-align: right;">90</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">2</td>
-<td style="text-align: left;">b</td>
+<td style="text-align: left;">Bob</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: left;">M</td>
+<td style="text-align: right;">85</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">3</td>
-<td style="text-align: left;">c</td>
+<td style="text-align: left;">Carol</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: left;">F</td>
+<td style="text-align: right;">88</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">Dave</td>
+<td style="text-align: right;">28</td>
+<td style="text-align: left;">M</td>
+<td style="text-align: right;">92</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">Emily</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: left;">F</td>
+<td style="text-align: right;">89</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 </section>
-<section id="working-with-data.frames" class="slide level2">
-<h2>Working with data.frames</h2>
+<section id="working-with-data-frames-1" class="slide level2">
+<h2>Working with <code>data frames</code></h2>
 <ul>
-<li><p><code>head()</code>- looks at top rows of the data.frame</p></li>
-<li><p>$ operator - access a column as a vector</p></li>
+<li><p><code>head()</code>- looks at top rows of the <code>data frame</code></p></li>
+<li><p>$ operator - access a column as a <code>vector</code></p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1"></a><span class="do">## print first two rows  first row </span></span>
-<span id="cb58-2"><a href="#cb58-2"></a><span class="fu">head</span>(test_scores, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1"></a><span class="do">## print first two rows  first row </span></span>
+<span id="cb67-2"><a href="#cb67-2"></a><span class="fu">head</span>(test_scores, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  id  name age gender score
 1  1 Alice  25      F    90
 2  2   Bob  30      M    85</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1"></a><span class="do">## access name column </span></span>
-<span id="cb60-2"><a href="#cb60-2"></a>test_scores<span class="sc">$</span>name</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1"></a><span class="do">## access name column </span></span>
+<span id="cb69-2"><a href="#cb69-2"></a>test_scores<span class="sc">$</span>name</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Alice" "Bob"   "Carol" "Dave"  "Emily"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1"></a><span class="do">## all rows, columns 1-3 </span></span>
-<span id="cb62-2"><a href="#cb62-2"></a>test_scores[,<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1"></a><span class="do">## all rows, columns 1-3 </span></span>
+<span id="cb71-2"><a href="#cb71-2"></a>test_scores[,<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  id  name age
 1  1 Alice  25
@@ -1153,8 +1244,8 @@ Casey Breen
 4  4  Dave  28
 5  5 Emily  24</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1"></a><span class="do">## all columns, rows 4-5 </span></span>
-<span id="cb64-2"><a href="#cb64-2"></a>test_scores[<span class="dv">4</span><span class="sc">:</span><span class="dv">5</span>,]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1"></a><span class="do">## all columns, rows 4-5 </span></span>
+<span id="cb73-2"><a href="#cb73-2"></a>test_scores[<span class="dv">4</span><span class="sc">:</span><span class="dv">5</span>,]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  id  name age gender score
 4  4  Dave  28      M    92
@@ -1162,8 +1253,8 @@ Casey Breen
 </div>
 </div>
 </section>
-<section id="subsetting-data.frames" class="slide level2">
-<h2>Subsetting data.frames</h2>
+<section id="subsetting-data-frames" class="slide level2">
+<h2>Subsetting <code>data frames</code></h2>
 <ul>
 <li><p><strong>Methods</strong>:</p>
 <ul>
@@ -1178,19 +1269,19 @@ Casey Breen
 <h2>Quiz</h2>
 <p>Which rows and will this return?</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1"></a>test_scores[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>,]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1"></a>test_scores[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>,]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>Which rows and which columns will this return?</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1"></a>test_scores[test_scores<span class="sc">$</span>score <span class="sc">&gt;=</span> <span class="dv">90</span>, ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1"></a>test_scores[test_scores<span class="sc">$</span>score <span class="sc">&gt;=</span> <span class="dv">90</span>, ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="answers" class="slide level2">
 <h2>Answers</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1"></a>test_scores[test_scores<span class="sc">$</span>score <span class="sc">&gt;=</span> <span class="dv">90</span>, ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1"></a>test_scores[test_scores<span class="sc">$</span>score <span class="sc">&gt;=</span> <span class="dv">90</span>, ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  id  name age gender score
 1  1 Alice  25      F    90
@@ -1198,7 +1289,7 @@ Casey Breen
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1"></a>test_scores[test_scores<span class="sc">$</span>score <span class="sc">&gt;=</span> <span class="dv">90</span>, ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1"></a>test_scores[test_scores<span class="sc">$</span>score <span class="sc">&gt;=</span> <span class="dv">90</span>, ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  id  name age gender score
 1  1 Alice  25      F    90
@@ -1210,8 +1301,8 @@ Casey Breen
 <h2>Explore <code>data frame</code> characteristics</h2>
 <p>Check number of rows</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1"></a><span class="do">## check number of rows (observations)</span></span>
-<span id="cb72-2"><a href="#cb72-2"></a><span class="fu">nrow</span>(test_scores)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1"></a><span class="do">## check number of rows (observations)</span></span>
+<span id="cb81-2"><a href="#cb81-2"></a><span class="fu">nrow</span>(test_scores)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 5</code></pre>
 </div>
@@ -1219,15 +1310,15 @@ Casey Breen
 <p><br>
 Check number of columns</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1"></a><span class="do">## check number of columns (variables)</span></span>
-<span id="cb74-2"><a href="#cb74-2"></a><span class="fu">ncol</span>(test_scores)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb83"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb83-1"><a href="#cb83-1"></a><span class="do">## check number of columns (variables)</span></span>
+<span id="cb83-2"><a href="#cb83-2"></a><span class="fu">ncol</span>(test_scores)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 5</code></pre>
 </div>
 </div>
 <p>Check column names</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1"></a><span class="fu">names</span>(test_scores)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb85"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb85-1"><a href="#cb85-1"></a><span class="fu">names</span>(test_scores)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "id"     "name"   "age"    "gender" "score" </code></pre>
 </div>
@@ -1249,14 +1340,14 @@ Check number of columns</p>
 <li><p><strong><code>readxl::read_excel()</code></strong>: Read Excel files</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1"></a><span class="do">## read in CSV file </span></span>
-<span id="cb78-2"><a href="#cb78-2"></a>df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"/path/to/your/data.csv"</span>)</span>
-<span id="cb78-3"><a href="#cb78-3"></a>df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"/path/to/your/data.csv"</span>) <span class="do">## faster</span></span>
-<span id="cb78-4"><a href="#cb78-4"></a></span>
-<span id="cb78-5"><a href="#cb78-5"></a></span>
-<span id="cb78-6"><a href="#cb78-6"></a><span class="do">## read in stata file </span></span>
-<span id="cb78-7"><a href="#cb78-7"></a><span class="fu">library</span>(haven)</span>
-<span id="cb78-8"><a href="#cb78-8"></a>data <span class="ot">&lt;-</span> <span class="fu">read_dta</span>(<span class="st">"path/to/file.dta"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb87"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a href="#cb87-1"></a><span class="do">## read in CSV file </span></span>
+<span id="cb87-2"><a href="#cb87-2"></a>df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"/path/to/your/data.csv"</span>)</span>
+<span id="cb87-3"><a href="#cb87-3"></a>df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"/path/to/your/data.csv"</span>) <span class="do">## faster</span></span>
+<span id="cb87-4"><a href="#cb87-4"></a></span>
+<span id="cb87-5"><a href="#cb87-5"></a></span>
+<span id="cb87-6"><a href="#cb87-6"></a><span class="do">## read in stata file </span></span>
+<span id="cb87-7"><a href="#cb87-7"></a><span class="fu">library</span>(haven)</span>
+<span id="cb87-8"><a href="#cb87-8"></a>data <span class="ot">&lt;-</span> <span class="fu">read_dta</span>(<span class="st">"path/to/file.dta"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="in-class-exercise-4" class="slide level2">
@@ -1283,24 +1374,32 @@ Check number of columns</p>
 <section id="exercise-4-solutions" class="slide level2">
 <h2>Exercise 4 Solutions</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1"></a><span class="fl">1.</span> <span class="do">## install packages </span></span>
-<span id="cb79-2"><a href="#cb79-2"></a><span class="fu">install.packages</span>(tidyverse)</span>
-<span id="cb79-3"><a href="#cb79-3"></a></span>
-<span id="cb79-4"><a href="#cb79-4"></a><span class="do">## library tidyverse </span></span>
-<span id="cb79-5"><a href="#cb79-5"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb79-6"><a href="#cb79-6"></a></span>
-<span id="cb79-7"><a href="#cb79-7"></a><span class="fl">2.</span> <span class="do">## read in data </span></span>
-<span id="cb79-8"><a href="#cb79-8"></a>censoc_numident <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"/path/to/censoc_numident_demo_dataset.csv"</span>)</span>
-<span id="cb79-9"><a href="#cb79-9"></a></span>
-<span id="cb79-10"><a href="#cb79-10"></a><span class="fl">3.</span> <span class="do">## nrows </span></span>
-<span id="cb79-11"><a href="#cb79-11"></a><span class="fu">nrow</span>(censoc_numident)</span>
-<span id="cb79-12"><a href="#cb79-12"></a></span>
-<span id="cb79-13"><a href="#cb79-13"></a><span class="fl">4.</span> <span class="do">## ncols </span></span>
-<span id="cb79-14"><a href="#cb79-14"></a><span class="fu">ncols</span>(censoc_numident)</span>
-<span id="cb79-15"><a href="#cb79-15"></a></span>
-<span id="cb79-16"><a href="#cb79-16"></a><span class="fl">5.</span> <span class="do">## column names </span></span>
-<span id="cb79-17"><a href="#cb79-17"></a><span class="fu">names</span>(censoc_numident)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1"></a><span class="fl">1.</span> <span class="do">## install packages </span></span>
+<span id="cb88-2"><a href="#cb88-2"></a><span class="fu">install.packages</span>(tidyverse)</span>
+<span id="cb88-3"><a href="#cb88-3"></a></span>
+<span id="cb88-4"><a href="#cb88-4"></a><span class="do">## library tidyverse </span></span>
+<span id="cb88-5"><a href="#cb88-5"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb88-6"><a href="#cb88-6"></a></span>
+<span id="cb88-7"><a href="#cb88-7"></a><span class="fl">2.</span> <span class="do">## read in data </span></span>
+<span id="cb88-8"><a href="#cb88-8"></a>censoc_numident <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"/path/to/censoc_numident_demo_dataset.csv"</span>)</span>
+<span id="cb88-9"><a href="#cb88-9"></a></span>
+<span id="cb88-10"><a href="#cb88-10"></a><span class="fl">3.</span> <span class="do">## nrows </span></span>
+<span id="cb88-11"><a href="#cb88-11"></a><span class="fu">nrow</span>(censoc_numident)</span>
+<span id="cb88-12"><a href="#cb88-12"></a></span>
+<span id="cb88-13"><a href="#cb88-13"></a><span class="fl">4.</span> <span class="do">## ncols </span></span>
+<span id="cb88-14"><a href="#cb88-14"></a><span class="fu">ncols</span>(censoc_numident)</span>
+<span id="cb88-15"><a href="#cb88-15"></a></span>
+<span id="cb88-16"><a href="#cb88-16"></a><span class="fl">5.</span> <span class="do">## column names </span></span>
+<span id="cb88-17"><a href="#cb88-17"></a><span class="fu">names</span>(censoc_numident)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="thank-you" class="slide level2">
+<h2>Thank you</h2>
+<ul>
+<li><p>Session tomorrow: 9:30am – 12:30pm</p></li>
+<li><p>Please try to finish exercises in advance</p></li>
+<li><p>Questions: casey.breen@sociology.ox.ac.uk</p></li>
+</ul>
 <div class="footer footer-default">
 
 </div>

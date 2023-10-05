@@ -7,9 +7,9 @@ format: pdf
 
 ## Problem Set 1
 
-Please complete the following questions in `R` in a quarto `document`. Please complete each exercise in a different code chunk.
+Please complete the following questions in `R` in a quarto `document`.
 
-### Assignment, arithmetic, logical expressions
+### Exercise 1 -- Assignment, arithmetic, logical expressions
 
 1.  Assign `x` and `y` to take values 3 and 4.
 2.  Create a new variable `z` as the product of variables `x` and `y.`
@@ -17,13 +17,13 @@ Please complete the following questions in `R` in a quarto `document`. Please co
 4.  Write a logical expression on whether `x` is greater than 10. When might you need to filter data based on a condition?
 5.  Write a logical expression testing whether `x` is *not* greater than 10.
 
-### Sequencing 
+### Exercise 2 -- Sequencing 
 
 1.  Generate vectors containing the numbers 100, 101, 102, 103, 104, and 105 using 3 different methods (e.g., **`c()`**, **`seq()`**, **`:`**). In what scenarios might each method be most convenient?
 2.  Generate a sequences of all **even** numbers between 0 and 100.
 3.  Create a descending sequence of numbers from 100 to 1, and assign it to a variable.
 
-### Data generation and basic statistical analysis
+### Exercise 3 -- Data generation and basic statistical analysis
 
 1.  Generate a sample of 100 observations drawn from a normal distribution with a mean of 10 and a standard deviation of 2. How is this type of random sampling useful in statistical analysis?
 
@@ -33,7 +33,7 @@ Please complete the following questions in `R` in a quarto `document`. Please co
 
 4.  Repeat steps 1\--3 with a sample of 10,000. Did the difference between the sample mean and the population mean decrease? Will this always be the case?
 
-### Work with real-world data 
+### Exercise 4 -- Work with real-world data 
 
 For this exercise, we will work with real-world data. Please download the CenSoc-Numident Demo file (as .CSV) and accompanying codebook (as PDF) from:
 
