@@ -1,0 +1,47 @@
+---
+title: |
+    | Introduction to R
+    | Session 2
+subtitle: "Department of Sociology | University of Oxford"
+author: "Casey Breen"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+format:
+  revealjs:
+    slide-number: true
+    show-slide-number: all
+---
+
+## Intro to `R` -- Housekeeping
+
+-   Course materials available from:
+
+    -   [www.github.com/caseybreen/intro_r](www.github.com/caseybreen/intro_r)
+
+-   My email: [casey.breen\@sociology.ac.uk.ox](casey.breen@sociology.ac.uk.ox)
+
+## Recap of session 1
+
+-   Data structures
+
+    -   What's a `vector`?
+
+    -   What's a `data frame` ?
+
+## Assignment 1:
+
+1.  Load and install the `tidyverse` packages
+2.  Use the `read_csv` package to read in the dataset and assign it to the object `censoc`
+3.  Use the `head` command to look at the first 5 rows
+4.  How many columns are in the dataset?
+5.  How many rows are in the dataset?
+6.  List the column names. What are a few research questions that could be addressed using this dataset.
+
+## Thank you
+
+-   Course materials available from:
+
+    -   [www.github.com/caseybreen/intro_r](www.github.com/caseybreen/intro_r)
+
+-   Recommendation: try to finish exercises
+
+-   Questions: casey.breen\@sociology.ox.ac.uk

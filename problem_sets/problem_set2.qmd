@@ -1,0 +1,34 @@
+---
+title: "Problem Set 1"
+subtitle: "Introduction to R | University of Oxford Sociology"
+author: "Casey Breen"
+format: pdf
+---
+
+# Problem Set 2
+
+Complete the following questions in R within a Quarto document.
+
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+## Exercise 1: Work with Real-World Data
+
+For this exercise, download the CenSoc-Numident Demo file (as .CSV) and the accompanying codebook (as PDF) from [Harvard Dataverse](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QVDPM9). The CenSoc-Numident is an individual-level data with information on individual-level mortality and sociodemographic characteristics.
+
+### 1a
+
+Read in the dataset using `read_csv()` from the tidyverse package.
+
+### 2b
+
+How many columns are in the dataset?
+
+### 3c
+
+How many rows are in the dataset?
+
+### 4d
+
+List the column names. What are a few research questions that could be addressed using this dataset.
