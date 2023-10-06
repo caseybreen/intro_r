@@ -1,5 +1,5 @@
 ---
-title: "Problem Set 1"
+title: "Problem Set 2"
 subtitle: "Introduction to R | University of Oxford Sociology"
 author: "Casey Breen"
 format: pdf
