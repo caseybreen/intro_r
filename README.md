@@ -9,3 +9,7 @@ Each session is approximately 3 hours.
 Session 1
 
 [Slides Session 1](https://github.com/caseybreen/intro_r/blob/main/slides/intro_r_day1.pdf) \| [Problem Set 1](https://github.com/caseybreen/intro_r/blob/main/problem_sets/problem_set1.pdf)\| [Problem Set 1 Solutions](https://github.com/caseybreen/intro_r/blob/main/problem_sets/problem_set1_solutions.pdf)
+
+Session 2 
+
+[Slides Session 2](https://github.com/caseybreen/intro_r/blob/main/slides/intro_r_day2.pdf) \| [Problem Set 2](https://github.com/caseybreen/intro_r/blob/main/problem_sets/problem_set2.pdf)\| 
