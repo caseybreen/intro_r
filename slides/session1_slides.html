@@ -12,7 +12,7 @@
 
   <meta name="author" content="Casey Breen">
   <meta name="dcterms.date" content="2023-10-07">
-  <title>quarto-input7c42b806</title>
+  <title>quarto-inputc0a2c857</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -1037,17 +1037,17 @@ Casey Breen
 <span id="cb56-6"><a href="#cb56-6"></a><span class="do">## find the mean </span></span>
 <span id="cb56-7"><a href="#cb56-7"></a><span class="fu">mean</span>(random_draws)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] -0.07449346</code></pre>
+<pre><code>[1] -0.1557548</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1"></a><span class="do">## find the median</span></span>
 <span id="cb58-2"><a href="#cb58-2"></a><span class="fu">median</span>(random_draws)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] -0.02621645</code></pre>
+<pre><code>[1] -0.1254567</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1"></a><span class="do">## find the standard deviation </span></span>
 <span id="cb60-2"><a href="#cb60-2"></a><span class="fu">sd</span>(random_draws)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.8467606</code></pre>
+<pre><code>[1] 0.2971541</code></pre>
 </div>
 </div>
 </section>
@@ -1417,7 +1417,7 @@ Casey Breen
 <span id="cb99-6"><a href="#cb99-6"></a><span class="do">## look at 1st, 10th, and 100th element </span></span>
 <span id="cb99-7"><a href="#cb99-7"></a>sample_data_100[<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">10</span>, <span class="dv">100</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 9.659873 8.681962 9.365962</code></pre>
+<pre><code>[1] 11.702258  6.093671 13.561693</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb101"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb101-1"><a href="#cb101-1"></a><span class="co"># Calculate the mean of this sample</span></span>
 <span id="cb101-2"><a href="#cb101-2"></a>sample_mean_100 <span class="ot">&lt;-</span> <span class="fu">mean</span>(sample_data_100)</span>
@@ -1427,7 +1427,7 @@ Casey Breen
 <span id="cb101-6"><a href="#cb101-6"></a></span>
 <span id="cb101-7"><a href="#cb101-7"></a>difference_100</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.1899317</code></pre>
+<pre><code>[1] 0.0296185</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb103"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb103-1"><a href="#cb103-1"></a><span class="co"># Calculate the Z-score for the sample mean</span></span>
 <span id="cb103-2"><a href="#cb103-2"></a>sample_data_10000 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10000</span>, </span>
@@ -1442,7 +1442,7 @@ Casey Breen
 <span id="cb103-11"><a href="#cb103-11"></a></span>
 <span id="cb103-12"><a href="#cb103-12"></a>sample_data_10000</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.03256477</code></pre>
+<pre><code>[1] 0.008747669</code></pre>
 </div>
 </div>
 </section>
