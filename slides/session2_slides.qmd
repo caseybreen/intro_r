@@ -1,0 +1,626 @@
+---
+title: |
+    | Introduction to R
+    | Session 2
+subtitle: "Department of Sociology | University of Oxford"
+author: "Casey Breen"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+format:
+  revealjs:
+    slide-number: true
+    show-slide-number: all
+---
+
+## Intro to `R` -- Session 2
+
+```{r}
+library(here)
+library(tidyverse)
+
+censoc <- read_csv(here("data/censoc_numident_demo_v2.1.csv"))
+```
+
+-   Reminder: course materials available from:
+
+    -   [www.github.com/caseybreen/intro_r](www.github.com/caseybreen/intro_r)
+
+-   Questions on problem set 1?
+
+## Review of session 1
+
+-   What's the difference between `R` and `RStudio`?
+-   What's a `vector`? What's a `data.frame`?
+-   What does the `$` operator do? What does `data$column_b` do?
+-   What are two different data structures? What are three different data types?
+-   What does `%in%` operator do?
+-   What does the `!` operator do?
+
+## Session 2
+
+-   **Module 4**: Importing and exporting in data
+
+-   **Module 5**: Data manipulation (`dplyr`) and data visualization (`ggplot2`)
+
+-   **Module 6**: Best practices and resources for self-study
+
+# Module 4
+
+## Importing and exporting data
+
+Key learning objectives
+
+-   Common data formats
+
+-   Functions for importing / exporting data
+
+-   Types of file paths in `R`
+
+## Importing data {.smaller}
+
+-   Common formats for data
+
+    -   .csv, .xlsx, .txt, .dat (stata), etc.
+
+-   Key functions
+
+    -   `read_csv()` function from `tidyverse`: Read CSV files
+
+        -   Also built-in ("base") function: `read.csv()`
+
+    -   `read.table()`: Read text files
+
+    -   `readxl::read_excel()`: Read Excel files
+
+```{r}
+#| eval: false 
+#| echo: true 
+## read in CSV file 
+df <- read_csv("/path/to/your/data.csv") ## faster
+
+## read in stata file 
+library(haven)
+data <- read_dta("path/to/file.dta")
+```
+
+## File paths
+
+-   **Absolute Path**: Specifies the full URL or address to locate a file or directory. Starts with the root directory.
+
+    -   Windows: `"C:\Users\username\folder\file.csv"`
+
+    -   macOS/Linux: `"/home/username/folder/file.csv"`
+
+-   **Relative Path**: Specifies how to find the file or directory based on the current working directory.
+
+    -   `folder/file.csv`
+
+## Working directories {.smaller}
+
+-   The working directory is the folder where your R session or script looks for files to read, or where it saves files you write
+
+-   Commands like **`read_csv("file.csv")`** or **`write_csv(data, "file.csv")`** will read from or write to this directory by default
+
+-   Key syntax:
+
+    -   **`getwd()`** --- returns working directory
+
+    -   **`setwd("/path/to/folder")`** --- sets working directory
+
+```{r}
+#| echo: true
+getwd()
+```
+
+## Reading in .CSV files
+
+-   Recap: to read in .csv files use `read_csv()` function from `tidyverse`
+
+    -   This will read in the .csv file into memory as a `data frame`
+
+```{r}
+#| echo: true
+#| eval: false
+
+library(tidyverse)
+df <- read_csv("dataset.csv")
+```
+
+-   Write out a `data frame` to a .csv file using `write_csv()`:
+
+```{r}
+#| echo: true
+#| eval: false
+write_csv(df, "dataset_v2.csv") 
+```
+
+## Downloading data for exercises
+
+-   We will be using the censoc numident demo dataset
+
+-   Please download the .csv file from the course website (`intro_r/data`)
+
+-   Short url: <https://shorturl.at/egz69>
+
+## Live coding demo
+
+-   Downloading demo file from github
+
+<!-- -->
+
+-   Reading in a .csv file in `R` using `read_csv()`
+
+    -   Absolute and relative paths
+
+-   Using `tab` to auto-complete file paths
+
+-   Exploring a `data frame`: number of columns, rows, column names, etc.
+
+## In-class exercise 1
+
+1.  Load and install the `tidyverse` packages using the commands `install.packages()` and `library()`
+2.  Use the `read_csv()` function to read in the downloaded dataset and assign it to the object `censoc`
+3.  Use the `head` command to look at the first 5 rows
+4.  How many columns are in the dataset?
+5.  How many rows are in the dataset?
+6.  List the column names. What are a few research questions that could be addressed using this dataset?
+
+## Exercise 1 solutions {.smaller}
+
+1.  Load and install the `tidyverse` packages using the commands `install.packages()` and `library()`
+
+```{r}
+#| echo: true
+#| eval: false
+install.packages(tidyverse)
+library(tidyverse)
+```
+
+2.  Use the `read_csv()` function to read in the dataset and assign it to the object `censoc`
+
+```{r}
+#| echo: true
+#| eval: false
+censoc <- read_csv("censoc_numident_demo_codebook_v2.1.pdf")
+```
+
+3.  Use the `head()` command to look at the first 5 rows
+
+```{r}
+#| echo: true
+#| eval: false
+head(censoc)
+```
+
+4.  How many columns are in the dataset?
+
+```{r}
+#| echo: true
+ncol(censoc)
+```
+
+## Exercise 1 solutions (cont.) {.smaller}
+
+5.  How many rows are in the dataset?
+
+```{r}
+#| echo: true
+nrow(censoc)
+```
+
+6.  List the column names.
+
+```{r}
+#| echo: true
+colnames <- names(censoc)
+colnames[1:10]
+```
+
+# Module 5
+
+## Data manipulation and visualization
+
+Key learning objectives
+
+-   Overview of `tidyverse` suite of packages
+
+-   Fundamentals of data manipulation with `dplyr`
+
+-   Data visualization with `ggplot`
+
+## Tidyverse {.smaller}
+
+::: columns
+::: {.column width="50%"}
+-   Packages: Collection of R packages designed for data science.
+-   Data manipulation: Simplifies data cleaning and transformation with `dplyr`.
+-   Data Visualization: Enables advanced plotting with `ggplot2`.
+:::
+
+::: {.column width="50%"}
+```{r, echo=FALSE, fig.width=6, fig.height=10}
+knitr::include_graphics(here("slides/session2_slides_files/figs/tidyverse_fig.png"))
+```
+:::
+:::
+
+## Data Manipulation using `dplyr` {.smaller}
+
+`filter`: Select rows based on conditions.
+
+```{r}
+#| echo: true
+#| eval: false
+
+filtered_df <- filter(df, age > 21)
+```
+
+`select`: Choose specific columns
+
+```{r}
+#| echo: true
+#| eval: false
+
+filtered_df <- select(df)
+```
+
+`mutate`: Add or modify columns
+
+```{r}
+#| echo: true
+#| eval: false
+
+df <- mutate(df, age_next_year = age + 1)
+```
+
+`summarize` or `summarise`: Aggregate or summarize data based on some criteria
+
+```{r}
+#| echo: true
+#| eval: false
+
+filtered_df <- summarize(df, mean(age))
+```
+
+`group_by`: Group data by variables. Often used with `summarise()`.
+
+```{r}
+#| echo: true
+#| eval: false
+filtered_df <- df %>% 
+  group_by(gender) %>% 
+  summarize(mean(age))
+```
+
+## The Pipe Operator `%>%` (or `|>` ) in R
+
+-   Takes the output of one function and passes it as the first argument to another function
+
+    -   "And then do..."
+
+-   What's the below code doing?
+
+```{r}
+#| echo: true
+#| eval: false
+filtered_df <- df %>% 
+  group_by(gender) %>% 
+  summarize(mean(age))
+```
+
+# Recoding values in R
+
+-   Sometime you want to recode a variable to take different values (e.g., recoding exact income to binary high/low income variable)
+
+-   The **`case_when()`** function in `R` is part of the **`dplyr`** package and is used for creating new variables based on multiple conditions:
+
+```{r}
+#| echo: true
+#| eval: false 
+new_var <- case_when(
+  condition1 ~ value1,
+  condition2 ~ value2,
+  TRUE ~ value_otherwise
+)
+```
+
+## Live coding demo
+
+-   Filter data
+
+-   Selecting data
+
+-   Calculating summary statistics by group
+
+-   Creating and recoding variables
+
+## In-class exercise 2
+
+1.  Filter the `censoc` data.frame to include only women (`sex == 2`). Use the `filter` command.
+2.  Filter the `censoc` data.frame to include only people born between 1905 and 1920 using the `byear` variable.
+3.  Select the columns `histid`, `death_age`, `sex`, and `ownershp`
+4.  Calculate the average age of death for women (hint: refer to question 1)
+
+## Exercise 2 solutions {.smaller}
+
+1.  Filter the `censoc` data.frame to include only women (sex == 2). Use the `filter` command.
+
+```{r}
+#| echo: true
+#| eval: false
+
+censoc %>% 
+  filter(sex == 2)
+
+```
+
+2.  Filter the `censoc` data.frame to include only people born between 1905 and 1920 using the `byear` variable.
+
+```{r}
+#| echo: true
+#| eval: false
+
+## method 1 
+censoc %>% 
+  filter(byear %in% 1905:1920)
+
+## method 2 
+censoc %>% 
+  filter(byear >= 1905 & byear <= 1920)
+```
+
+## Exercise 2 solutions (cont.) {.smaller}
+
+3.  Select the columns `histid`, `death_age`, `sex`, and `ownershp`
+
+```{r}
+#| echo: true
+censoc_select <- censoc %>% 
+  select(histid, death_age, sex, ownershp) 
+
+head(censoc_select)
+```
+
+4.  Calculate the average age of death for women (hint: refer to question 1)
+
+```{r}
+#| echo: true
+censoc %>% 
+  filter(sex == 2) %>% 
+  summarize(mean_death_age_women = mean(death_age))
+```
+
+## Data visualization using ggplot
+
+-   `ggplot2` provides a powerful and flexible system for creating a variety of data visualizations
+
+-   `aes`: Defines what data to show
+
+-   `geoms`: Chooses the type of plot (e.g., histogram)
+
+```{r}
+#| echo: true
+#| eval: false
+
+ggplot(data = <DATA>) + 
+  <GEOM_FUNCTION>(mapping = aes(<MAPPINGS>))
+```
+
+## Types of plots
+
+-   `geom_point()`: Scatter plot
+-   `geom_bar()`: Bar chart
+-   `geom_histogram()`: Histogram
+-   And more ...
+
+```{r}
+#| echo: true
+#| eval: true
+#| 
+ggplot(data = censoc) + 
+  geom_histogram(aes(x = death_age)) 
+```
+
+## Live coding demo
+
+-   Create histogram using `ggplot`
+
+-   Demonstrate flexibility of `ggplot`
+
+    -   Themes
+    -   Axis labels, titles
+    -   Colors
+
+## In-class exercise 3 {.smaller}
+
+1.  Make a histogram of the variable `death_age`. When are most people dying?
+
+2.  Make a histogram of the variable `byear`. When are most people born?
+
+3.  Recode the variable `sex` from numeric values (1, 2) to take character values ("men" and "women"). Note that 1 = men, 2 = women.
+
+4.  Calculate the mean of of death for both men and women using `group_by()` and `summarize()`. Do men or women live longer?
+
+5.  Make a histogram of the variable `death_age` for both men and women. Use the `filter()` command.
+
+6.  Now try adding the following line to the histogram you made in question 1: `+ facet_wrap(~sex)`
+
+## Exercise 3 solutions {.smaller}
+
+1.  Make a histogram of the variable `death_age`. When are most people dying?
+
+```{r}
+#| echo: true
+#| eval: false
+ggplot(data = censoc) + 
+  geom_histogram(aes(x = death_age)) 
+```
+
+2.  Make a histogram of the variable `byear`. When are most people born?
+
+```{r}
+#| echo: true
+#| eval: false
+ggplot(data = censoc) + 
+  geom_histogram(aes(x = death_age)) 
+```
+
+## Exercise 3 solutions (cont.) {.smaller}
+
+3.  Recode the variable `sex` from numeric values (1, 2) to take character values ("men" and "women"). Note that 1 = men, 2 = women.
+
+```{r}
+## recode sex  
+censoc <- censoc %>% 
+  mutate(sex_recode = case_when(
+    sex == 1 ~ "men",
+    sex == 2 ~ "women"
+  ))
+
+## look at first few rows to check our recode worked 
+censoc %>% 
+  select(sex, sex_recode) %>% 
+  head()
+```
+
+## Exercise 3 solutions (cont.) {.smaller}
+
+4.  Calculate the mean of of death for both men and women using `group_by()` and `summarize()`. Do men or women live longer?
+
+```{r}
+#| echo: true
+#| eval: false 
+ggplot(data = censoc) + 
+  geom_histogram(aes(x = death_age)) 
+```
+
+5.  Make a histogram of the variable `death_age` for both men and women. Use the `filter()` command.
+
+```{r}
+#| echo: true
+#| eval: false 
+## filter 
+censoc_men <- censoc %>% filter(sex == 1)
+censoc_women <- censoc %>% filter(sex == 2)
+
+## histogram for men 
+ggplot(data = censoc_men) + 
+  geom_histogram(aes(x = death_age)) 
+
+## histogram for women 
+ggplot(data = censoc_women) + 
+  geom_histogram(aes(x = death_age)) 
+```
+
+## Exercise 3 solutions (cont.) {.smaller}
+
+6.  Now try adding the following line to the histogram you made in question 1: `+ facet_wrap(~sex)`
+
+```{r}
+#| echo: true
+#| eval: true
+ggplot(data = censoc) + 
+  geom_histogram(aes(x = death_age)) + 
+  facet_wrap(~sex)
+```
+
+# Module 6
+
+## Best practices and resources for self-study
+
+Key learning objectives
+
+-   Best practices for writing and documenting code
+
+-   Where to go when you're stuck
+
+-   Resources for learning more
+
+## Best practices (opinionated)
+
+-   **Style**: use descriptive names and "snake_case"
+-   **Documentation**: Start commenting your code early, it's a good habit for the future
+-   **Learn `tidyverse`**: It offers a more coherent syntax and is widely used in data science
+-   **Advanced topics**: R Projects, github integration, etc
+
+## When you're stuck
+
+-   Google
+
+    -   Lots of packages have documentation available online
+
+    -   Stack overflow -- excellent resource
+
+-   Use help syntax (e.g., `?dplyr`)
+
+-   GPT4 (decent, but be careful!)
+
+## Resources for learning more
+
+1.  R for data science (<https://r4ds.hadley.nz/>)
+2.  Data visualization: a practical introduction (<https://socviz.co/>)
+
+```{r, echo=FALSE, fig.width=6, fig.height=5}
+knitr::include_graphics(here("slides/session2_slides_files/figs/r_for_datascience.png"))
+```
+
+## In-class exercise 4  {.smaller}
+
+Do homeowners in the United States live longer than renters in the United States?
+
+1.  Using the `censoc` data.frame, create a new data.frame `censoc_homeownership` that filters out any "not available values" for the `ownershp` variable (values of ownershp = 0). Use the `filter` command.
+
+2.  In the `censoc_homeownership` data.frame, create a new variable `homeowner` using the `mutate` command and the `case_when` command. Assign this new variable `homeowner` a value of "own" if `ownershp == 1` and a value of "rent" if `ownershp == 2`. Note: we can check the values for this variable here: <https://usa.ipums.org/usa-action/variables/OWNERSHP#codes_section>
+
+3.  Make a histogram on the age of death for "homeowner" and "renter" groups using `ggplot.` Use the `facet_wrap(~homeowner)` --- use the `censoc_homeownership` data.frame
+
+4.  Calculate the average age of death for "homeowner" and "renter" groups. Which group lives longer, on average? Use the `group_by` and `summarize` commands. What are some possible explanations for homeowners living longer than renters in the US?
+
+## Exercise 4 solution {.smaller}
+
+Do homeowners in the United States live longer than renters in the United States?
+
+1.  Using the `censoc` data.frame, create a new data.frame `censoc_homeownership` that filters out any "not available values" for the `ownershp` variable (values of ownershp = 0). Use the `filter` command.
+
+```{r}
+censoc_homeownership <- censoc %>% 
+  filter(ownershp != 0)
+```
+
+2.  In the `censoc_homeownership` data.frame, create a new variable `homeowner` using the `mutate` command and the `case_when` command. Assign this new variable `homeowner` a value of "own" if `ownershp == 1` and a value of "rent" if `ownershp == 2`. Note: we can check the values for this variable here: <https://usa.ipums.org/usa-action/variables/OWNERSHP#codes_section>
+
+```{r}
+## create new homeowner variable
+censoc_homeownership <- censoc_homeownership %>% 
+  mutate(homeowner = case_when(
+    ownershp == 1 ~ "own",
+    ownershp == 2 ~ "rent"
+  ))
+```
+
+## Exercise 4 solution (cont.) {.smaller}
+
+3.  Make a histogram on the age of death for "homeowner" and "renter" groups using `ggplot.` Use the `facet_wrap(~homeowner)` --- and make sure you're using your `censoc_homeownership` data.frame
+
+```{r}
+ggplot(data = censoc_homeownership) + 
+  geom_histogram(aes(x = death_age)) + 
+  facet_wrap(~homeowner)
+```
+
+4.  Calculate the average age of death for "homeowner" and "renter" groups. Which group lives longer, on average? Use the `group_by` and `summarize` commands. What are some possible explanations for homeowners living longer than renters in the US?
+
+```{r}
+censoc_homeownership %>% 
+  group_by(homeowner) %>% 
+  summarize(mean(death_age))
+```
+
+## Thank you
+
+-   Course materials available from:
+
+    -   [www.github.com/caseybreen/intro_r](www.github.com/caseybreen/intro_r)
+
+-   Please independently complete all exercises in problem set 2 (and review solutions)
+
+-   Questions: [casey.breen\@sociology.ox.ac.uk](casey.breen@sociology.ox.ac.uk)
