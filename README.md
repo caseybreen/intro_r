@@ -4,11 +4,11 @@ This repository contains the materials for a two-session "Introduction to R" cou
 
 ## Materials
 
-Session 1
+**Session 1**
 
 [Slides Session 1](https://github.com/caseybreen/intro_r/blob/main/slides/session1_slides.pdf) \| [Problem Set 1](https://github.com/caseybreen/intro_r/blob/main/problem_sets/problem_set1.pdf) \| [Problem Set 1 Solutions](https://github.com/caseybreen/intro_r/blob/main/problem_sets/problem_set1_solutions.pdf)
 
-Session 2
+**Session 2**
 
 [Slides Session 2](https://github.com/caseybreen/intro_r/blob/main/slides/session2_slides.pdf) \| [Problem Set 2](https://github.com/caseybreen/intro_r/blob/main/problem_sets/problem_set2.pdf) \| [Problem Set 2 Solutions](https://github.com/caseybreen/intro_r/blob/main/problem_sets/problem_set2_solutions.pdf)
 
