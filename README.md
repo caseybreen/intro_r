@@ -13,4 +13,8 @@ This repository contains the materials for a two-session "Introduction to R" cou
 [Slides Session 2](https://github.com/caseybreen/intro_r/blob/main/slides/session2_slides.pdf) \| [Problem Set 2](https://github.com/caseybreen/intro_r/blob/main/problem_sets/problem_set2.pdf) \| [Problem Set 2 Solutions](https://github.com/caseybreen/intro_r/blob/main/problem_sets/problem_set2_solutions.pdf)
 
 
-**Note**: Problem set 1 consists of all in-class exercises from session 1; problem set 2 consists of all in-class exercises from session 2. Please complete these independently and review the available solutions.
+**Note**: Problem Set 1 includes all in-class exercises from Session 1, and Problem Set 2 includes all in-class exercises from Session 2. Complete these exercises independently and consult the provided solutions for review.
+
+
+
+
