@@ -242,14 +242,12 @@ knitr::include_graphics(here("slides/session1_slides_files/figs/lightbulb_analog
 
 -   Practice running code below
 
-    ```{r}
-    #| echo: true
-    3+3 
+```{r}
+#| echo: true
+3+3
 
-    14/2
-
-    print("Thank you for attending the intro to R session !")
-    ```
+print("Thank you for attending the intro to R session!")
+```
 
 # Module 2
 
@@ -606,7 +604,7 @@ Assignment operator (creates **`<-`**)
 
 -   Your turn next...
 
-## In-class exercise 1 
+## In-class exercise 1
 
 1.  Assign `x` and `y` to take values 3 and 4.
 2.  Assign `z` as the product of `x` and `y`.
@@ -657,7 +655,7 @@ three_squared > 10
 !three_squared > 10
 ```
 
-## In-class exercise 2 
+## In-class exercise 2
 
 1.  Generate vectors containing the numbers 100, 101, 102, 103, 104, and 105 using 3 different methods (e.g., **`c()`**, **`seq()`**, **`:`**). In what scenarios might each method be most convenient?
 2.  Generate a sequences of all **even** numbers between 0 and 100. Use the `seq()` function.
@@ -904,4 +902,4 @@ sample_data_10000
 
 -   Please independently complete all exercises in problem set 2 (and review solutions)
 
--   Questions: [casey.breen\@sociology.ox.ac.uk](casey.breen\@sociology.ox.ac.uk)
+-   Questions: [casey.breen\@sociology.ox.ac.uk](casey.breen@sociology.ox.ac.uk)
