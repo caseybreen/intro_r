@@ -7,13 +7,11 @@ format: pdf
 
 # Problem Set 1
 
-This problem set includes all of the in-class group exercises from session 1. Please try completing these exercises independently.
-
-Complete the following questions in R within a Quarto document.
+This document contans solutions to all exercises from problem set 1. To reinforce your understanding, please try your best to complete these exercises independently before referring to the solutions.
 
 ## Exercise 1: Assignment, Arithmetic, Logical Expressions
 
-1.1  Assign `x` and `y` to take values 3 and 4.
+1.1 Assign `x` and `y` to take values 3 and 4.
 
 ```{r}
 #| echo: true
@@ -77,7 +75,7 @@ vector_seq <- seq(100, 105, by = 1)
 vector_colon <- c(100:105) 
 ```
 
-***Answer**: The first method, generating a vector using `c()` is convenient when you are only including a few elements in your sequence or there is no clear pattern. The second method, using `seq`, is convenient when the numbers follow a pattern but not necessarily just increment by. The third method is most convenient to generate numbers in a sequence increasing or decreasing by exactly 1.*
+***Answer**: The first method, generating a vector using `c()` is convenient when you are only including a few elements in your sequence or there is no clear pattern. The second method, using `seq`, is convenient when the numbers follow a pattern but not necessarily just increment by 1. The third method is most convenient to generate numbers in a sequence increasing or decreasing by exactly 1.*
 
 2.2 Generate a sequence of all even numbers between 0 and 100. Use the `seq()` function.
 
@@ -86,9 +84,6 @@ vector_colon <- c(100:105)
 # Generate a sequence of all even numbers between 0 and 100
 even_seq <- seq(0, 100, by = 2)
 even_seq
-# Create a descending sequence of numbers from 100 to 1
-desc_seq <- seq(100, 1, by = -1)
-desc_seq
 ```
 
 2.3 Create a descending sequence from 100 to 1 and assign it to a variable. Use the `seq()` function.
@@ -119,7 +114,7 @@ sim_data <- rnorm(n = 100,
 sim_data[c(1, 10, 100)]
 ```
 
-3.3 Calculate the mean of this `vector`. How does this `sample` mean relate to the `population` mean (hint: population mean = 10) of the distribution?
+3.3 Calculate the mean of this `vector`. How does this *sample* mean relate to the theoretical *population* mean (hint: population mean = 10) of the distribution?
 
 ```{r}
 #| echo: true
@@ -129,12 +124,12 @@ mean(sim_data)
 
 ***Answer**: This is relatively close to, but not exactly, the population mean. This is because we are taking a random sample from the distribution.*
 
-3.4 Calculate the difference between the `sample` mean and the `population` mean. Discuss the reason for the discrepancy.
+3.4 Calculate the difference between the *sample* mean and the *population* mean. Discuss the reason for the discrepancy.
 
 ```{r}
 #| echo: true
 #| 
-diff_100 <- mean(sim_data) - 10
+mean(sim_data) - 10
 
 ```
 

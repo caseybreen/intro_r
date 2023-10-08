@@ -7,7 +7,7 @@ format: pdf
 
 # Problem Set 1
 
-Complete the following questions in R within a Quarto document.
+This problem set contains exercises from Session 1 that were originally done in small-groups. To reinforce your understanding, please complete these exercises independently. Answer the following questions using `R` in a Quarto document.
 
 ## Exercise 1: Assignment, Arithmetic, Logical Expressions
 
@@ -35,8 +35,8 @@ Complete the following questions in R within a Quarto document.
 
 3.2 What are the 1st, 10th, and 100th elements of this `vector`?
 
-3.3 Calculate the mean of this `vector`. How does this `sample` mean relate to the `population` mean (hint: population mean = 10) of the distribution?
+3.3 Calculate the mean of this `vector`. How does this *sample* mean relate to the theoretical *population* mean (hint: population mean = 10) of the distribution?
 
-3.4 Calculate the difference between the `sample` mean and the `population` mean. Discuss the reason for the discrepancy.
+3.4 Calculate the difference between the *sample* mean and the *population* mean. Discuss the reason for the discrepancy.
 
 3.5 Repeat steps 1 and 3 with a sample size of 10,000. Did the difference between the sample mean and the population mean decrease? Why?

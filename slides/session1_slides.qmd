@@ -68,13 +68,13 @@ library(here)
 
 ## Introduction to `R`, `RStudio`, and code formats {.smaller}
 
-**Key topics**:
+**Learning objectives**:
 
 -   Installing `R` and `RStudio`
 
 -   Why `R`?
 
--   `R` Scripts, `R` notebooks, Quarto
+-   Understanding `R` Scripts, `R` notebooks, Quarto documents
 
 ## `R` and `RStudio`
 
@@ -107,17 +107,16 @@ knitr::include_graphics(here("slides/session1_slides_files/figs/mobile_usage_pre
 library(tidyverse)
 ```
 
-```{r, fig.width=4, fig.height = 4, fig.align='center'}
+```{r, fig.width=3, fig.height = 3, fig.align='center'}
 #| echo: true
 # Generate random data for x
-x <- rnorm(n = 10000)
-y <- 0.8 * x + rnorm(10000, 0, sqrt(1 - 0.8^2))
+x <- rnorm(n = 3000)
+y <- 0.8 * x + rnorm(3000, 0, sqrt(1 - 0.8^2))
 
 # Create data.frame
-
 data_df <- data.frame(x = x, y = y)
 
-# Generate df 
+# Generate visualization 
 data_df %>% 
   ggplot(aes(x = x, y = y)) + 
   geom_point(alpha = 0.1) + 
@@ -132,21 +131,21 @@ knitr::include_graphics(here("slides/session1_slides_files/figs/rstudio_layout.p
 
 ## Why `RStudio`?
 
--   All-in-One IDE: streamlines coding, data visualization, and workflow
+-   **All-in-one development environment**: streamlines coding, data visualization, and workflow
 
 -   **Extensible**: supports R --- but also Python, SQL, and Git
 
--   **Rich Community**: eases learning and problem-solving
+-   **Rich community**: eases learning and problem-solving
 
-## **`R` Scripts vs. `R` Notebooks**
+## Code formats: `R` Scripts vs. `R` Notebooks
 
--   **R Scripts**
+-   **`R` Scripts**
 
     -   Simple: just code
 
     -   Best for simple tasks (and multi-script pipelines)
 
--   **R-Notebooks (Quarto, R Notebook)**
+-   **`R` Notebooks (Quarto, `R` Notebook)**
 
     -   Integrated: Mix of code, text, and outputs for easy documentation
 
@@ -156,15 +155,15 @@ knitr::include_graphics(here("slides/session1_slides_files/figs/rstudio_layout.p
 
 ::: columns
 ::: {.column width="40%"}
--   "Notebook"-Style: supports interactive code and text chunks.
+-   "Notebook" Style: supports interactive code and text
 
-    -   Code Chunks: segments for code execution
+    -   Code cells: segments for code execution
 
-    -   Text Chunks: annotations or explanations in Markdown format.
+    -   Text chunks: annotations or explanations in Markdown format.
 
 <!-- -->
 
--   Inline Output: figures and code output display directly below the corresponding code chunk
+-   Inline output: figures and code output display directly below the corresponding code cell
 :::
 
 ::: {.column width="10%"}
@@ -213,21 +212,21 @@ knitr::include_graphics(here("slides/session1_slides_files/figs/lightbulb_analog
 
 ## Running code {.smaller}
 
--   Run code in a quarto document (or script, or R notebook)
+-   Run all code in a quarto document (or `R` script, or `R` notebook)
 
     -   Exception: install packages, quick checks in console
 
--   To run a single line of code
+-   To run a single line of code in a code cell
 
     -   Cursor over line, **`Ctrl + Enter`** (Windows/Linux) or **`Cmd + Enter`** (Mac).
 
--   To run a full code chunk (or script)
+-   To run a full code cell (or script)
 
     -   **`Ctrl + Shift + Enter`** (Windows/Linux) or **`Cmd + Shift + Enter`** (Mac).
 
 ## Live coding demo {.smaller}
 
--   Demo of creating a new quarto document and running code in a code chunk
+-   Demo of creating a new Quarto document and running code in a code cell
 -   Your turn next...
 
 ## In-class exercise 0
@@ -236,7 +235,7 @@ knitr::include_graphics(here("slides/session1_slides_files/figs/lightbulb_analog
 
     -   `File -> New File -> Quarto Document -> Create`
 
--   Create a new code chunk
+-   Create a new code cell
 
     -   `Insert -> Executable cell -> R`
 
@@ -253,13 +252,13 @@ print("Thank you for attending the intro to R session!")
 
 ## `R` programming fundamentals
 
-**Key topics**:
+**Learning objectives**:
 
--   Objects and functions
+-   Comprehend R objects and functions
 
--   Basic syntax: comments, assignment, operators
+-   Master basic syntax, including comments, assignment, and operators
 
--   Data structures and types
+-   Understand data structures and types in R
 
 ## Objects {.smaller}
 
@@ -324,11 +323,19 @@ my_function(2, 3)
 
 -   Functions from packages
 
+```{r}
+#| echo: true
+# User-Defined Functions: Custom functions
+
+library(here) ## library package here
+here() ## run custom "here" function to print out working directory 
+```
+
 ## Comments
 
 -   Use **`#`** to start a single-line comment
 
--   Comments are an important tool for documentation
+-   Comments are an important way to document code
 
 ```{r}
 #| echo: true
@@ -338,6 +345,8 @@ x <- 7 # assigns 1 to x
 
 ## the line below won't assign 12 to x because it's commented out 
 # x <- 12
+
+x
 ```
 
 ## Assignment operators
@@ -391,8 +400,8 @@ y <- x
 #| echo: true
 
 ## exponents 
-10^2 
-10 ** 2 
+10^2 ## or 10 ** 2 
+
 ```
 
 ## Comparison and logical operators {.smaller}
@@ -477,7 +486,7 @@ example_df ## prints out df_example
 # knitr::kable(example_df)
 ```
 
-## Data types
+## Data types {.smaller}
 
 -   Each `vector` or `data frame` column can only contain one data type:
 
@@ -576,13 +585,13 @@ sd(random_draws)
 
 ## Keyboard shortcuts {.smaller}
 
-Insert new code chunk
+Insert new code cell
 
 -   macOS: `Cmd` + `Option` + `I`
 
 -   Windows/Linux: `Ctrl` + `Alt` + `I`
 
-Run full code chunk or script
+Run full code cell or script
 
 -   macOS: `Cmd` + `Shift` + `Enter`
 
@@ -696,15 +705,15 @@ desc_seq <- seq(100, 1, by = -1)
 
 # Module 3
 
-## Working with data
+## Working with `vectors` and `data frames`
 
 Learning objectives
 
--   Select elements from `vectors` and `data frames`
+-   Select elements from `vectors` and columns from `data frames`
 
 -   Subset `data frames`
 
--   Investigate characteristics of a data.frame
+-   Investigate characteristics of `data frames`
 
 ## Indexing vectors
 
@@ -858,7 +867,7 @@ names(test_scores)
 
 4.  Calculate the difference between the sample mean and the population mean. Discuss the reason for the discrepancy.
 
-5.  Repeat steps 1 and 3 with a sample of 10,000. Did the difference between the sample mean and the population mean decrease? Why?
+5.  Repeat steps 1-4 with a new sample size of 10,000. Did the difference between the sample mean and the population mean decrease? Why?
 
 ## Exercise 3 solutions {.smaller}
 
