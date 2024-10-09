@@ -909,6 +909,6 @@ sample_data_10000
 
 -   Thanks for your attendance and participation
 
--   Please independently complete all exercises in problem set 2 (and review solutions)
+-   Please independently complete all exercises in problem set 1 (and review solutions)
 
 -   Questions: [casey.breen\@sociology.ox.ac.uk](casey.breen@sociology.ox.ac.uk)
