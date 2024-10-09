@@ -1,0 +1,91 @@
+---
+title: |
+    | Workflow
+    | Session 1
+subtitle: "Department of Sociology | University of Oxford"
+author: "Casey Breen"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+format:
+  revealjs:
+    slide-number: true
+    show-slide-number: all
+---
+
+## "Workflow for Sociologists"
+
+```{r}
+## library packages - this will be hidden 
+library(tidyverse)
+library(here)
+```
+
+-   
+
+-   Course website:
+
+    -   [www.github.com/caseybreen/intro_r](www.github.com/caseybreen/intro_r)
+    -   Slides, exercises, and solutions
+
+## Course goals
+
+-   Overview: why `R` is a powerful tool for social science research
+
+. . .
+
+-   Install `R` and `RStudio`
+
+. . .
+
+-   Introduction to `R` syntax, data types, and data structures
+
+. . .
+
+-   Basic understanding of data manipulation and visualization
+
+## Course agenda {.smaller}
+
+-   Overview of GitHub
+
+-   Overview of Zotero
+
+-   Overview of Overleaf + LaTeX
+
+## GitHub Overview
+
+-   Cloud-based code hosting service
+
+-   Version control using Git
+
+-   Collaborative platform for code
+
+-   Issue tracking and project management
+
+## GitHub - Why you should use it
+
+-   Version control is helpful for making sure you don't lose code
+
+-   New laptop? No problem
+
+-   Easy to put together replication packages
+
+## GitHub Repository
+
+-   Code organized into a repository
+
+-   Repository can have have different folders
+
+## GitHub Workflow
+
+-   Local repository
+
+-   Remote repository
+
+-   Some commands for moving between local and remote repository
+
+## Questions?
+
+-   Thanks for your attendance and participation
+
+-   Please independently complete all exercises in problem set 2 (and review solutions)
+
+-   Questions: [casey.breen\@sociology.ox.ac.uk](casey.breen@sociology.ox.ac.uk)

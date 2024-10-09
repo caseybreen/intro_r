@@ -8,11 +8,11 @@
 <link href="session2_slides_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="session2_slides_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="session2_slides_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.433">
+  <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Casey Breen">
-  <meta name="dcterms.date" content="2023-10-08">
-  <title>quarto-input7568358d</title>
+  <meta name="dcterms.date" content="2024-10-09">
+  <title>quarto-inputf94b4c8e2ba8b7ca</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -32,7 +32,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -43,7 +43,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -71,7 +71,7 @@
     code span.at { color: #657422; } /* Attribute */
     code span.bn { color: #ad0000; } /* BaseN */
     code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
     code span.ch { color: #20794d; } /* Char */
     code span.cn { color: #8f5902; } /* Constant */
     code span.co { color: #5e5e5e; } /* Comment */
@@ -85,7 +85,7 @@
     code span.fu { color: #4758ab; } /* Function */
     code span.im { color: #00769e; } /* Import */
     code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; } /* Keyword */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
     code span.op { color: #5e5e5e; } /* Operator */
     code span.ot { color: #003b4f; } /* Other */
     code span.pp { color: #ad0000; } /* Preprocessor */
@@ -222,7 +222,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -391,8 +392,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title"><p>Introduction to R<br>
-Session 2</p></h1>
+  <h1 class="title"><div class="line-block">Introduction to R<br>
+Session 2</div></h1>
   <p class="subtitle">Department of Sociology | University of Oxford</p>
 
 <div class="quarto-title-authors">
@@ -403,7 +404,7 @@ Casey Breen
 </div>
 </div>
 
-  <p class="date">2023-10-08</p>
+  <p class="date">2024-10-09</p>
 </section>
 <section id="intro-to-r-session-2" class="slide level2">
 <h2>Intro to <code>R</code> – Session 2</h2>
@@ -466,12 +467,12 @@ Casey Breen
 </ul></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="do">## read in CSV file </span></span>
-<span id="cb1-2"><a href="#cb1-2"></a>df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"/path/to/your/data.csv"</span>) <span class="do">## faster</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a></span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="do">## read in stata file </span></span>
-<span id="cb1-5"><a href="#cb1-5"></a><span class="fu">library</span>(haven)</span>
-<span id="cb1-6"><a href="#cb1-6"></a>data <span class="ot">&lt;-</span> <span class="fu">read_dta</span>(<span class="st">"path/to/file.dta"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="do">## read in CSV file </span></span>
+<span id="cb1-2"><a href=""></a>df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"/path/to/your/data.csv"</span>) <span class="do">## faster</span></span>
+<span id="cb1-3"><a href=""></a></span>
+<span id="cb1-4"><a href=""></a><span class="do">## read in stata file </span></span>
+<span id="cb1-5"><a href=""></a><span class="fu">library</span>(haven)</span>
+<span id="cb1-6"><a href=""></a>data <span class="ot">&lt;-</span> <span class="fu">read_dta</span>(<span class="st">"path/to/file.dta"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="file-paths" class="slide level2">
@@ -500,7 +501,7 @@ Casey Breen
 </ul></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">getwd</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a><span class="fu">getwd</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "/Users/caseybreen/workspace/teaching/intro_r/slides"</code></pre>
 </div>
@@ -515,14 +516,14 @@ Casey Breen
 </ul></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb4-2"><a href="#cb4-2"></a>df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"dataset.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href=""></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb4-2"><a href=""></a>df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"dataset.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>Write out a <code>data frame</code> to a .csv file using <code>write_csv()</code>:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">write_csv</span>(df, <span class="st">"dataset_v2.csv"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a><span class="fu">write_csv</span>(df, <span class="st">"dataset_v2.csv"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="downloading-data-for-exercises" class="slide level2">
@@ -562,26 +563,26 @@ Casey Breen
 <li>Load and install the <code>tidyverse</code> packages using the commands <code>install.packages()</code> and <code>library()</code></li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">install.packages</span>(tidyverse) <span class="do">## only have yo do this once </span></span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href=""></a><span class="fu">install.packages</span>(tidyverse) <span class="do">## only have yo do this once </span></span>
+<span id="cb6-2"><a href=""></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="2" type="1">
 <li>Use the <code>read_csv()</code> function to read in the dataset and assign it to the object <code>censoc</code></li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>censoc <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"censoc_numident_demo_v2.1.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a>censoc <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"censoc_numident_demo_v2.1.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="3" type="1">
 <li>Use the <code>head()</code> command to look at the first 5 rows</li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">head</span>(censoc)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href=""></a><span class="fu">head</span>(censoc)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="4" type="1">
 <li>How many columns are in the dataset?</li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">ncol</span>(censoc)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href=""></a><span class="fu">ncol</span>(censoc)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 39</code></pre>
 </div>
@@ -593,7 +594,7 @@ Casey Breen
 <li>How many rows are in the dataset?</li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">nrow</span>(censoc)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href=""></a><span class="fu">nrow</span>(censoc)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 85865</code></pre>
 </div>
@@ -602,8 +603,8 @@ Casey Breen
 <li>List the column names.</li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>colnames <span class="ot">&lt;-</span> <span class="fu">names</span>(censoc)</span>
-<span id="cb13-2"><a href="#cb13-2"></a><span class="fu">head</span>(colnames)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href=""></a>colnames <span class="ot">&lt;-</span> <span class="fu">names</span>(censoc)</span>
+<span id="cb13-2"><a href=""></a><span class="fu">head</span>(colnames)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "histid"    "byear"     "bmonth"    "dyear"     "dmonth"    "death_age"</code></pre>
 </div>
@@ -635,35 +636,38 @@ Casey Breen
 </div><div class="column" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
+<div>
+<figure>
 <p><img data-src="session2_slides_files/figs/tidyverse_fig.png" width="458"></p>
+</figure>
 </div>
 </div>
 </div>
-</div>
+</div></div>
 </section>
 <section id="data-manipulation-using-dplyr" class="slide level2 smaller">
 <h2>Data Manipulation using <code>dplyr</code></h2>
 <p><code>filter</code>: Select rows based on conditions.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>filtered_df <span class="ot">&lt;-</span> <span class="fu">filter</span>(df, age <span class="sc">&gt;</span> <span class="dv">21</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href=""></a>filtered_df <span class="ot">&lt;-</span> <span class="fu">filter</span>(df, age <span class="sc">&gt;</span> <span class="dv">21</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><code>select</code>: Choose specific columns</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>filtered_df <span class="ot">&lt;-</span> <span class="fu">select</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href=""></a>filtered_df <span class="ot">&lt;-</span> <span class="fu">select</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><code>mutate</code>: Add or modify columns</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>df <span class="ot">&lt;-</span> <span class="fu">mutate</span>(df, <span class="at">age_next_year =</span> age <span class="sc">+</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href=""></a>df <span class="ot">&lt;-</span> <span class="fu">mutate</span>(df, <span class="at">age_next_year =</span> age <span class="sc">+</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><code>summarize</code> or <code>summarise</code>: Aggregate or summarize data based on some criteria</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>filtered_df <span class="ot">&lt;-</span> <span class="fu">summarize</span>(df, <span class="fu">mean</span>(age))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href=""></a>filtered_df <span class="ot">&lt;-</span> <span class="fu">summarize</span>(df, <span class="fu">mean</span>(age))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><code>group_by</code>: Group data by variables. Often used with <code>summarise()</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>filtered_df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> </span>
-<span id="cb19-2"><a href="#cb19-2"></a>  <span class="fu">group_by</span>(gender) <span class="sc">%&gt;%</span> </span>
-<span id="cb19-3"><a href="#cb19-3"></a>  <span class="fu">summarize</span>(<span class="fu">mean</span>(age))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href=""></a>filtered_df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> </span>
+<span id="cb19-2"><a href=""></a>  <span class="fu">group_by</span>(gender) <span class="sc">%&gt;%</span> </span>
+<span id="cb19-3"><a href=""></a>  <span class="fu">summarize</span>(<span class="fu">mean</span>(age))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="the-pipe-operator-or-in-r" class="slide level2">
@@ -676,9 +680,9 @@ Casey Breen
 <li><p>What’s the below code doing?</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a>filtered_df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> </span>
-<span id="cb20-2"><a href="#cb20-2"></a>  <span class="fu">group_by</span>(gender) <span class="sc">%&gt;%</span> </span>
-<span id="cb20-3"><a href="#cb20-3"></a>  <span class="fu">summarize</span>(<span class="fu">mean</span>(age))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href=""></a>filtered_df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> </span>
+<span id="cb20-2"><a href=""></a>  <span class="fu">group_by</span>(gender) <span class="sc">%&gt;%</span> </span>
+<span id="cb20-3"><a href=""></a>  <span class="fu">summarize</span>(<span class="fu">mean</span>(age))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section></section>
 <section>
@@ -689,11 +693,11 @@ Casey Breen
 <li><p>The <code>case_when()</code> function in <code>R</code> is part of the <code>dplyr</code> package and is used for creating new variables based on multiple conditions:</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a>new_var <span class="ot">&lt;-</span> <span class="fu">case_when</span>(</span>
-<span id="cb21-2"><a href="#cb21-2"></a>  condition1 <span class="sc">~</span> value1,</span>
-<span id="cb21-3"><a href="#cb21-3"></a>  condition2 <span class="sc">~</span> value2,</span>
-<span id="cb21-4"><a href="#cb21-4"></a>  <span class="cn">TRUE</span> <span class="sc">~</span> value_otherwise</span>
-<span id="cb21-5"><a href="#cb21-5"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href=""></a>new_var <span class="ot">&lt;-</span> <span class="fu">case_when</span>(</span>
+<span id="cb21-2"><a href=""></a>  condition1 <span class="sc">~</span> value1,</span>
+<span id="cb21-3"><a href=""></a>  condition2 <span class="sc">~</span> value2,</span>
+<span id="cb21-4"><a href=""></a>  <span class="cn">TRUE</span> <span class="sc">~</span> value_otherwise</span>
+<span id="cb21-5"><a href=""></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="live-coding-demo-1" class="slide level2">
@@ -720,21 +724,21 @@ Casey Breen
 <li>Filter the <code>censoc</code> data.frame to include only women (sex == 2). Use the <code>filter</code> command.</li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="do">## filter to only include women </span></span>
-<span id="cb22-2"><a href="#cb22-2"></a>censoc <span class="sc">%&gt;%</span> </span>
-<span id="cb22-3"><a href="#cb22-3"></a>  <span class="fu">filter</span>(sex <span class="sc">==</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href=""></a><span class="do">## filter to only include women </span></span>
+<span id="cb22-2"><a href=""></a>censoc <span class="sc">%&gt;%</span> </span>
+<span id="cb22-3"><a href=""></a>  <span class="fu">filter</span>(sex <span class="sc">==</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="2" type="1">
 <li>Filter the <code>censoc</code> data.frame to include only people born between 1905 and 1920 using the <code>byear</code> variable.</li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="do">## method 1 </span></span>
-<span id="cb23-2"><a href="#cb23-2"></a>censoc <span class="sc">%&gt;%</span> </span>
-<span id="cb23-3"><a href="#cb23-3"></a>  <span class="fu">filter</span>(byear <span class="sc">%in%</span> <span class="dv">1905</span><span class="sc">:</span><span class="dv">1920</span>)</span>
-<span id="cb23-4"><a href="#cb23-4"></a></span>
-<span id="cb23-5"><a href="#cb23-5"></a><span class="do">## method 2 </span></span>
-<span id="cb23-6"><a href="#cb23-6"></a>censoc <span class="sc">%&gt;%</span> </span>
-<span id="cb23-7"><a href="#cb23-7"></a>  <span class="fu">filter</span>(byear <span class="sc">&gt;=</span> <span class="dv">1905</span> <span class="sc">&amp;</span> byear <span class="sc">&lt;=</span> <span class="dv">1920</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href=""></a><span class="do">## method 1 </span></span>
+<span id="cb23-2"><a href=""></a>censoc <span class="sc">%&gt;%</span> </span>
+<span id="cb23-3"><a href=""></a>  <span class="fu">filter</span>(byear <span class="sc">%in%</span> <span class="dv">1905</span><span class="sc">:</span><span class="dv">1920</span>)</span>
+<span id="cb23-4"><a href=""></a></span>
+<span id="cb23-5"><a href=""></a><span class="do">## method 2 </span></span>
+<span id="cb23-6"><a href=""></a>censoc <span class="sc">%&gt;%</span> </span>
+<span id="cb23-7"><a href=""></a>  <span class="fu">filter</span>(byear <span class="sc">&gt;=</span> <span class="dv">1905</span> <span class="sc">&amp;</span> byear <span class="sc">&lt;=</span> <span class="dv">1920</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="exercise-2-solutions-cont." class="slide level2 smaller">
@@ -743,10 +747,10 @@ Casey Breen
 <li>Select the columns <code>histid</code>, <code>death_age</code>, <code>sex</code>, and <code>ownershp</code></li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a>censoc_select <span class="ot">&lt;-</span> censoc <span class="sc">%&gt;%</span> </span>
-<span id="cb24-2"><a href="#cb24-2"></a>  <span class="fu">select</span>(histid, death_age, sex, ownershp) </span>
-<span id="cb24-3"><a href="#cb24-3"></a></span>
-<span id="cb24-4"><a href="#cb24-4"></a><span class="fu">head</span>(censoc_select)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href=""></a>censoc_select <span class="ot">&lt;-</span> censoc <span class="sc">%&gt;%</span> </span>
+<span id="cb24-2"><a href=""></a>  <span class="fu">select</span>(histid, death_age, sex, ownershp) </span>
+<span id="cb24-3"><a href=""></a></span>
+<span id="cb24-4"><a href=""></a><span class="fu">head</span>(censoc_select)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 4
   histid                               death_age   sex ownershp
@@ -763,9 +767,9 @@ Casey Breen
 <li>Calculate the average age of death for women (hint: refer to question 1)</li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a>censoc <span class="sc">%&gt;%</span> </span>
-<span id="cb26-2"><a href="#cb26-2"></a>  <span class="fu">filter</span>(sex <span class="sc">==</span> <span class="dv">2</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb26-3"><a href="#cb26-3"></a>  <span class="fu">summarize</span>(<span class="at">mean_death_age_women =</span> <span class="fu">mean</span>(death_age))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href=""></a>censoc <span class="sc">%&gt;%</span> </span>
+<span id="cb26-2"><a href=""></a>  <span class="fu">filter</span>(sex <span class="sc">==</span> <span class="dv">2</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb26-3"><a href=""></a>  <span class="fu">summarize</span>(<span class="at">mean_death_age_women =</span> <span class="fu">mean</span>(death_age))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
   mean_death_age_women
@@ -783,8 +787,8 @@ Casey Breen
 <li><p><code>geoms</code>: Chooses the type of plot (e.g., histogram)</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> <span class="sc">&lt;</span>DATA<span class="sc">&gt;</span>) <span class="sc">+</span> </span>
-<span id="cb28-2"><a href="#cb28-2"></a>  <span class="er">&lt;</span>GEOM_FUNCTION<span class="sc">&gt;</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="sc">&lt;</span>MAPPINGS<span class="sc">&gt;</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> <span class="sc">&lt;</span>DATA<span class="sc">&gt;</span>) <span class="sc">+</span> </span>
+<span id="cb28-2"><a href=""></a>  <span class="er">&lt;</span>GEOM_FUNCTION<span class="sc">&gt;</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="sc">&lt;</span>MAPPINGS<span class="sc">&gt;</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="types-of-plots" class="slide level2">
@@ -801,8 +805,8 @@ Casey Breen
 <li>Histogram of age of death in censoc dataset</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> censoc) <span class="sc">+</span> </span>
-<span id="cb29-2"><a href="#cb29-2"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> death_age)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> censoc) <span class="sc">+</span> </span>
+<span id="cb29-2"><a href=""></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> death_age)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="session2_slides_files/figure-revealjs/unnamed-chunk-25-1.png" width="960" class="r-stretch"></section>
@@ -812,9 +816,9 @@ Casey Breen
 <li><code>+ theme(&lt;theme_choice&gt;)</code> will add on a theme</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> censoc) <span class="sc">+</span> </span>
-<span id="cb30-2"><a href="#cb30-2"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> death_age)) <span class="sc">+</span> </span>
-<span id="cb30-3"><a href="#cb30-3"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">15</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> censoc) <span class="sc">+</span> </span>
+<span id="cb30-2"><a href=""></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> death_age)) <span class="sc">+</span> </span>
+<span id="cb30-3"><a href=""></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">15</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="session2_slides_files/figure-revealjs/unnamed-chunk-26-1.png" width="960" class="r-stretch"></section>
@@ -824,9 +828,9 @@ Casey Breen
 <li><code>color</code> and <code>fill</code> will can change color / fill of plot</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> censoc) <span class="sc">+</span> </span>
-<span id="cb31-2"><a href="#cb31-2"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> death_age), <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">fill =</span> <span class="st">"grey"</span>) <span class="sc">+</span> </span>
-<span id="cb31-3"><a href="#cb31-3"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">15</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> censoc) <span class="sc">+</span> </span>
+<span id="cb31-2"><a href=""></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> death_age), <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">fill =</span> <span class="st">"grey"</span>) <span class="sc">+</span> </span>
+<span id="cb31-3"><a href=""></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">15</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="session2_slides_files/figure-revealjs/unnamed-chunk-27-1.png" width="960" class="r-stretch"></section>
@@ -836,10 +840,10 @@ Casey Breen
 <li><code>+ labs()</code> add on title/axis labels</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> censoc) <span class="sc">+</span> </span>
-<span id="cb32-2"><a href="#cb32-2"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> death_age), <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">fill =</span> <span class="st">"grey"</span>) <span class="sc">+</span> </span>
-<span id="cb32-3"><a href="#cb32-3"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">15</span>) <span class="sc">+</span> </span>
-<span id="cb32-4"><a href="#cb32-4"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Distribution of age of death"</span>, <span class="at">x =</span> <span class="st">"Age of Death (yrs)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> censoc) <span class="sc">+</span> </span>
+<span id="cb32-2"><a href=""></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> death_age), <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">fill =</span> <span class="st">"grey"</span>) <span class="sc">+</span> </span>
+<span id="cb32-3"><a href=""></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">15</span>) <span class="sc">+</span> </span>
+<span id="cb32-4"><a href=""></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Distribution of age of death"</span>, <span class="at">x =</span> <span class="st">"Age of Death (yrs)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="session2_slides_files/figure-revealjs/unnamed-chunk-28-1.png" width="960" class="r-stretch"></section>
@@ -861,7 +865,7 @@ Casey Breen
 <li><p>Make a histogram of the variable <code>death_age</code>. When are most people dying?</p></li>
 <li><p>Make a histogram of the variable <code>byear</code>. When are most people born?</p></li>
 <li><p>Recode the variable <code>sex</code> from numeric values (1, 2) to take character values (“men” and “women”). Note that 1 = men, 2 = women.</p></li>
-<li><p>Calculate the mean of of death for both men and women using <code>group_by()</code> and <code>summarize()</code>. Do men or women live longer?</p></li>
+<li><p>Calculate the mean of of death for both men and women using <code>group_by()</code> and <code>summarize()</code>. Use the <code>death_age</code> variable. Do men or women live longer in this sample?</p></li>
 <li><p>Make a histogram of the variable <code>death_age</code> for both men and women. Use the <code>filter()</code> command.</p></li>
 <li><p>Now try adding the following line to the histogram you made in question 1: <code>+ facet_wrap(~sex)</code></p></li>
 </ol>
@@ -872,8 +876,8 @@ Casey Breen
 <li>Make a histogram of the variable <code>death_age</code>. When are most people dying?</li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> censoc) <span class="sc">+</span> </span>
-<span id="cb33-2"><a href="#cb33-2"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> death_age)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> censoc) <span class="sc">+</span> </span>
+<span id="cb33-2"><a href=""></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> death_age)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="session2_slides_files/figure-revealjs/unnamed-chunk-29-1.png" width="960" class="r-stretch"></section>
@@ -883,8 +887,8 @@ Casey Breen
 <li>Make a histogram of the variable <code>byear</code>. When are most people born?</li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> censoc) <span class="sc">+</span> </span>
-<span id="cb34-2"><a href="#cb34-2"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> byear)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> censoc) <span class="sc">+</span> </span>
+<span id="cb34-2"><a href=""></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> byear)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="session2_slides_files/figure-revealjs/unnamed-chunk-30-1.png" width="960" class="r-stretch"></section>
@@ -894,17 +898,17 @@ Casey Breen
 <li>Recode the variable <code>sex</code> from numeric values (1, 2) to take character values (“men” and “women”). Note that 1 = men, 2 = women.</li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a><span class="do">## recode sex  </span></span>
-<span id="cb35-2"><a href="#cb35-2"></a>censoc <span class="ot">&lt;-</span> censoc <span class="sc">%&gt;%</span> </span>
-<span id="cb35-3"><a href="#cb35-3"></a>  <span class="fu">mutate</span>(<span class="at">sex_recode =</span> <span class="fu">case_when</span>(</span>
-<span id="cb35-4"><a href="#cb35-4"></a>    sex <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">"men"</span>,</span>
-<span id="cb35-5"><a href="#cb35-5"></a>    sex <span class="sc">==</span> <span class="dv">2</span> <span class="sc">~</span> <span class="st">"women"</span></span>
-<span id="cb35-6"><a href="#cb35-6"></a>  ))</span>
-<span id="cb35-7"><a href="#cb35-7"></a></span>
-<span id="cb35-8"><a href="#cb35-8"></a><span class="do">## look at first few rows to check our recode worked </span></span>
-<span id="cb35-9"><a href="#cb35-9"></a>censoc <span class="sc">%&gt;%</span> </span>
-<span id="cb35-10"><a href="#cb35-10"></a>  <span class="fu">select</span>(sex, sex_recode) <span class="sc">%&gt;%</span> </span>
-<span id="cb35-11"><a href="#cb35-11"></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href=""></a><span class="do">## recode sex  </span></span>
+<span id="cb35-2"><a href=""></a>censoc <span class="ot">&lt;-</span> censoc <span class="sc">%&gt;%</span> </span>
+<span id="cb35-3"><a href=""></a>  <span class="fu">mutate</span>(<span class="at">sex_recode =</span> <span class="fu">case_when</span>(</span>
+<span id="cb35-4"><a href=""></a>    sex <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">"men"</span>,</span>
+<span id="cb35-5"><a href=""></a>    sex <span class="sc">==</span> <span class="dv">2</span> <span class="sc">~</span> <span class="st">"women"</span></span>
+<span id="cb35-6"><a href=""></a>  ))</span>
+<span id="cb35-7"><a href=""></a></span>
+<span id="cb35-8"><a href=""></a><span class="do">## look at first few rows to check our recode worked </span></span>
+<span id="cb35-9"><a href=""></a>censoc <span class="sc">%&gt;%</span> </span>
+<span id="cb35-10"><a href=""></a>  <span class="fu">select</span>(sex, sex_recode) <span class="sc">%&gt;%</span> </span>
+<span id="cb35-11"><a href=""></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 2
     sex sex_recode
@@ -924,9 +928,9 @@ Casey Breen
 <li>Calculate the mean of of death for both men and women using <code>group_by()</code> and <code>summarize()</code>. Do men or women live longer?</li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a>censoc <span class="sc">%&gt;%</span> </span>
-<span id="cb37-2"><a href="#cb37-2"></a>  <span class="fu">group_by</span>(sex_recode) <span class="sc">%&gt;%</span> </span>
-<span id="cb37-3"><a href="#cb37-3"></a>  <span class="fu">summarize</span>(<span class="fu">mean</span>(death_age))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href=""></a>censoc <span class="sc">%&gt;%</span> </span>
+<span id="cb37-2"><a href=""></a>  <span class="fu">group_by</span>(sex_recode) <span class="sc">%&gt;%</span> </span>
+<span id="cb37-3"><a href=""></a>  <span class="fu">summarize</span>(<span class="fu">mean</span>(death_age))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 2
   sex_recode `mean(death_age)`
@@ -942,18 +946,26 @@ Casey Breen
 <li>Make a histogram of the variable <code>death_age</code> for both men and women.</li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1"></a>censoc_men <span class="ot">&lt;-</span> censoc <span class="sc">%&gt;%</span> <span class="fu">filter</span>(sex_recode <span class="sc">==</span> <span class="st">"men"</span>)</span>
-<span id="cb39-2"><a href="#cb39-2"></a>censoc_women <span class="ot">&lt;-</span> censoc <span class="sc">%&gt;%</span> <span class="fu">filter</span>(sex_recode <span class="sc">==</span> <span class="st">"women"</span>)</span>
-<span id="cb39-3"><a href="#cb39-3"></a></span>
-<span id="cb39-4"><a href="#cb39-4"></a><span class="fu">ggplot</span>(<span class="at">data =</span> censoc_men) <span class="sc">+</span> <span class="do">## histogram for men </span></span>
-<span id="cb39-5"><a href="#cb39-5"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> death_age)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href=""></a>censoc_men <span class="ot">&lt;-</span> censoc <span class="sc">%&gt;%</span> <span class="fu">filter</span>(sex_recode <span class="sc">==</span> <span class="st">"men"</span>)</span>
+<span id="cb39-2"><a href=""></a>censoc_women <span class="ot">&lt;-</span> censoc <span class="sc">%&gt;%</span> <span class="fu">filter</span>(sex_recode <span class="sc">==</span> <span class="st">"women"</span>)</span>
+<span id="cb39-3"><a href=""></a></span>
+<span id="cb39-4"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> censoc_men) <span class="sc">+</span> <span class="do">## histogram for men </span></span>
+<span id="cb39-5"><a href=""></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> death_age)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
+<div>
+<figure>
 <p><img data-src="session2_slides_files/figure-revealjs/unnamed-chunk-33-1.png" width="163"></p>
+</figure>
 </div>
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> censoc_women) <span class="sc">+</span> <span class="do">## histogram for women </span></span>
-<span id="cb40-2"><a href="#cb40-2"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> death_age)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> censoc_women) <span class="sc">+</span> <span class="do">## histogram for women </span></span>
+<span id="cb40-2"><a href=""></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> death_age)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
+<div>
+<figure>
 <p><img data-src="session2_slides_files/figure-revealjs/unnamed-chunk-33-2.png" width="163"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
@@ -963,9 +975,9 @@ Casey Breen
 <li>Now try adding the following line to the histogram you made in question 1: <code>+ facet_wrap(~sex)</code></li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> censoc) <span class="sc">+</span> </span>
-<span id="cb41-2"><a href="#cb41-2"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> death_age)) <span class="sc">+</span> </span>
-<span id="cb41-3"><a href="#cb41-3"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>sex_recode)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> censoc) <span class="sc">+</span> </span>
+<span id="cb41-2"><a href=""></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> death_age)) <span class="sc">+</span> </span>
+<span id="cb41-3"><a href=""></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>sex_recode)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="session2_slides_files/figure-revealjs/unnamed-chunk-34-1.png" width="960" class="r-stretch"></section></section>
@@ -1019,7 +1031,7 @@ Casey Breen
 <li><p>Using the <code>censoc</code> data.frame, create a new data.frame <code>censoc_homeownership</code> that filters out any “missing” value for the <code>ownershp</code> variable (missing = 0). Use the <code>filter()</code> command.</p></li>
 <li><p>In the <code>censoc_homeownership</code> data.frame, create a new variable <code>homeowner</code> using the <code>mutate()</code> command and the <code>case_when()</code> command. Assign this new variable <code>homeowner</code> a value of “own” if <code>ownershp == 1</code> and a value of “rent” if <code>ownershp == 2</code>.</p></li>
 <li><p>Make a histogram on the age of death for “homeowner” and “renter” groups using <code>ggplot</code> using the <code>censoc_homeownership</code> data.frame. Use the <code>+ facet_wrap(~homeowner)</code> command.</p></li>
-<li><p>Calculate the average age of death for “homeowner” and “renter” groups. Which group lives longer, on average? Use the <code>group_by()</code> and <code>summarize()</code> functions What are some possible explanations for homeowners living longer than renters in the US?</p></li>
+<li><p>Calculate the average age of death for “homeowner” and “renter” groups. Which group lives longer, on average? Use the <code>group_by()</code> and <code>summarize()</code> functions. What are some possible explanations for homeowners living longer than renters in the US?</p></li>
 </ol>
 </section>
 <section id="exercise-4-solution" class="slide level2 smaller">
@@ -1029,19 +1041,19 @@ Casey Breen
 <li>Using the <code>censoc</code> data.frame, create a new data.frame <code>censoc_homeownership</code> that filters out any “missing” value for the <code>ownershp</code> variable (missing = 0). Use the <code>filter()</code> command.</li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a>censoc_homeownership <span class="ot">&lt;-</span> censoc <span class="sc">%&gt;%</span> </span>
-<span id="cb42-2"><a href="#cb42-2"></a>  <span class="fu">filter</span>(ownershp <span class="sc">!=</span> <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href=""></a>censoc_homeownership <span class="ot">&lt;-</span> censoc <span class="sc">%&gt;%</span> </span>
+<span id="cb42-2"><a href=""></a>  <span class="fu">filter</span>(ownershp <span class="sc">!=</span> <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="2" type="1">
 <li>In the <code>censoc_homeownership</code> data.frame, create a new variable <code>homeowner</code> using the <code>mutate()</code> command and the <code>case_when()</code> command. Assign this new variable <code>homeowner</code> a value of “own” if <code>ownershp == 1</code> and a value of “rent” if <code>ownershp == 2</code>.</li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1"></a><span class="do">## create new homeowner variable</span></span>
-<span id="cb43-2"><a href="#cb43-2"></a>censoc_homeownership <span class="ot">&lt;-</span> censoc_homeownership <span class="sc">%&gt;%</span> </span>
-<span id="cb43-3"><a href="#cb43-3"></a>  <span class="fu">mutate</span>(<span class="at">homeowner =</span> <span class="fu">case_when</span>(</span>
-<span id="cb43-4"><a href="#cb43-4"></a>    ownershp <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">"own"</span>,</span>
-<span id="cb43-5"><a href="#cb43-5"></a>    ownershp <span class="sc">==</span> <span class="dv">2</span> <span class="sc">~</span> <span class="st">"rent"</span></span>
-<span id="cb43-6"><a href="#cb43-6"></a>  ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href=""></a><span class="do">## create new homeowner variable</span></span>
+<span id="cb43-2"><a href=""></a>censoc_homeownership <span class="ot">&lt;-</span> censoc_homeownership <span class="sc">%&gt;%</span> </span>
+<span id="cb43-3"><a href=""></a>  <span class="fu">mutate</span>(<span class="at">homeowner =</span> <span class="fu">case_when</span>(</span>
+<span id="cb43-4"><a href=""></a>    ownershp <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">"own"</span>,</span>
+<span id="cb43-5"><a href=""></a>    ownershp <span class="sc">==</span> <span class="dv">2</span> <span class="sc">~</span> <span class="st">"rent"</span></span>
+<span id="cb43-6"><a href=""></a>  ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="exercise-4-solution-cont." class="slide level2 smaller">
@@ -1050,9 +1062,9 @@ Casey Breen
 <li>Make a histogram on the age of death for “homeowner” and “renter” groups using <code>ggplot</code> using the <code>censoc_homeownership</code> data.frame. Use the <code>+ facet_wrap(~homeowner)</code> command.</li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> censoc_homeownership) <span class="sc">+</span> </span>
-<span id="cb44-2"><a href="#cb44-2"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> death_age)) <span class="sc">+</span> </span>
-<span id="cb44-3"><a href="#cb44-3"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>homeowner)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> censoc_homeownership) <span class="sc">+</span> </span>
+<span id="cb44-2"><a href=""></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> death_age)) <span class="sc">+</span> </span>
+<span id="cb44-3"><a href=""></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>homeowner)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="session2_slides_files/figure-revealjs/unnamed-chunk-38-1.png" width="960" class="r-stretch"></section>
@@ -1062,9 +1074,9 @@ Casey Breen
 <li>Calculate the average age of death for “homeowner” and “renter” groups. Which group lives longer, on average? Use the <code>group_by()</code> and <code>summarize()</code> functions What are some possible explanations for homeowners living longer than renters in the US?</li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1"></a>censoc_homeownership <span class="sc">%&gt;%</span> </span>
-<span id="cb45-2"><a href="#cb45-2"></a>  <span class="fu">group_by</span>(homeowner) <span class="sc">%&gt;%</span> </span>
-<span id="cb45-3"><a href="#cb45-3"></a>  <span class="fu">summarize</span>(<span class="fu">mean</span>(death_age))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href=""></a>censoc_homeownership <span class="sc">%&gt;%</span> </span>
+<span id="cb45-2"><a href=""></a>  <span class="fu">group_by</span>(homeowner) <span class="sc">%&gt;%</span> </span>
+<span id="cb45-3"><a href=""></a>  <span class="fu">summarize</span>(<span class="fu">mean</span>(death_age))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 2
   homeowner `mean(death_age)`
@@ -1084,8 +1096,10 @@ Casey Breen
 <li><p>Please independently complete all exercises in problem set 2 (and review solutions)</p></li>
 <li><p>Questions: <a href="casey.breen@sociology.ox.ac.uk">casey.breen@sociology.ox.ac.uk</a></p></li>
 </ul>
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
+</div>
 </div>
 </section></section>
     </div>
@@ -1114,7 +1128,6 @@ Casey Breen
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -1369,18 +1382,7 @@ Casey Breen
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -1412,11 +1414,50 @@ Casey Breen
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
-      function tippyHover(el, contentFn) {
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -1426,8 +1467,17 @@ Casey Breen
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
@@ -1441,7 +1491,11 @@ Casey Breen
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {

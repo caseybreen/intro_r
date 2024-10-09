@@ -223,7 +223,7 @@ Learning objectives
 
 ## Tidyverse
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 -   Packages: Collection of R packages designed for data science.
 -   Data manipulation: Simplifies data cleaning and transformation with `dplyr`.
@@ -235,7 +235,7 @@ Learning objectives
 knitr::include_graphics(here("slides/session2_slides_files/figs/tidyverse_fig.png"))
 ```
 :::
-:::
+:::::
 
 ## Data Manipulation using `dplyr` {.smaller}
 
@@ -663,4 +663,4 @@ censoc_homeownership %>%
 
 -   Please independently complete all exercises in problem set 2 (and review solutions)
 
--   Questions: [casey.breen\@sociology.ox.ac.uk](casey.breen@sociology.ox.ac.uk)
+-   Questions: [casey.breen\@demography.ox.ac.uk](casey.breen@sociology.ox.ac.uk)
