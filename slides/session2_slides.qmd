@@ -593,11 +593,8 @@ Learning objectives
 ## Resources for learning more
 
 1.  R for data science (<https://r4ds.hadley.nz/>)
-2.  Data visualization: a practical introduction (<https://socviz.co/>)
 
-```{r, echo=FALSE, fig.width=4, fig.height=4}
-knitr::include_graphics(here("slides/session2_slides_files/figs/r_for_datascience.png"))
-```
+2.  Data visualization: a practical introduction (<https://socviz.co/>)
 
 ## In-class exercise 4 {.smaller}
 

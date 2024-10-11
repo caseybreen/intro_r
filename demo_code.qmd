@@ -1,0 +1,154 @@
+---
+title: "day_2_intro_r"
+format: html
+author: Casey Breen
+---
+
+```{r}
+## library package
+
+# install.packages("tidyverse")
+
+## library pacakges 
+library(tidyverse)
+
+```
+
+# Read in csv file
+
+```{r}
+##
+censoc <- read_csv(file = "/Users/caseybreen/Downloads/censoc_numident_demo_v2.1.csv")
+```
+
+```{r}
+censoc
+
+## filter data
+censoc %>% 
+  filter(byear %in% 1920:1925)
+
+## Selecting columns 
+censoc %>% 
+  select(histid, byear, death_age, urban)
+
+mean(censoc$death_age)
+
+censoc %>% 
+  summarize(mean(death_age), median(death_age), sd(death_age))
+  
+
+
+```
+
+```{r}
+## create new variable 
+
+censoc %>% 
+  mutate(death_age_plus_10 = death_age + 10) %>% 
+  select(histid, death_age, death_age_plus_10)
+
+
+
+```
+
+```{r}
+## recode variable 
+
+censoc %>% 
+  mutate(death_age_categorical = case_when(
+    death_age > 76 ~ "High longevity",
+    death_age <= 76 ~ "Low longevity"
+  )) %>% 
+  select(death_age_categorical, death_age)
+
+```
+
+## CenSoc Exercise 
+
+```{r}
+censoc_women <- censoc %>% 
+  filter(sex == 2)
+```
+
+```{r}
+censoc_1905_1920 <- censoc %>% 
+  filter(byear %in% 1905:1920)
+
+censoc_1905_1920 <- censoc %>% 
+  filter(byear %in% )
+
+censoc_1905_1920 <- censoc %>% 
+  filter(byear >= 1905 & byear <= 1920)
+
+censoc %>% 
+  select(histid, death_age, sex, ownershp)
+```
+
+```{r}
+censoc_women %>%
+  summarize(mean_death_age_women = mean(death_age),
+            median_death_age_women = median(death_age))
+```
+
+```{r}
+ggplot(data = censoc) + 
+  geom_histogram(aes(x = death_age), colour = "blue", fill = "red") + 
+  labs(title = "Demo Histogram",
+       x = "Death Age - Full Sample",
+       y = "Count") + 
+  theme_minimal()
+```
+
+```{r}
+ggplot(data = censoc) + 
+  geom_histogram(aes(x = death_age))
+```
+
+```{r}
+ggplot(data = censoc) + 
+  geom_histogram(aes(x = byear))
+```
+
+## variable recode using case_when 
+
+```{r}
+censoc2 <- censoc %>% 
+  mutate(sex_recode = case_when(
+    sex == 1 ~ "men",
+    sex == 2 ~ "women"
+  ))
+
+
+censoc %>% 
+  count(sex_recode, sex)
+```
+
+```{r}
+censoc %>% 
+  group_by(sex_recode) %>% 
+  summarize(mean(death_age))
+```
+
+```{r}
+censoc_women  <- censoc %>% 
+  filter(sex_recode == "women") 
+
+
+censoc_women %>% 
+  ggplot() + 
+  geom_histogram(aes(x = death_age))
+
+
+censoc %>% 
+  filter(sex_recode == "men") %>% 
+  ggplot() + 
+  geom_histogram(aes(x = death_age))
+```
+
+```{r}
+censoc %>% 
+  ggplot() + 
+  geom_histogram(aes(x = death_age)) + 
+  facet_wrap(~sex_recode)
+```
