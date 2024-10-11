@@ -139,7 +139,9 @@ write_csv(df, "dataset_v2.csv")
 
 -   Please download the .csv file from the course website (`intro_r/data`)
 
--   Short url: <https://shorturl.at/egz69>
+    -   [https://github.com/caseybreen/intro_r](https://github.com/caseybreen/intro_r/)
+
+-   Short url: <https://tinyurl.com/intro-r-data>
 
 ## Live coding demo
 
