@@ -11,8 +11,8 @@
   <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Casey Breen">
-  <meta name="dcterms.date" content="2024-10-11">
-  <title>quarto-inputb5d80a57aeaac513</title>
+  <meta name="dcterms.date" content="2024-10-15">
+  <title>quarto-input1a14cee445186839</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -404,7 +404,7 @@ Casey Breen
 </div>
 </div>
 
-  <p class="date">2024-10-11</p>
+  <p class="date">2024-10-15</p>
 </section>
 <section id="intro-to-r-session-2" class="slide level2">
 <h2>Intro to <code>R</code> – Session 2</h2>
@@ -566,7 +566,7 @@ Casey Breen
 <li>Load and install the <code>tidyverse</code> packages using the commands <code>install.packages()</code> and <code>library()</code></li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href=""></a><span class="fu">install.packages</span>(tidyverse) <span class="do">## only have yo do this once </span></span>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href=""></a><span class="fu">install.packages</span>(tidyverse) <span class="do">## only have to do this once </span></span>
 <span id="cb6-2"><a href=""></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="2" type="1">
@@ -696,11 +696,12 @@ Casey Breen
 <li><p>The <code>case_when()</code> function in <code>R</code> is part of the <code>dplyr</code> package and is used for creating new variables based on multiple conditions:</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href=""></a>new_var <span class="ot">&lt;-</span> <span class="fu">case_when</span>(</span>
-<span id="cb21-2"><a href=""></a>  condition1 <span class="sc">~</span> value1,</span>
-<span id="cb21-3"><a href=""></a>  condition2 <span class="sc">~</span> value2,</span>
-<span id="cb21-4"><a href=""></a>  <span class="cn">TRUE</span> <span class="sc">~</span> value_otherwise</span>
-<span id="cb21-5"><a href=""></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href=""></a>df_new <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> </span>
+<span id="cb21-2"><a href=""></a>  <span class="fu">mutate</span>(<span class="at">new_var =</span> <span class="fu">case_when</span>(</span>
+<span id="cb21-3"><a href=""></a>  condition1 <span class="sc">~</span> value1,</span>
+<span id="cb21-4"><a href=""></a>  condition2 <span class="sc">~</span> value2,</span>
+<span id="cb21-5"><a href=""></a>  <span class="cn">TRUE</span> <span class="sc">~</span> value_otherwise</span>
+<span id="cb21-6"><a href=""></a>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="live-coding-demo-1" class="slide level2">

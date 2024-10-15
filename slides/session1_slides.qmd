@@ -501,8 +501,8 @@ example_df ## prints out df_example
 ```{r}
 #| echo: true
 ## generate vectors 
-vec <- c(1, 2, 3)
-vec1 <- c("a", "b", "c")
+vec1 <- c(1, 2, 3)
+vec2 <- c("a", "b", "c")
 
 ## check type 
 class(vec1)
@@ -911,4 +911,4 @@ sample_data_10000
 
 -   Please independently complete all exercises in problem set 1 (and review solutions)
 
--   Questions: [casey.breen\@sociology.ox.ac.uk](casey.breen@sociology.ox.ac.uk)
+-   Questions: [casey.breen\@demography.ox.ac.uk](casey.breen@sociology.ox.ac.uk)

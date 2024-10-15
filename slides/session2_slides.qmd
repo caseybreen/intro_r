@@ -167,7 +167,7 @@ write_csv(df, "dataset_v2.csv")
 ```{r}
 #| echo: true
 #| eval: false
-install.packages(tidyverse) ## only have yo do this once 
+install.packages(tidyverse) ## only have to do this once 
 library(tidyverse)
 ```
 
@@ -312,11 +312,12 @@ filtered_df <- df %>%
 ```{r}
 #| echo: true
 #| eval: false 
-new_var <- case_when(
+df_new <- df %>% 
+  mutate(new_var = case_when(
   condition1 ~ value1,
   condition2 ~ value2,
   TRUE ~ value_otherwise
-)
+))
 ```
 
 ## Live coding demo
