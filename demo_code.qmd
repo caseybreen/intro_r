@@ -64,7 +64,7 @@ censoc %>%
 
 ```
 
-## CenSoc Exercise 
+## CenSoc Exercise
 
 ```{r}
 censoc_women <- censoc %>% 
@@ -110,7 +110,7 @@ ggplot(data = censoc) +
   geom_histogram(aes(x = byear))
 ```
 
-## variable recode using case_when 
+## variable recode using case_when
 
 ```{r}
 censoc2 <- censoc %>% 
