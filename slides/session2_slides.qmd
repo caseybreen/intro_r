@@ -2,7 +2,7 @@
 title: |
     | Introduction to R
     | Session 2
-subtitle: "Department of Sociology | University of Oxford"
+subtitle: "Department of Sociology | University of Texas at Austin"
 author: "Casey Breen"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 format:
@@ -23,8 +23,7 @@ censoc <- read_csv(here("data/censoc_numident_demo_v2.1.csv"))
 -   Reminder: course materials available from:
 
     -   [www.github.com/caseybreen/intro_r](www.github.com/caseybreen/intro_r)
-
--   Questions on problem set 1?
+    -   
 
 ## Review of session 1
 

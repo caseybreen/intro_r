@@ -1,10 +1,9 @@
 ---
 title: |
     | Introduction to R
-    | Session 1
 subtitle: "Department of Sociology | University of Texas at Austin"
 author: "Casey Breen"
-date: "`r format(Sys.time(), '%d %B, %Y')`"
+date: "Thursday, Jan 22nd"
 format:
   revealjs:
     slide-number: true
@@ -17,20 +16,18 @@ format:
 ## library packages - this will be hidden 
 library(tidyverse)
 library(here)
+
+censoc <- read_csv(here("data/censoc_numident_demo_v2.1.csv"))
 ```
 
--   Course website:
+-   Course website (if you want to learn more):
 
     -   [www.github.com/caseybreen/intro_r](www.github.com/caseybreen/intro_r)
     -   Slides, exercises, and solutions
 
-## Course goals
+## Session goals
 
 -   Overview: why `R` is a powerful tool for social science research
-
-. . .
-
--   Install `R` and `RStudio`
 
 . . .
 
@@ -42,21 +39,9 @@ library(here)
 
 ## Course agenda {.smaller}
 
--   **Session 1**
-
-    -   Module 1: Introduction to `R`, `RStudio,` and code formats
-
-    -   Module 2: `R` programming fundamentals (syntax, operators, data types, data structures, sequencing)
-
-    -   Module 3: Working with data (indexing vectors / matrices, importing data)
-
--   **Session 2**
-
-    -   Module 4: Importing and exporting data
-
-    -   Module 5: Data manipulation (`dplyr`) and data visualization (`ggplot2`)
-
-    -   Module 6: Best practices and resources for self-study
+-   Module 1: Introduction to `R`, `RStudio,` and code formats
+-   Module 2: `R` programming fundamentals (syntax, operators, data types, data structures, sequencing)
+-   Module 3: Working with data
 
 # Module 1
 
@@ -658,45 +643,6 @@ three_squared > 10
 !three_squared > 10
 ```
 
-## In-class exercise 2
-
-1.  Generate vectors containing the numbers 100, 101, 102, 103, 104, and 105 using 3 different methods (e.g., **`c()`**, **`seq()`**, **`:`**). In what scenarios might each method be most convenient?
-2.  Generate a sequences of all **even** numbers between 0 and 100. Use the `seq()` function.
-3.  Create a descending sequence of numbers from 100 to 1, and assign it to a variable. Use the `seq()` function.
-
-## Exercise 2 solutions {.smaller}
-
-1.  Generate vectors containing the numbers 100 to 105 using three different methods (`c()`, `seq()`, `:`). Discuss the convenience of each method.
-
-```{r}
-#| echo: true
-#| 
-# Generate a vector using c() method
-vector_c <- c(100, 101, 102, 103, 104, 105)
-
-# Generate a vector using seq() method
-vector_seq <- seq(100, 105, by = 1)
-
-# Generate a vector using : operator
-vector_colon <- c(100:105) 
-```
-
-2.  Generate a sequence of all even numbers between 0 and 100. Use the `seq()` function.
-
-```{r}
-#| echo: true
-# Generate a sequence of all even numbers between 0 and 100
-even_seq <- seq(0, 100, by = 2)
-```
-
-3.  Create a descending sequence of numbers from 100 to 1, and assign it to a variable. Use the `seq()` function.
-
-```{r}
-#| echo: true
-# Create a descending sequence of numbers from 100 to 1
-desc_seq <- seq(100, 1, by = -1)
-```
-
 # Module 3
 
 ## Working with `vectors` and `data frames`
@@ -843,66 +789,208 @@ Check column names
 names(test_scores)
 ```
 
-## Live coding demo
+# Module 5
 
--   Generate random draws from a normal distribution using the `rnorm` function
+## Data manipulation and visualization
 
--   Subset the vector of random draws to only include certain observations
+Learning objectives
 
--   Look at basic summary statistics
+-   Overview of `tidyverse` suite of packages
 
-## In-class exercise 3 {.smaller}
+-   Fundamentals of data manipulation with `dplyr`
 
-1.  Generate a `vector` of 100 observations drawn from a normal distribution with a mean of 10 and a standard deviation of 2. Use the `rnorm` function.
+-   Data visualization with `ggplot`
 
-2.  What are the 1st, 10th, and 100th elements of this `vector`?
+## Tidyverse
 
-3.  Calculate the mean of this `vector`. How does this `sample` mean relate to the `population` mean (hint: population mean = 10) of the distribution?
+::::: columns
+::: {.column width="50%"}
+-   Packages: Collection of R packages designed for data science.
+-   Data manipulation: Simplifies data cleaning and transformation with `dplyr`.
+-   Data Visualization: Enables advanced plotting with `ggplot2`.
+:::
 
-4.  Calculate the difference between the sample mean and the population mean. Discuss the reason for the discrepancy.
+::: {.column width="50%"}
+```{r, echo=FALSE, fig.width=6, fig.height=10}
+knitr::include_graphics(here("slides/session2_slides_files/figs/tidyverse_fig.png"))
+```
+:::
+:::::
 
-5.  Repeat steps 1-4 with a new sample size of 10,000. Did the difference between the sample mean and the population mean decrease? Why?
+## Data Manipulation using `dplyr` {.smaller}
 
-## Exercise 3 solutions {.smaller}
+`filter`: Select rows based on conditions.
 
 ```{r}
 #| echo: true
+#| eval: false
 
-# Generate a sample of 1,000 draws from a normal distribution with mean = 10 and sd = 2
-sample_data_100 <- rnorm(100, 
-                     mean = 10,
-                     sd = 2)
-
-## look at 1st, 10th, and 100th element 
-sample_data_100[c(1, 10, 100)]
-
-# Calculate the mean of this sample
-sample_mean_100 <- mean(sample_data_100)
-
-# Calculate the difference between the mean of the sample and the expected value of the mean
-difference_100 <- abs(sample_mean_100 - 10)
-
-difference_100
-
-# Calculate the Z-score for the sample mean
-sample_data_10000 <- rnorm(10000, 
-                     mean = 10,
-                     sd = 2)
-
-# Calculate the mean of this sample
-sample_data_10000 <- mean(sample_data_10000)
-
-# Calculate the difference between the mean of the sample and the expected value of the mean
-sample_data_10000 <- abs(sample_data_10000 - 10)
-
-sample_data_10000
-
+filtered_df <- filter(df, age > 21)
 ```
 
-## Questions?
+`select`: Choose specific columns
 
--   Thanks for your attendance and participation
+```{r}
+#| echo: true
+#| eval: false
 
--   Please independently complete all exercises in problem set 1 (and review solutions)
+filtered_df <- select(df)
+```
 
--   Questions: [casey.breen\@demography.ox.ac.uk](casey.breen@sociology.ox.ac.uk)
+`mutate`: Add or modify columns
+
+```{r}
+#| echo: true
+#| eval: false
+
+df <- mutate(df, age_next_year = age + 1)
+```
+
+`summarize` or `summarise`: Aggregate or summarize data based on some criteria
+
+```{r}
+#| echo: true
+#| eval: false
+
+filtered_df <- summarize(df, mean(age))
+```
+
+`group_by`: Group data by variables. Often used with `summarise()`.
+
+```{r}
+#| echo: true
+#| eval: false
+filtered_df <- df %>% 
+  group_by(gender) %>% 
+  summarize(mean(age))
+```
+
+## The Pipe Operator `%>%` (or `|>` ) in R
+
+-   Takes the output of one function and passes it as the first argument to another function
+
+    -   "And then do..."
+
+-   What's the below code doing?
+
+```{r}
+#| echo: true
+#| eval: false
+filtered_df <- df %>% 
+  group_by(gender) %>% 
+  summarize(mean(age))
+```
+
+# Recoding values in R
+
+-   Sometime you want to recode a variable to take different values (e.g., recoding exact income to binary high/low income variable)
+
+-   The `case_when()` function in `R` is part of the `dplyr` package and is used for creating new variables based on multiple conditions:
+
+```{r}
+#| echo: true
+#| eval: false 
+df_new <- df %>% 
+  mutate(new_var = case_when(
+  condition1 ~ value1,
+  condition2 ~ value2,
+  TRUE ~ value_otherwise
+))
+```
+
+## Live coding demo
+
+-   Filter data
+
+-   Selecting data
+
+-   Calculating summary statistics by group
+
+-   Creating and recoding variables
+
+## Your turn 
+
+```{r}
+#| echo: true
+#| eval: false 
+# install.packages(tidyverse) ## you only need to do this once! 
+library(tidyverse)
+```
+
+```{r}
+#| echo: true
+#| eval: true 
+## load a built in dataset 
+data(diamonds, package = "ggplot2")
+
+## print first few rows 
+head(diamonds)
+```
+## Data Visualization (Distn of carats)
+
+```{r}
+#| echo: true
+#| eval: true 
+## make a histogram of that distribution of carats 
+ggplot(data = diamonds) + 
+  geom_histogram(aes(x = carat))
+```
+
+## Data Visualization (Carat vs. Price)
+
+```{r}
+#| echo: true
+#| eval: true 
+## plot relationship between carats and price 
+ggplot(data = diamonds) + 
+  geom_point(aes(x = carat, y = price))
+```
+
+
+## Exerise  
+
+1. Make a histogram of the price of diamonds 
+
+2. For diamonds great than 1 carat (hint: `filter()`), what is average price by `cut` (hint: `group_by` + `summarize`?
+
+3. Assign your answer from (2) to a data.frame called `price_by_cut`. Now use `ggplot()` + `geom_col` to visualize this. 
+
+## Solutions Q1  
+
+
+```{r}
+#| echo: true
+#| eval: true 
+## Price of diamonds 
+ggplot(data = diamonds) + 
+  geom_histogram(aes(x = price))
+```
+
+## Solutions Q2 
+
+```{r}
+#| echo: true
+#| eval: true 
+
+## Price by cut 
+price_by_cut <- diamonds %>% 
+  filter(carat > 1) %>% 
+  group_by(cut) %>% 
+  summarize(mean_price = mean(price))
+```
+
+
+## Solutions Q3 
+
+
+```{r}
+#| echo: true
+#| eval: true 
+
+## Visualize 
+ggplot(data = price_by_cut) + 
+  geom_col(aes(y = mean_price, x = cut, fill = cut))
+```
+
+
+
