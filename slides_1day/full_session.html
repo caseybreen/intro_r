@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="session1_slides_files/libs/clipboard/clipboard.min.js"></script>
-<script src="session1_slides_files/libs/quarto-html/tabby.min.js"></script>
-<script src="session1_slides_files/libs/quarto-html/popper.min.js"></script>
-<script src="session1_slides_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="session1_slides_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="session1_slides_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="session1_slides_files/libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="full_session_files/libs/clipboard/clipboard.min.js"></script>
+<script src="full_session_files/libs/quarto-html/tabby.min.js"></script>
+<script src="full_session_files/libs/quarto-html/popper.min.js"></script>
+<script src="full_session_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="full_session_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="full_session_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="full_session_files/libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
   <meta name="author" content="Casey Breen">
-  <title>quarto-input9f82b19e5673c588</title>
+  <meta name="dcterms.date" content="2026-01-15">
+  <title>quarto-input28cd02dd4f653601</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="session1_slides_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="session1_slides_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="full_session_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="full_session_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -95,11 +96,11 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="session1_slides_files/libs/revealjs/dist/theme/quarto-534cd8e3a96973385dffff3f4709048d.css">
-  <link href="session1_slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="session1_slides_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="session1_slides_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="session1_slides_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="full_session_files/libs/revealjs/dist/theme/quarto-534cd8e3a96973385dffff3f4709048d.css">
+  <link href="full_session_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="full_session_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="full_session_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="full_session_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -204,23 +205,28 @@ Casey Breen
 </div>
 </div>
 
-  <p class="date">Invalid Date</p>
+  <p class="date">2026-01-15</p>
 </section>
 <section id="welcome-to-intro-to-r" class="slide level2">
 <h2>Welcome to “Intro to <code>R</code>”</h2>
 <ul>
-<li><p>Course website (if you want to learn more):</p>
+<li><p>Course website:</p>
 <ul>
 <li><a href="www.github.com/caseybreen/intro_r">www.github.com/caseybreen/intro_r</a></li>
 <li>Slides, exercises, and solutions</li>
 </ul></li>
 </ul>
 </section>
-<section id="session-goals" class="slide level2">
-<h2>Session goals</h2>
+<section id="course-goals" class="slide level2">
+<h2>Course goals</h2>
 <ul>
 <li>Overview: why <code>R</code> is a powerful tool for social science research</li>
 </ul>
+<div class="fragment">
+<ul>
+<li>Install <code>R</code> and <code>RStudio</code></li>
+</ul>
+</div>
 <div class="fragment">
 <ul>
 <li>Introduction to <code>R</code> syntax, data types, and data structures</li>
@@ -235,9 +241,18 @@ Casey Breen
 <section id="course-agenda" class="slide level2 smaller">
 <h2>Course agenda</h2>
 <ul>
-<li>Module 1: Introduction to <code>R</code>, <code>RStudio,</code> and code formats</li>
-<li>Module 2: <code>R</code> programming fundamentals (syntax, operators, data types, data structures, sequencing)</li>
-<li>Module 3: Working with data</li>
+<li><p><strong>Session 1</strong></p>
+<ul>
+<li><p>Module 1: Introduction to <code>R</code>, <code>RStudio,</code> and code formats</p></li>
+<li><p>Module 2: <code>R</code> programming fundamentals (syntax, operators, data types, data structures, sequencing)</p></li>
+<li><p>Module 3: Working with data (indexing vectors / matrices, importing data)</p></li>
+</ul></li>
+<li><p><strong>Session 2</strong></p>
+<ul>
+<li><p>Module 4: Importing and exporting data</p></li>
+<li><p>Module 5: Data manipulation (<code>dplyr</code>) and data visualization (<code>ggplot2</code>)</p></li>
+<li><p>Module 6: Best practices and resources for self-study</p></li>
+</ul></li>
 </ul>
 </section>
 <section>
@@ -296,7 +311,7 @@ Casey Breen
 <span id="cb1-12"><a href=""></a>  <span class="fu">theme_classic</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
-<img data-src="session1_slides_files/figure-revealjs/unnamed-chunk-4-1.png" class="quarto-figure quarto-figure-center r-stretch" width="288"></section>
+<img data-src="full_session_files/figure-revealjs/unnamed-chunk-4-1.png" class="quarto-figure quarto-figure-center r-stretch" width="288"></section>
 <section id="rstudio-panes" class="slide level2 smaller">
 <h2><code>RStudio</code> panes</h2>
 
@@ -824,17 +839,17 @@ Casey Breen
 <span id="cb55-6"><a href=""></a><span class="do">## find the mean </span></span>
 <span id="cb55-7"><a href=""></a><span class="fu">mean</span>(random_draws)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.1131806</code></pre>
+<pre><code>[1] -0.04330527</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href=""></a><span class="do">## find the median</span></span>
 <span id="cb57-2"><a href=""></a><span class="fu">median</span>(random_draws)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] -0.3859664</code></pre>
+<pre><code>[1] -0.1126793</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href=""></a><span class="do">## find the standard deviation </span></span>
 <span id="cb59-2"><a href=""></a><span class="fu">sd</span>(random_draws)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 1.196568</code></pre>
+<pre><code>[1] 0.8554328</code></pre>
 </div>
 </div>
 </section>
@@ -914,6 +929,44 @@ Casey Breen
 <pre><code>[1] TRUE</code></pre>
 </div>
 </div>
+</section>
+<section id="in-class-exercise-2" class="slide level2">
+<h2>In-class exercise 2</h2>
+<ol type="1">
+<li>Generate vectors containing the numbers 100, 101, 102, 103, 104, and 105 using 3 different methods (e.g., <strong><code>c()</code></strong>, <strong><code>seq()</code></strong>, <strong><code>:</code></strong>). In what scenarios might each method be most convenient?</li>
+<li>Generate a sequences of all <strong>even</strong> numbers between 0 and 100. Use the <code>seq()</code> function.</li>
+<li>Create a descending sequence of numbers from 100 to 1, and assign it to a variable. Use the <code>seq()</code> function.</li>
+</ol>
+</section>
+<section id="exercise-2-solutions" class="slide level2 smaller">
+<h2>Exercise 2 solutions</h2>
+<ol type="1">
+<li>Generate vectors containing the numbers 100 to 105 using three different methods (<code>c()</code>, <code>seq()</code>, <code>:</code>). Discuss the convenience of each method.</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb68"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href=""></a><span class="co"># Generate a vector using c() method</span></span>
+<span id="cb68-2"><a href=""></a>vector_c <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">101</span>, <span class="dv">102</span>, <span class="dv">103</span>, <span class="dv">104</span>, <span class="dv">105</span>)</span>
+<span id="cb68-3"><a href=""></a></span>
+<span id="cb68-4"><a href=""></a><span class="co"># Generate a vector using seq() method</span></span>
+<span id="cb68-5"><a href=""></a>vector_seq <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">100</span>, <span class="dv">105</span>, <span class="at">by =</span> <span class="dv">1</span>)</span>
+<span id="cb68-6"><a href=""></a></span>
+<span id="cb68-7"><a href=""></a><span class="co"># Generate a vector using : operator</span></span>
+<span id="cb68-8"><a href=""></a>vector_colon <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">100</span><span class="sc">:</span><span class="dv">105</span>) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ol start="2" type="1">
+<li>Generate a sequence of all even numbers between 0 and 100. Use the <code>seq()</code> function.</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb69"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href=""></a><span class="co"># Generate a sequence of all even numbers between 0 and 100</span></span>
+<span id="cb69-2"><a href=""></a>even_seq <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">100</span>, <span class="at">by =</span> <span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ol start="3" type="1">
+<li>Create a descending sequence of numbers from 100 to 1, and assign it to a variable. Use the <code>seq()</code> function.</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb70"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href=""></a><span class="co"># Create a descending sequence of numbers from 100 to 1</span></span>
+<span id="cb70-2"><a href=""></a>desc_seq <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">100</span>, <span class="dv">1</span>, <span class="at">by =</span> <span class="sc">-</span><span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </section></section>
 <section>
 <section id="module-3" class="title-slide slide level1 center">
@@ -935,14 +988,14 @@ Casey Breen
 <li>Basic indexing</li>
 </ul>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb68"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href=""></a>vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>)</span>
-<span id="cb68-2"><a href=""></a>first_element <span class="ot">&lt;-</span> vec[<span class="dv">1</span>]</span>
-<span id="cb68-3"><a href=""></a>first_element</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb71"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href=""></a>vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>)</span>
+<span id="cb71-2"><a href=""></a>first_element <span class="ot">&lt;-</span> vec[<span class="dv">1</span>]</span>
+<span id="cb71-3"><a href=""></a>first_element</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb70"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href=""></a>third_element <span class="ot">&lt;-</span> vec[<span class="dv">3</span>]</span>
-<span id="cb70-2"><a href=""></a>third_element</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb73"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href=""></a>third_element <span class="ot">&lt;-</span> vec[<span class="dv">3</span>]</span>
+<span id="cb73-2"><a href=""></a>third_element</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3</code></pre>
 </div>
@@ -951,8 +1004,8 @@ Casey Breen
 <li>Conditional indexing</li>
 </ul>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb72"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href=""></a>vec <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">5</span>, <span class="dv">33</span>, <span class="at">by =</span> <span class="dv">2</span>)</span>
-<span id="cb72-2"><a href=""></a>vec[vec <span class="sc">&gt;</span> <span class="dv">25</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb75"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href=""></a>vec <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">5</span>, <span class="dv">33</span>, <span class="at">by =</span> <span class="dv">2</span>)</span>
+<span id="cb75-2"><a href=""></a>vec[vec <span class="sc">&gt;</span> <span class="dv">25</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 27 29 31 33</code></pre>
 </div>
@@ -965,15 +1018,15 @@ Casey Breen
 <li><p>Structured as rows (observations) and columns (variables)</p></li>
 </ul>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb74"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href=""></a>test_scores <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb74-2"><a href=""></a>  <span class="at">id =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>),</span>
-<span id="cb74-3"><a href=""></a>  <span class="at">name =</span> <span class="fu">c</span>(<span class="st">"Alice"</span>, <span class="st">"Bob"</span>, <span class="st">"Carol"</span>, <span class="st">"Dave"</span>, <span class="st">"Emily"</span>),</span>
-<span id="cb74-4"><a href=""></a>  <span class="at">age =</span> <span class="fu">c</span>(<span class="dv">25</span>, <span class="dv">30</span>, <span class="dv">22</span>, <span class="dv">28</span>, <span class="dv">24</span>),</span>
-<span id="cb74-5"><a href=""></a>  <span class="at">gender =</span> <span class="fu">c</span>(<span class="st">"F"</span>, <span class="st">"M"</span>, <span class="st">"F"</span>, <span class="st">"M"</span>, <span class="st">"F"</span>),</span>
-<span id="cb74-6"><a href=""></a>  <span class="at">score =</span> <span class="fu">c</span>(<span class="dv">90</span>, <span class="dv">85</span>, <span class="dv">88</span>, <span class="dv">92</span>, <span class="dv">89</span>)</span>
-<span id="cb74-7"><a href=""></a>)</span>
-<span id="cb74-8"><a href=""></a></span>
-<span id="cb74-9"><a href=""></a>knitr<span class="sc">::</span><span class="fu">kable</span>(test_scores)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb77"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href=""></a>test_scores <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb77-2"><a href=""></a>  <span class="at">id =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>),</span>
+<span id="cb77-3"><a href=""></a>  <span class="at">name =</span> <span class="fu">c</span>(<span class="st">"Alice"</span>, <span class="st">"Bob"</span>, <span class="st">"Carol"</span>, <span class="st">"Dave"</span>, <span class="st">"Emily"</span>),</span>
+<span id="cb77-4"><a href=""></a>  <span class="at">age =</span> <span class="fu">c</span>(<span class="dv">25</span>, <span class="dv">30</span>, <span class="dv">22</span>, <span class="dv">28</span>, <span class="dv">24</span>),</span>
+<span id="cb77-5"><a href=""></a>  <span class="at">gender =</span> <span class="fu">c</span>(<span class="st">"F"</span>, <span class="st">"M"</span>, <span class="st">"F"</span>, <span class="st">"M"</span>, <span class="st">"F"</span>),</span>
+<span id="cb77-6"><a href=""></a>  <span class="at">score =</span> <span class="fu">c</span>(<span class="dv">90</span>, <span class="dv">85</span>, <span class="dv">88</span>, <span class="dv">92</span>, <span class="dv">89</span>)</span>
+<span id="cb77-7"><a href=""></a>)</span>
+<span id="cb77-8"><a href=""></a></span>
+<span id="cb77-9"><a href=""></a>knitr<span class="sc">::</span><span class="fu">kable</span>(test_scores)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <table class="caption-top">
 <thead>
@@ -1033,15 +1086,15 @@ Casey Breen
 <li><p><code>$</code> operator - access a column as a <code>vector</code></p></li>
 </ul>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb75"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href=""></a><span class="do">## print first two rows  first row </span></span>
-<span id="cb75-2"><a href=""></a><span class="fu">head</span>(test_scores, <span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb78"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href=""></a><span class="do">## print first two rows  first row </span></span>
+<span id="cb78-2"><a href=""></a><span class="fu">head</span>(test_scores, <span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  id  name age gender score
 1  1 Alice  25      F    90
 2  2   Bob  30      M    85</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb77"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href=""></a><span class="do">## access name column </span></span>
-<span id="cb77-2"><a href=""></a>test_scores<span class="sc">$</span>name</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb80"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a href=""></a><span class="do">## access name column </span></span>
+<span id="cb80-2"><a href=""></a>test_scores<span class="sc">$</span>name</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Alice" "Bob"   "Carol" "Dave"  "Emily"</code></pre>
 </div>
@@ -1059,8 +1112,8 @@ Casey Breen
 <li><p><strong>Conditional Subsetting</strong>: <strong><code>df[df$age &gt; 25, ]</code></strong>.</p></li>
 </ul>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb79"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href=""></a><span class="do">## all rows, columns 1-3 </span></span>
-<span id="cb79-2"><a href=""></a>test_scores[,<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb82"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a href=""></a><span class="do">## all rows, columns 1-3 </span></span>
+<span id="cb82-2"><a href=""></a>test_scores[,<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  id  name age
 1  1 Alice  25
@@ -1069,8 +1122,8 @@ Casey Breen
 4  4  Dave  28
 5  5 Emily  24</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb81"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href=""></a><span class="do">## all columns, rows 4-5 </span></span>
-<span id="cb81-2"><a href=""></a>test_scores[<span class="dv">4</span><span class="sc">:</span><span class="dv">5</span>,]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb84"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a href=""></a><span class="do">## all columns, rows 4-5 </span></span>
+<span id="cb84-2"><a href=""></a>test_scores[<span class="dv">4</span><span class="sc">:</span><span class="dv">5</span>,]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  id  name age gender score
 4  4  Dave  28      M    92
@@ -1082,19 +1135,19 @@ Casey Breen
 <h2>Quiz</h2>
 <p>Which rows and will this return?</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb83"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb83-1"><a href=""></a>test_scores[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>,]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb86"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a href=""></a>test_scores[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>,]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <ul>
 <li>Which rows and which columns will this return?</li>
 </ul>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb84"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a href=""></a>test_scores[test_scores<span class="sc">$</span>score <span class="sc">&gt;=</span> <span class="dv">90</span>, ]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb87"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a href=""></a>test_scores[test_scores<span class="sc">$</span>score <span class="sc">&gt;=</span> <span class="dv">90</span>, ]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="answers" class="slide level2">
 <h2>Answers</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb85"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb85-1"><a href=""></a>test_scores[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>,]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb88"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a href=""></a>test_scores[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>,]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  id  name age gender score
 1  1 Alice  25      F    90
@@ -1103,7 +1156,7 @@ Casey Breen
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb87"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a href=""></a>test_scores[test_scores<span class="sc">$</span>score <span class="sc">&gt;=</span> <span class="dv">90</span>, ]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb90"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb90-1"><a href=""></a>test_scores[test_scores<span class="sc">$</span>score <span class="sc">&gt;=</span> <span class="dv">90</span>, ]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  id  name age gender score
 1  1 Alice  25      F    90
@@ -1115,25 +1168,277 @@ Casey Breen
 <h2>Explore <code>data frame</code> characteristics</h2>
 <p>Check number of rows</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb89"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb89-1"><a href=""></a><span class="do">## check number of rows (observations)</span></span>
-<span id="cb89-2"><a href=""></a><span class="fu">nrow</span>(test_scores)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb92"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb92-1"><a href=""></a><span class="do">## check number of rows (observations)</span></span>
+<span id="cb92-2"><a href=""></a><span class="fu">nrow</span>(test_scores)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 5</code></pre>
 </div>
 </div>
 <p>Check number of columns</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb91"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb91-1"><a href=""></a><span class="do">## check number of columns (variables)</span></span>
-<span id="cb91-2"><a href=""></a><span class="fu">ncol</span>(test_scores)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb94"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb94-1"><a href=""></a><span class="do">## check number of columns (variables)</span></span>
+<span id="cb94-2"><a href=""></a><span class="fu">ncol</span>(test_scores)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 5</code></pre>
 </div>
 </div>
 <p>Check column names</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb93"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb93-1"><a href=""></a><span class="fu">names</span>(test_scores)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb96"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb96-1"><a href=""></a><span class="fu">names</span>(test_scores)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "id"     "name"   "age"    "gender" "score" </code></pre>
+</div>
+</div>
+</section>
+<section id="live-coding-demo-2" class="slide level2">
+<h2>Live coding demo</h2>
+<ul>
+<li><p>Generate random draws from a normal distribution using the <code>rnorm</code> function</p></li>
+<li><p>Subset the vector of random draws to only include certain observations</p></li>
+<li><p>Look at basic summary statistics</p></li>
+</ul>
+</section>
+<section id="in-class-exercise-3" class="slide level2 smaller">
+<h2>In-class exercise 3</h2>
+<ol type="1">
+<li><p>Generate a <code>vector</code> of 100 observations drawn from a normal distribution with a mean of 10 and a standard deviation of 2. Use the <code>rnorm</code> function.</p></li>
+<li><p>What are the 1st, 10th, and 100th elements of this <code>vector</code>?</p></li>
+<li><p>Calculate the mean of this <code>vector</code>. How does this <code>sample</code> mean relate to the <code>population</code> mean (hint: population mean = 10) of the distribution?</p></li>
+<li><p>Calculate the difference between the sample mean and the population mean. Discuss the reason for the discrepancy.</p></li>
+<li><p>Repeat steps 1-4 with a new sample size of 10,000. Did the difference between the sample mean and the population mean decrease? Why?</p></li>
+</ol>
+</section>
+<section id="exercise-3-solutions" class="slide level2 smaller">
+<h2>Exercise 3 solutions</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb98"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb98-1"><a href=""></a><span class="co"># Generate a sample of 1,000 draws from a normal distribution with mean = 10 and sd = 2</span></span>
+<span id="cb98-2"><a href=""></a>sample_data_100 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, </span>
+<span id="cb98-3"><a href=""></a>                     <span class="at">mean =</span> <span class="dv">10</span>,</span>
+<span id="cb98-4"><a href=""></a>                     <span class="at">sd =</span> <span class="dv">2</span>)</span>
+<span id="cb98-5"><a href=""></a></span>
+<span id="cb98-6"><a href=""></a><span class="do">## look at 1st, 10th, and 100th element </span></span>
+<span id="cb98-7"><a href=""></a>sample_data_100[<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">10</span>, <span class="dv">100</span>)]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  9.625076 11.940661  5.094503</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb100"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb100-1"><a href=""></a><span class="co"># Calculate the mean of this sample</span></span>
+<span id="cb100-2"><a href=""></a>sample_mean_100 <span class="ot">&lt;-</span> <span class="fu">mean</span>(sample_data_100)</span>
+<span id="cb100-3"><a href=""></a></span>
+<span id="cb100-4"><a href=""></a><span class="co"># Calculate the difference between the mean of the sample and the expected value of the mean</span></span>
+<span id="cb100-5"><a href=""></a>difference_100 <span class="ot">&lt;-</span> <span class="fu">abs</span>(sample_mean_100 <span class="sc">-</span> <span class="dv">10</span>)</span>
+<span id="cb100-6"><a href=""></a></span>
+<span id="cb100-7"><a href=""></a>difference_100</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.09042448</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb102"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb102-1"><a href=""></a><span class="co"># Calculate the Z-score for the sample mean</span></span>
+<span id="cb102-2"><a href=""></a>sample_data_10000 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10000</span>, </span>
+<span id="cb102-3"><a href=""></a>                     <span class="at">mean =</span> <span class="dv">10</span>,</span>
+<span id="cb102-4"><a href=""></a>                     <span class="at">sd =</span> <span class="dv">2</span>)</span>
+<span id="cb102-5"><a href=""></a></span>
+<span id="cb102-6"><a href=""></a><span class="co"># Calculate the mean of this sample</span></span>
+<span id="cb102-7"><a href=""></a>sample_data_10000 <span class="ot">&lt;-</span> <span class="fu">mean</span>(sample_data_10000)</span>
+<span id="cb102-8"><a href=""></a></span>
+<span id="cb102-9"><a href=""></a><span class="co"># Calculate the difference between the mean of the sample and the expected value of the mean</span></span>
+<span id="cb102-10"><a href=""></a>sample_data_10000 <span class="ot">&lt;-</span> <span class="fu">abs</span>(sample_data_10000 <span class="sc">-</span> <span class="dv">10</span>)</span>
+<span id="cb102-11"><a href=""></a></span>
+<span id="cb102-12"><a href=""></a>sample_data_10000</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.02897172</code></pre>
+</div>
+</div>
+</section>
+<section id="questions" class="slide level2">
+<h2>Questions?</h2>
+<ul>
+<li><p>Thanks for your attendance and participation</p></li>
+<li><p>Please independently complete all exercises in problem set 1 (and review solutions)</p></li>
+<li><p>Questions: <a href="casey.breen@sociology.ox.ac.uk">casey.breen@demography.ox.ac.uk</a></p></li>
+</ul>
+</section>
+<section id="session-2" class="slide level2">
+<h2>Session 2</h2>
+<ul>
+<li><p><strong>Module 4</strong>: Importing and exporting in data</p></li>
+<li><p><strong>Module 5</strong>: Data manipulation (<code>dplyr</code>) and data visualization (<code>ggplot2</code>)</p></li>
+<li><p><strong>Module 6</strong>: Best practices for <code>R</code> coding and resources for self-study</p></li>
+</ul>
+</section></section>
+<section>
+<section id="module-4" class="title-slide slide level1 center">
+<h1>Module 4</h1>
+
+</section>
+<section id="importing-and-exporting-data" class="slide level2">
+<h2>Importing and exporting data</h2>
+<p>Learning objectives</p>
+<ul>
+<li><p>Common data formats</p></li>
+<li><p>Functions for importing / exporting data</p></li>
+<li><p>Types of file paths in <code>R</code></p></li>
+</ul>
+</section>
+<section id="importing-data" class="slide level2 smaller">
+<h2>Importing data</h2>
+<ul>
+<li><p>Common formats for data</p>
+<ul>
+<li>.csv, .xlsx, .txt, .dat (stata), etc.</li>
+</ul></li>
+<li><p>Key functions</p>
+<ul>
+<li><p><code>read_csv()</code> function from <code>tidyverse</code>: Read CSV files</p>
+<ul>
+<li>Also built-in (“base”) function: <code>read.csv()</code></li>
+</ul></li>
+<li><p><code>read.table()</code>: Read text files</p></li>
+<li><p><code>readxl::read_excel()</code>: Read Excel files</p></li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb104"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb104-1"><a href=""></a><span class="do">## read in CSV file </span></span>
+<span id="cb104-2"><a href=""></a>df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"/path/to/your/data.csv"</span>) <span class="do">## faster</span></span>
+<span id="cb104-3"><a href=""></a></span>
+<span id="cb104-4"><a href=""></a><span class="do">## read in stata file </span></span>
+<span id="cb104-5"><a href=""></a><span class="fu">library</span>(haven)</span>
+<span id="cb104-6"><a href=""></a>data <span class="ot">&lt;-</span> <span class="fu">read_dta</span>(<span class="st">"path/to/file.dta"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="file-paths" class="slide level2">
+<h2>File paths</h2>
+<ul>
+<li><p><strong>Absolute Path</strong>: Specifies the full path locate a file or directory, starting with the root directory.</p>
+<ul>
+<li><p>Windows: <code>"C:\Users\username\folder\file.csv"</code></p></li>
+<li><p>macOS/Linux: <code>"/home/username/folder/file.csv"</code></p></li>
+</ul></li>
+<li><p><strong>Relative Path</strong>: Specifies how to find the file or directory based on the current working directory.</p>
+<ul>
+<li><code>folder/file.csv</code></li>
+</ul></li>
+</ul>
+</section>
+<section id="working-directories" class="slide level2 smaller">
+<h2>Working directories</h2>
+<ul>
+<li><p>The working directory is the folder where your R session or script looks for files to read, or where it saves files you write</p></li>
+<li><p>Commands like <strong><code>read_csv("file.csv")</code></strong> or <strong><code>write_csv(data, "file.csv")</code></strong> will read from or write to this directory by default</p></li>
+<li><p>Key syntax:</p>
+<ul>
+<li><p><strong><code>getwd()</code></strong> — returns working directory</p></li>
+<li><p><strong><code>setwd("/path/to/folder")</code></strong> — sets working directory</p></li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb105"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb105-1"><a href=""></a><span class="fu">getwd</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "/Users/cb48679/workspace/intro_r/slides_1day"</code></pre>
+</div>
+</div>
+</section>
+<section id="reading-in-.csv-files" class="slide level2">
+<h2>Reading in .CSV files</h2>
+<ul>
+<li><p>Recap: to read in .csv files use <code>read_csv()</code> function from <code>tidyverse</code></p>
+<ul>
+<li>This will read in the .csv file into memory as a <code>data frame</code></li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb107"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb107-1"><a href=""></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb107-2"><a href=""></a>df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"dataset.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ul>
+<li>Write out a <code>data frame</code> to a .csv file using <code>write_csv()</code>:</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb108"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb108-1"><a href=""></a><span class="fu">write_csv</span>(df, <span class="st">"dataset_v2.csv"</span>) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="downloading-data-for-exercises" class="slide level2">
+<h2>Downloading data for exercises</h2>
+<ul>
+<li><p>We will be using the CenSoc Numident Demo dataset</p></li>
+<li><p>Please download the .csv file from the course website (<code>intro_r/data</code>)</p>
+<ul>
+<li><a href="https://github.com/caseybreen/intro_r/">https://github.com/caseybreen/intro_r</a></li>
+</ul></li>
+<li><p>Short url: <a href="https://tinyurl.com/intro-r-data" class="uri">https://tinyurl.com/intro-r-data</a></p></li>
+</ul>
+</section>
+<section id="live-coding-demo-3" class="slide level2">
+<h2>Live coding demo</h2>
+<ul>
+<li>Downloading demo file from Github</li>
+<li>Reading in a .csv file in <code>R</code> using <code>read_csv()</code>
+<ul>
+<li>Absolute and relative paths</li>
+</ul></li>
+<li>Using <code>tab</code> to auto-complete file paths</li>
+<li>Exploring a <code>data frame</code>: number of columns, rows, column names, etc.</li>
+</ul>
+</section>
+<section id="in-class-exercise-1-1" class="slide level2">
+<h2>In-class exercise 1</h2>
+<ol type="1">
+<li>Load and install the <code>tidyverse</code> packages using the commands <code>install.packages()</code> and <code>library()</code></li>
+<li>Use the <code>read_csv()</code> function to read in the downloaded dataset and assign it to the object <code>censoc</code></li>
+<li>Use the <code>head</code> command to look at the first 5 rows</li>
+<li>How many columns are in the dataset?</li>
+<li>How many rows are in the dataset?</li>
+<li>List the column names. What are a few research questions that could be addressed using this dataset?</li>
+</ol>
+</section>
+<section id="exercise-1-solutions-1" class="slide level2 smaller">
+<h2>Exercise 1 solutions</h2>
+<ol type="1">
+<li>Load and install the <code>tidyverse</code> packages using the commands <code>install.packages()</code> and <code>library()</code></li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb109"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb109-1"><a href=""></a><span class="fu">install.packages</span>(tidyverse) <span class="do">## only have to do this once </span></span>
+<span id="cb109-2"><a href=""></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ol start="2" type="1">
+<li>Use the <code>read_csv()</code> function to read in the dataset and assign it to the object <code>censoc</code></li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb110"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb110-1"><a href=""></a>censoc <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"censoc_numident_demo_v2.1.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ol start="3" type="1">
+<li>Use the <code>head()</code> command to look at the first 5 rows</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb111"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb111-1"><a href=""></a><span class="fu">head</span>(censoc)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ol start="4" type="1">
+<li>How many columns are in the dataset?</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb112"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb112-1"><a href=""></a><span class="fu">ncol</span>(censoc)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 39</code></pre>
+</div>
+</div>
+</section>
+<section id="exercise-1-solutions-cont." class="slide level2 smaller">
+<h2>Exercise 1 solutions (cont.)</h2>
+<ol start="5" type="1">
+<li>How many rows are in the dataset?</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb114"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb114-1"><a href=""></a><span class="fu">nrow</span>(censoc)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 85865</code></pre>
+</div>
+</div>
+<ol start="6" type="1">
+<li>List the column names.</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb116"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb116-1"><a href=""></a>colnames <span class="ot">&lt;-</span> <span class="fu">names</span>(censoc)</span>
+<span id="cb116-2"><a href=""></a><span class="fu">head</span>(colnames)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "histid"    "byear"     "bmonth"    "dyear"     "dmonth"    "death_age"</code></pre>
 </div>
 </div>
 </section></section>
@@ -1176,25 +1481,25 @@ Casey Breen
 <h2>Data Manipulation using <code>dplyr</code></h2>
 <p><code>filter</code>: Select rows based on conditions.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb95"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb95-1"><a href=""></a>filtered_df <span class="ot">&lt;-</span> <span class="fu">filter</span>(df, age <span class="sc">&gt;</span> <span class="dv">21</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb118"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb118-1"><a href=""></a>filtered_df <span class="ot">&lt;-</span> <span class="fu">filter</span>(df, age <span class="sc">&gt;</span> <span class="dv">21</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><code>select</code>: Choose specific columns</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb96"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb96-1"><a href=""></a>filtered_df <span class="ot">&lt;-</span> <span class="fu">select</span>(df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb119"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb119-1"><a href=""></a>filtered_df <span class="ot">&lt;-</span> <span class="fu">select</span>(df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><code>mutate</code>: Add or modify columns</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb97"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb97-1"><a href=""></a>df <span class="ot">&lt;-</span> <span class="fu">mutate</span>(df, <span class="at">age_next_year =</span> age <span class="sc">+</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb120"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb120-1"><a href=""></a>df <span class="ot">&lt;-</span> <span class="fu">mutate</span>(df, <span class="at">age_next_year =</span> age <span class="sc">+</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><code>summarize</code> or <code>summarise</code>: Aggregate or summarize data based on some criteria</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb98"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb98-1"><a href=""></a>filtered_df <span class="ot">&lt;-</span> <span class="fu">summarize</span>(df, <span class="fu">mean</span>(age))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb121"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb121-1"><a href=""></a>filtered_df <span class="ot">&lt;-</span> <span class="fu">summarize</span>(df, <span class="fu">mean</span>(age))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><code>group_by</code>: Group data by variables. Often used with <code>summarise()</code>.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb99"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb99-1"><a href=""></a>filtered_df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> </span>
-<span id="cb99-2"><a href=""></a>  <span class="fu">group_by</span>(gender) <span class="sc">%&gt;%</span> </span>
-<span id="cb99-3"><a href=""></a>  <span class="fu">summarize</span>(<span class="fu">mean</span>(age))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb122"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb122-1"><a href=""></a>filtered_df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> </span>
+<span id="cb122-2"><a href=""></a>  <span class="fu">group_by</span>(gender) <span class="sc">%&gt;%</span> </span>
+<span id="cb122-3"><a href=""></a>  <span class="fu">summarize</span>(<span class="fu">mean</span>(age))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="the-pipe-operator-or-in-r" class="slide level2">
@@ -1207,9 +1512,9 @@ Casey Breen
 <li><p>What’s the below code doing?</p></li>
 </ul>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb100"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb100-1"><a href=""></a>filtered_df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> </span>
-<span id="cb100-2"><a href=""></a>  <span class="fu">group_by</span>(gender) <span class="sc">%&gt;%</span> </span>
-<span id="cb100-3"><a href=""></a>  <span class="fu">summarize</span>(<span class="fu">mean</span>(age))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb123"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb123-1"><a href=""></a>filtered_df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> </span>
+<span id="cb123-2"><a href=""></a>  <span class="fu">group_by</span>(gender) <span class="sc">%&gt;%</span> </span>
+<span id="cb123-3"><a href=""></a>  <span class="fu">summarize</span>(<span class="fu">mean</span>(age))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section></section>
 <section>
@@ -1220,15 +1525,15 @@ Casey Breen
 <li><p>The <code>case_when()</code> function in <code>R</code> is part of the <code>dplyr</code> package and is used for creating new variables based on multiple conditions:</p></li>
 </ul>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb101"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb101-1"><a href=""></a>df_new <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> </span>
-<span id="cb101-2"><a href=""></a>  <span class="fu">mutate</span>(<span class="at">new_var =</span> <span class="fu">case_when</span>(</span>
-<span id="cb101-3"><a href=""></a>  condition1 <span class="sc">~</span> value1,</span>
-<span id="cb101-4"><a href=""></a>  condition2 <span class="sc">~</span> value2,</span>
-<span id="cb101-5"><a href=""></a>  <span class="cn">TRUE</span> <span class="sc">~</span> value_otherwise</span>
-<span id="cb101-6"><a href=""></a>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb124"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb124-1"><a href=""></a>df_new <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> </span>
+<span id="cb124-2"><a href=""></a>  <span class="fu">mutate</span>(<span class="at">new_var =</span> <span class="fu">case_when</span>(</span>
+<span id="cb124-3"><a href=""></a>  condition1 <span class="sc">~</span> value1,</span>
+<span id="cb124-4"><a href=""></a>  condition2 <span class="sc">~</span> value2,</span>
+<span id="cb124-5"><a href=""></a>  <span class="cn">TRUE</span> <span class="sc">~</span> value_otherwise</span>
+<span id="cb124-6"><a href=""></a>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="live-coding-demo-2" class="slide level2">
+<section id="live-coding-demo-4" class="slide level2">
 <h2>Live coding demo</h2>
 <ul>
 <li><p>Filter data</p></li>
@@ -1237,85 +1542,313 @@ Casey Breen
 <li><p>Creating and recoding variables</p></li>
 </ul>
 </section>
-<section id="your-turn" class="slide level2">
-<h2>Your turn</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb102"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb102-1"><a href=""></a><span class="co"># install.packages(tidyverse) ## you only need to do this once! </span></span>
-<span id="cb102-2"><a href=""></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb103"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb103-1"><a href=""></a><span class="do">## load a built in dataset </span></span>
-<span id="cb103-2"><a href=""></a><span class="fu">data</span>(diamonds, <span class="at">package =</span> <span class="st">"ggplot2"</span>)</span>
-<span id="cb103-3"><a href=""></a></span>
-<span id="cb103-4"><a href=""></a><span class="do">## print first few rows </span></span>
-<span id="cb103-5"><a href=""></a><span class="fu">head</span>(diamonds)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 10
-  carat cut       color clarity depth table price     x     y     z
-  &lt;dbl&gt; &lt;ord&gt;     &lt;ord&gt; &lt;ord&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-1  0.23 Ideal     E     SI2      61.5    55   326  3.95  3.98  2.43
-2  0.21 Premium   E     SI1      59.8    61   326  3.89  3.84  2.31
-3  0.23 Good      E     VS1      56.9    65   327  4.05  4.07  2.31
-4  0.29 Premium   I     VS2      62.4    58   334  4.2   4.23  2.63
-5  0.31 Good      J     SI2      63.3    58   335  4.34  4.35  2.75
-6  0.24 Very Good J     VVS2     62.8    57   336  3.94  3.96  2.48</code></pre>
-</div>
-</div>
-</section>
-<section id="data-visualization-distn-of-carats" class="slide level2">
-<h2>Data Visualization (Distn of carats)</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb105"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb105-1"><a href=""></a><span class="do">## make a histogram of that distribution of carats </span></span>
-<span id="cb105-2"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span> </span>
-<span id="cb105-3"><a href=""></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> carat))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-
-</div>
-<img data-src="session1_slides_files/figure-revealjs/unnamed-chunk-58-1.png" width="960" class="r-stretch"></section>
-<section id="data-visualization-carat-vs.-price" class="slide level2">
-<h2>Data Visualization (Carat vs.&nbsp;Price)</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb106"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb106-1"><a href=""></a><span class="do">## plot relationship between carats and price </span></span>
-<span id="cb106-2"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span> </span>
-<span id="cb106-3"><a href=""></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> carat, <span class="at">y =</span> price))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-
-</div>
-<img data-src="session1_slides_files/figure-revealjs/unnamed-chunk-59-1.png" width="960" class="r-stretch"></section>
-<section id="exercise" class="slide level2">
-<h2>Exercise</h2>
+<section id="in-class-exercise-2-1" class="slide level2">
+<h2>In-class exercise 2</h2>
 <ol type="1">
-<li><p>Make a histogram of the price of diamonds</p></li>
-<li><p>For diamonds great than 1 carat (hint: <code>filter()</code>), what is average price by <code>cut</code> (hint: <code>group_by</code> + <code>summarize</code>?</p></li>
-<li><p>Assign your answer from (2) to a data.frame called <code>price_by_cut</code>. Now use <code>ggplot()</code> + <code>geom_col</code> to visualize this.</p></li>
+<li>Filter the <code>censoc</code> data.frame to include only women (<code>sex == 2</code>). Use the <code>filter</code> command.</li>
+<li>Filter the <code>censoc</code> data.frame to include only people born between 1905 and 1920 using the <code>byear</code> variable.</li>
+<li>Select the columns <code>histid</code>, <code>death_age</code>, <code>sex</code>, and <code>ownershp</code></li>
+<li>Calculate the average age of death for women (hint: refer to question 1)</li>
 </ol>
 </section>
-<section id="solutions-q1" class="slide level2">
-<h2>Solutions Q1</h2>
+<section id="exercise-2-solutions-1" class="slide level2 smaller">
+<h2>Exercise 2 solutions</h2>
+<ol type="1">
+<li>Filter the <code>censoc</code> data.frame to include only women (sex == 2). Use the <code>filter</code> command.</li>
+</ol>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb107"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb107-1"><a href=""></a><span class="do">## Price of diamonds </span></span>
-<span id="cb107-2"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span> </span>
-<span id="cb107-3"><a href=""></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> price))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb125"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb125-1"><a href=""></a><span class="do">## filter to only include women </span></span>
+<span id="cb125-2"><a href=""></a>censoc <span class="sc">%&gt;%</span> </span>
+<span id="cb125-3"><a href=""></a>  <span class="fu">filter</span>(sex <span class="sc">==</span> <span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<img data-src="session1_slides_files/figure-revealjs/unnamed-chunk-60-1.png" width="960" class="r-stretch"></section>
-<section id="solutions-q2" class="slide level2">
-<h2>Solutions Q2</h2>
+<ol start="2" type="1">
+<li>Filter the <code>censoc</code> data.frame to include only people born between 1905 and 1920 using the <code>byear</code> variable.</li>
+</ol>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb108"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb108-1"><a href=""></a><span class="do">## Price by cut </span></span>
-<span id="cb108-2"><a href=""></a>price_by_cut <span class="ot">&lt;-</span> diamonds <span class="sc">%&gt;%</span> </span>
-<span id="cb108-3"><a href=""></a>  <span class="fu">filter</span>(carat <span class="sc">&gt;</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb108-4"><a href=""></a>  <span class="fu">group_by</span>(cut) <span class="sc">%&gt;%</span> </span>
-<span id="cb108-5"><a href=""></a>  <span class="fu">summarize</span>(<span class="at">mean_price =</span> <span class="fu">mean</span>(price))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb126"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb126-1"><a href=""></a><span class="do">## method 1 </span></span>
+<span id="cb126-2"><a href=""></a>censoc <span class="sc">%&gt;%</span> </span>
+<span id="cb126-3"><a href=""></a>  <span class="fu">filter</span>(byear <span class="sc">%in%</span> <span class="dv">1905</span><span class="sc">:</span><span class="dv">1920</span>)</span>
+<span id="cb126-4"><a href=""></a></span>
+<span id="cb126-5"><a href=""></a><span class="do">## method 2 </span></span>
+<span id="cb126-6"><a href=""></a>censoc <span class="sc">%&gt;%</span> </span>
+<span id="cb126-7"><a href=""></a>  <span class="fu">filter</span>(byear <span class="sc">&gt;=</span> <span class="dv">1905</span> <span class="sc">&amp;</span> byear <span class="sc">&lt;=</span> <span class="dv">1920</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="solutions-q3" class="slide level2">
-<h2>Solutions Q3</h2>
+<section id="exercise-2-solutions-cont." class="slide level2 smaller">
+<h2>Exercise 2 solutions (cont.)</h2>
+<ol start="3" type="1">
+<li>Select the columns <code>histid</code>, <code>death_age</code>, <code>sex</code>, and <code>ownershp</code></li>
+</ol>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb109"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb109-1"><a href=""></a><span class="do">## Visualize </span></span>
-<span id="cb109-2"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> price_by_cut) <span class="sc">+</span> </span>
-<span id="cb109-3"><a href=""></a>  <span class="fu">geom_col</span>(<span class="fu">aes</span>(<span class="at">y =</span> mean_price, <span class="at">x =</span> cut, <span class="at">fill =</span> cut))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb127"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb127-1"><a href=""></a>censoc_select <span class="ot">&lt;-</span> censoc <span class="sc">%&gt;%</span> </span>
+<span id="cb127-2"><a href=""></a>  <span class="fu">select</span>(histid, death_age, sex, ownershp) </span>
+<span id="cb127-3"><a href=""></a></span>
+<span id="cb127-4"><a href=""></a><span class="fu">head</span>(censoc_select)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 4
+  histid                               death_age   sex ownershp
+  &lt;chr&gt;                                    &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;
+1 235C4FA2-B407-4E61-A31D-DBF299C1C120        85     1        1
+2 0DE161A7-34A7-47EA-B053-EA8549172CCC        77     1        1
+3 EFF79CEC-DA83-482A-AB9A-FFCAC3C9A6A5        77     1        1
+4 B51D01FA-54A4-4E5E-8BCF-B6D9521A2983        73     2        2
+5 D545AEB1-C5C3-4E32-BB22-4BF58CF50311        73     1        2
+6 A71A537B-C440-4E85-A276-334B05B723A7        82     2        1</code></pre>
+</div>
+</div>
+<ol start="4" type="1">
+<li>Calculate the average age of death for women (hint: refer to question 1)</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb129"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb129-1"><a href=""></a>censoc <span class="sc">%&gt;%</span> </span>
+<span id="cb129-2"><a href=""></a>  <span class="fu">filter</span>(sex <span class="sc">==</span> <span class="dv">2</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb129-3"><a href=""></a>  <span class="fu">summarize</span>(<span class="at">mean_death_age_women =</span> <span class="fu">mean</span>(death_age))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+  mean_death_age_women
+                 &lt;dbl&gt;
+1                 78.2</code></pre>
+</div>
+</div>
+</section>
+<section id="data-visualization-using-ggplot" class="slide level2">
+<h2>Data visualization using ggplot</h2>
+<ul>
+<li><p><code>ggplot2</code> provides a powerful and flexible system for creating a variety of data visualizations</p></li>
+<li><p><code>data</code>: specifies the dataset to be used for the plot</p></li>
+<li><p><code>aes</code>: Defines what data to show</p></li>
+<li><p><code>geoms</code>: Chooses the type of plot (e.g., histogram)</p></li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb131"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb131-1"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> <span class="sc">&lt;</span>DATA<span class="sc">&gt;</span>) <span class="sc">+</span> </span>
+<span id="cb131-2"><a href=""></a>  <span class="er">&lt;</span>GEOM_FUNCTION<span class="sc">&gt;</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="sc">&lt;</span>MAPPINGS<span class="sc">&gt;</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="types-of-plots" class="slide level2">
+<h2>Types of plots</h2>
+<ul>
+<li><code>geom_point()</code>: Scatter plot</li>
+<li><code>geom_bar()</code>: Bar chart</li>
+<li><code>geom_histogram()</code>: Histogram</li>
+</ul>
+</section>
+<section id="basic-histogram-example" class="slide level2">
+<h2>Basic histogram example</h2>
+<ul>
+<li>Histogram of age of death in censoc dataset</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb132"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb132-1"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> censoc) <span class="sc">+</span> </span>
+<span id="cb132-2"><a href=""></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> death_age)) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
-<img data-src="session1_slides_files/figure-revealjs/unnamed-chunk-62-1.png" width="960" class="r-stretch"></section>
+<img data-src="full_session_files/figure-revealjs/unnamed-chunk-76-1.png" width="960" class="r-stretch"></section>
+<section id="customisable-specify-theme" class="slide level2">
+<h2>Customisable – specify theme</h2>
+<ul>
+<li><code>+ theme(&lt;theme_choice&gt;)</code> will add on a theme</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb133"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb133-1"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> censoc) <span class="sc">+</span> </span>
+<span id="cb133-2"><a href=""></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> death_age)) <span class="sc">+</span> </span>
+<span id="cb133-3"><a href=""></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">15</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+
+</div>
+<img data-src="full_session_files/figure-revealjs/unnamed-chunk-77-1.png" width="960" class="r-stretch"></section>
+<section id="customisable-specify-colors" class="slide level2">
+<h2>Customisable – specify colors</h2>
+<ul>
+<li><code>color</code> and <code>fill</code> will can change color / fill of plot</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb134"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb134-1"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> censoc) <span class="sc">+</span> </span>
+<span id="cb134-2"><a href=""></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> death_age), <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">fill =</span> <span class="st">"grey"</span>) <span class="sc">+</span> </span>
+<span id="cb134-3"><a href=""></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">15</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+
+</div>
+<img data-src="full_session_files/figure-revealjs/unnamed-chunk-78-1.png" width="960" class="r-stretch"></section>
+<section id="customisable-add-on-labelstitle" class="slide level2">
+<h2>Customisable – add on labels/title</h2>
+<ul>
+<li><code>+ labs()</code> add on title/axis labels</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb135"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb135-1"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> censoc) <span class="sc">+</span> </span>
+<span id="cb135-2"><a href=""></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> death_age), <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">fill =</span> <span class="st">"grey"</span>) <span class="sc">+</span> </span>
+<span id="cb135-3"><a href=""></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">15</span>) <span class="sc">+</span> </span>
+<span id="cb135-4"><a href=""></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Distribution of age of death"</span>, <span class="at">x =</span> <span class="st">"Age of Death (yrs)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+
+</div>
+<img data-src="full_session_files/figure-revealjs/unnamed-chunk-79-1.png" width="960" class="r-stretch"></section>
+<section id="live-coding-demo-5" class="slide level2">
+<h2>Live coding demo</h2>
+<ul>
+<li><p>Create histogram using <code>ggplot</code></p></li>
+<li><p>Demonstrate flexibility of <code>ggplot</code></p>
+<ul>
+<li>Themes</li>
+<li>Axis labels, titles</li>
+<li>Colors</li>
+</ul></li>
+</ul>
+</section>
+<section id="in-class-exercise-3-1" class="slide level2 smaller">
+<h2>In-class exercise 3</h2>
+<ol type="1">
+<li><p>Make a histogram of the variable <code>death_age</code>. When are most people dying?</p></li>
+<li><p>Make a histogram of the variable <code>byear</code>. When are most people born?</p></li>
+<li><p>Recode the variable <code>sex</code> from numeric values (1, 2) to take character values (“men” and “women”). Note that 1 = men, 2 = women.</p></li>
+<li><p>Calculate the mean of of death for both men and women using <code>group_by()</code> and <code>summarize()</code>. Use the <code>death_age</code> variable. Do men or women live longer in this sample?</p></li>
+<li><p>Make a histogram of the variable <code>death_age</code> for both men and women. Use the <code>filter()</code> command.</p></li>
+<li><p>Now try adding the following line to the histogram you made in question 1: <code>+ facet_wrap(~sex)</code></p></li>
+</ol>
+</section>
+<section id="exercise-3-solutions-1" class="slide level2 smaller">
+<h2>Exercise 3 solutions</h2>
+<ol type="1">
+<li>Make a histogram of the variable <code>death_age</code>. When are most people dying?</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb136"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb136-1"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> censoc) <span class="sc">+</span> </span>
+<span id="cb136-2"><a href=""></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> death_age)) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+
+</div>
+<img data-src="full_session_files/figure-revealjs/unnamed-chunk-80-1.png" width="960" class="r-stretch"></section>
+<section id="exercise-3-solutions-cont." class="slide level2 smaller">
+<h2>Exercise 3 solutions (cont.)</h2>
+<ol start="2" type="1">
+<li>Make a histogram of the variable <code>byear</code>. When are most people born?</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb137"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb137-1"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> censoc) <span class="sc">+</span> </span>
+<span id="cb137-2"><a href=""></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> byear)) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+
+</div>
+<img data-src="full_session_files/figure-revealjs/unnamed-chunk-81-1.png" width="960" class="r-stretch"></section>
+<section id="exercise-3-solutions-cont.-1" class="slide level2 smaller">
+<h2>Exercise 3 solutions (cont.)</h2>
+<ol start="3" type="1">
+<li>Recode the variable <code>sex</code> from numeric values (1, 2) to take character values (“men” and “women”). Note that 1 = men, 2 = women.</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb138"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb138-1"><a href=""></a><span class="do">## recode sex  </span></span>
+<span id="cb138-2"><a href=""></a>censoc <span class="ot">&lt;-</span> censoc <span class="sc">%&gt;%</span> </span>
+<span id="cb138-3"><a href=""></a>  <span class="fu">mutate</span>(<span class="at">sex_recode =</span> <span class="fu">case_when</span>(</span>
+<span id="cb138-4"><a href=""></a>    sex <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">"men"</span>,</span>
+<span id="cb138-5"><a href=""></a>    sex <span class="sc">==</span> <span class="dv">2</span> <span class="sc">~</span> <span class="st">"women"</span></span>
+<span id="cb138-6"><a href=""></a>  ))</span>
+<span id="cb138-7"><a href=""></a></span>
+<span id="cb138-8"><a href=""></a><span class="do">## look at first few rows to check our recode worked </span></span>
+<span id="cb138-9"><a href=""></a>censoc <span class="sc">%&gt;%</span> </span>
+<span id="cb138-10"><a href=""></a>  <span class="fu">select</span>(sex, sex_recode) <span class="sc">%&gt;%</span> </span>
+<span id="cb138-11"><a href=""></a>  <span class="fu">head</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 2
+    sex sex_recode
+  &lt;dbl&gt; &lt;chr&gt;     
+1     1 men       
+2     1 men       
+3     1 men       
+4     2 women     
+5     1 men       
+6     2 women     </code></pre>
+</div>
+</div>
+</section>
+<section id="exercise-3-solutions-cont.-2" class="slide level2 smaller">
+<h2>Exercise 3 solutions (cont.)</h2>
+<ol start="4" type="1">
+<li>Calculate the mean of of death for both men and women using <code>group_by()</code> and <code>summarize()</code>. Do men or women live longer?</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb140"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb140-1"><a href=""></a>censoc <span class="sc">%&gt;%</span> </span>
+<span id="cb140-2"><a href=""></a>  <span class="fu">group_by</span>(sex_recode) <span class="sc">%&gt;%</span> </span>
+<span id="cb140-3"><a href=""></a>  <span class="fu">summarize</span>(<span class="fu">mean</span>(death_age))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 2
+  sex_recode `mean(death_age)`
+  &lt;chr&gt;                  &lt;dbl&gt;
+1 men                     73.9
+2 women                   78.2</code></pre>
+</div>
+</div>
+</section>
+<section id="exercise-3-solutions-cont.-3" class="slide level2 smaller">
+<h2>Exercise 3 solutions (cont.)</h2>
+<ol start="5" type="1">
+<li>Make a histogram of the variable <code>death_age</code> for both men and women.</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb142"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb142-1"><a href=""></a>censoc_men <span class="ot">&lt;-</span> censoc <span class="sc">%&gt;%</span> <span class="fu">filter</span>(sex_recode <span class="sc">==</span> <span class="st">"men"</span>)</span>
+<span id="cb142-2"><a href=""></a>censoc_women <span class="ot">&lt;-</span> censoc <span class="sc">%&gt;%</span> <span class="fu">filter</span>(sex_recode <span class="sc">==</span> <span class="st">"women"</span>)</span>
+<span id="cb142-3"><a href=""></a></span>
+<span id="cb142-4"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> censoc_men) <span class="sc">+</span> <span class="do">## histogram for men </span></span>
+<span id="cb142-5"><a href=""></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> death_age)) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="full_session_files/figure-revealjs/unnamed-chunk-84-1.png" width="163"></p>
+</figure>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb143"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb143-1"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> censoc_women) <span class="sc">+</span> <span class="do">## histogram for women </span></span>
+<span id="cb143-2"><a href=""></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> death_age)) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="full_session_files/figure-revealjs/unnamed-chunk-84-2.png" width="163"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-3-solutions-cont.-4" class="slide level2 smaller">
+<h2>Exercise 3 solutions (cont.)</h2>
+<ol start="6" type="1">
+<li>Now try adding the following line to the histogram you made in question 1: <code>+ facet_wrap(~sex)</code></li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb144"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb144-1"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> censoc) <span class="sc">+</span> </span>
+<span id="cb144-2"><a href=""></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> death_age)) <span class="sc">+</span> </span>
+<span id="cb144-3"><a href=""></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>sex_recode)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+
+</div>
+<img data-src="full_session_files/figure-revealjs/unnamed-chunk-85-1.png" width="960" class="r-stretch"></section></section>
+<section>
+<section id="module-6" class="title-slide slide level1 center">
+<h1>Module 6</h1>
+
+</section>
+<section id="best-practices-and-resources-for-self-study" class="slide level2">
+<h2>Best practices and resources for self-study</h2>
+<p>Learning objectives</p>
+<ul>
+<li><p>Best practices for writing and documenting code</p></li>
+<li><p>Where to go when you’re stuck</p></li>
+<li><p>Resources for learning more</p></li>
+</ul>
+</section>
+<section id="best-practices-opinionated" class="slide level2">
+<h2>Best practices (opinionated)</h2>
+<ul>
+<li><strong>Style</strong>: use descriptive names and “snake_case”</li>
+<li><strong>Documentation</strong>: Start commenting your code early, it’s a good habit for the future</li>
+<li><strong>Learn <code>tidyverse</code></strong>: offers a more coherent syntax and is widely used in data science</li>
+<li><strong>Advanced topics</strong>: R Projects, github integration, etc</li>
+</ul>
+</section>
+<section id="when-youre-stuck" class="slide level2">
+<h2>When you’re stuck</h2>
+<ul>
+<li><p>Google</p>
+<ul>
+<li><p>Lots of packages have documentation available online</p></li>
+<li><p>Stack overflow – excellent resource</p></li>
+</ul></li>
+<li><p>Use help syntax (e.g., <code>?dplyr</code>)</p></li>
+<li><p>GPT (decent, but be careful!)</p></li>
+</ul>
+</section>
 <section id="resources-for-learning-more" class="slide level2">
 <h2>Resources for learning more</h2>
 <ol type="1">
@@ -1323,9 +1856,78 @@ Casey Breen
 <li><p>Data visualization: a practical introduction (<a href="https://socviz.co/" class="uri">https://socviz.co/</a>)</p></li>
 </ol>
 </section>
-<section id="turn-in-your-lab" class="slide level2">
-<h2>Turn in your lab!</h2>
-<p>Please turn in your Qmd file (whatever you have completed) on Canvas so you can get credit.</p>
+<section id="in-class-exercise-4" class="slide level2 smaller">
+<h2>In-class exercise 4</h2>
+<p>Do homeowners in the United States live longer than renters in the United States?</p>
+<ol type="1">
+<li><p>Using the <code>censoc</code> data.frame, create a new data.frame <code>censoc_homeownership</code> that filters out any “missing” value for the <code>ownershp</code> variable (missing = 0). Use the <code>filter()</code> command.</p></li>
+<li><p>In the <code>censoc_homeownership</code> data.frame, create a new variable <code>homeowner</code> using the <code>mutate()</code> command and the <code>case_when()</code> command. Assign this new variable <code>homeowner</code> a value of “own” if <code>ownershp == 1</code> and a value of “rent” if <code>ownershp == 2</code>.</p></li>
+<li><p>Make a histogram on the age of death for “homeowner” and “renter” groups using <code>ggplot</code> using the <code>censoc_homeownership</code> data.frame. Use the <code>+ facet_wrap(~homeowner)</code> command.</p></li>
+<li><p>Calculate the average age of death for “homeowner” and “renter” groups. Which group lives longer, on average? Use the <code>group_by()</code> and <code>summarize()</code> functions. What are some possible explanations for homeowners living longer than renters in the US?</p></li>
+</ol>
+</section>
+<section id="exercise-4-solution" class="slide level2 smaller">
+<h2>Exercise 4 solution</h2>
+<p>Do homeowners in the United States live longer than renters in the United States?</p>
+<ol type="1">
+<li>Using the <code>censoc</code> data.frame, create a new data.frame <code>censoc_homeownership</code> that filters out any “missing” value for the <code>ownershp</code> variable (missing = 0). Use the <code>filter()</code> command.</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb145"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb145-1"><a href=""></a>censoc_homeownership <span class="ot">&lt;-</span> censoc <span class="sc">%&gt;%</span> </span>
+<span id="cb145-2"><a href=""></a>  <span class="fu">filter</span>(ownershp <span class="sc">!=</span> <span class="dv">0</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ol start="2" type="1">
+<li>In the <code>censoc_homeownership</code> data.frame, create a new variable <code>homeowner</code> using the <code>mutate()</code> command and the <code>case_when()</code> command. Assign this new variable <code>homeowner</code> a value of “own” if <code>ownershp == 1</code> and a value of “rent” if <code>ownershp == 2</code>.</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb146"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb146-1"><a href=""></a><span class="do">## create new homeowner variable</span></span>
+<span id="cb146-2"><a href=""></a>censoc_homeownership <span class="ot">&lt;-</span> censoc_homeownership <span class="sc">%&gt;%</span> </span>
+<span id="cb146-3"><a href=""></a>  <span class="fu">mutate</span>(<span class="at">homeowner =</span> <span class="fu">case_when</span>(</span>
+<span id="cb146-4"><a href=""></a>    ownershp <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">"own"</span>,</span>
+<span id="cb146-5"><a href=""></a>    ownershp <span class="sc">==</span> <span class="dv">2</span> <span class="sc">~</span> <span class="st">"rent"</span></span>
+<span id="cb146-6"><a href=""></a>  ))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="exercise-4-solution-cont." class="slide level2 smaller">
+<h2>Exercise 4 solution (cont.)</h2>
+<ol start="3" type="1">
+<li>Make a histogram on the age of death for “homeowner” and “renter” groups using <code>ggplot</code> using the <code>censoc_homeownership</code> data.frame. Use the <code>+ facet_wrap(~homeowner)</code> command.</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb147"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb147-1"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> censoc_homeownership) <span class="sc">+</span> </span>
+<span id="cb147-2"><a href=""></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> death_age)) <span class="sc">+</span> </span>
+<span id="cb147-3"><a href=""></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>homeowner)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+
+</div>
+<img data-src="full_session_files/figure-revealjs/unnamed-chunk-88-1.png" width="960" class="r-stretch"></section>
+<section id="exercise-4-solution-cont.-1" class="slide level2 smaller">
+<h2>Exercise 4 solution (cont.)</h2>
+<ol start="4" type="1">
+<li>Calculate the average age of death for “homeowner” and “renter” groups. Which group lives longer, on average? Use the <code>group_by()</code> and <code>summarize()</code> functions What are some possible explanations for homeowners living longer than renters in the US?</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb148"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb148-1"><a href=""></a>censoc_homeownership <span class="sc">%&gt;%</span> </span>
+<span id="cb148-2"><a href=""></a>  <span class="fu">group_by</span>(homeowner) <span class="sc">%&gt;%</span> </span>
+<span id="cb148-3"><a href=""></a>  <span class="fu">summarize</span>(<span class="fu">mean</span>(death_age))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 2
+  homeowner `mean(death_age)`
+  &lt;chr&gt;                 &lt;dbl&gt;
+1 own                    76.5
+2 rent                   75.8</code></pre>
+</div>
+</div>
+</section>
+<section id="thank-you" class="slide level2">
+<h2>Thank you</h2>
+<ul>
+<li><p>Course materials available from:</p>
+<ul>
+<li><a href="www.github.com/caseybreen/intro_r">www.github.com/caseybreen/intro_r</a></li>
+</ul></li>
+<li><p>Please independently complete all exercises in problem set 2 (and review solutions)</p></li>
+<li><p>Questions?</p></li>
+</ul>
 
 </section></section>
     </div>
@@ -1336,19 +1938,19 @@ Casey Breen
 </div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="session1_slides_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="full_session_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="session1_slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="session1_slides_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="session1_slides_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="session1_slides_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="session1_slides_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="full_session_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="full_session_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="full_session_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="full_session_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="full_session_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="session1_slides_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="session1_slides_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="session1_slides_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="session1_slides_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="full_session_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="full_session_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="full_session_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="full_session_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
