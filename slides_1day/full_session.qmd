@@ -5,9 +5,8 @@ subtitle: "Department of Sociology | University of Texas at Austin"
 author: "Casey Breen"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 format:
-  revealjs:
+  pptx:
     slide-number: true
-    show-slide-number: all
 ---
 
 ## Welcome to "Intro to `R`"
@@ -906,8 +905,6 @@ sample_data_10000
 
 -   Questions: [casey.breen\@demography.ox.ac.uk](casey.breen@sociology.ox.ac.uk)
 
-
-
 ```{r}
 library(here)
 library(tidyverse)
@@ -1543,4 +1540,4 @@ censoc_homeownership %>%
 
 -   Please independently complete all exercises in problem set 2 (and review solutions)
 
--   Questions? 
+-   Questions?
