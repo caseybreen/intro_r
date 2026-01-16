@@ -3,7 +3,7 @@ title: |
     | Introduction to R
 subtitle: "Department of Sociology | University of Texas at Austin"
 author: "Casey Breen"
-date: "Thursday, Jan 22nd"
+date: 2026-01-22
 format:
   revealjs:
     slide-number: true
@@ -907,7 +907,7 @@ df_new <- df %>%
 
 -   Creating and recoding variables
 
-## Your turn 
+## Your turn
 
 ```{r}
 #| echo: true
@@ -925,6 +925,7 @@ data(diamonds, package = "ggplot2")
 ## print first few rows 
 head(diamonds)
 ```
+
 ## Data Visualization (Distn of carats)
 
 ```{r}
@@ -945,17 +946,15 @@ ggplot(data = diamonds) +
   geom_point(aes(x = carat, y = price))
 ```
 
+## Exercise
 
-## Exercise  
+1.  Make a histogram of the price of diamonds
 
-1. Make a histogram of the price of diamonds 
+2.  For diamonds great than 1 carat (hint: `filter()`), what is average price by `cut` (hint: `group_by` + `summarize`?
 
-2. For diamonds great than 1 carat (hint: `filter()`), what is average price by `cut` (hint: `group_by` + `summarize`?
+3.  Assign your answer from (2) to a data.frame called `price_by_cut`. Now use `ggplot()` + `geom_col` to visualize this.
 
-3. Assign your answer from (2) to a data.frame called `price_by_cut`. Now use `ggplot()` + `geom_col` to visualize this. 
-
-
-## Solutions Q1  
+## Solutions Q1
 
 ```{r}
 #| echo: true
@@ -965,7 +964,7 @@ ggplot(data = diamonds) +
   geom_histogram(aes(x = price))
 ```
 
-## Solutions Q2 
+## Solutions Q2
 
 ```{r}
 #| echo: true
@@ -978,8 +977,7 @@ price_by_cut <- diamonds %>%
   summarize(mean_price = mean(price))
 ```
 
-
-## Solutions Q3 
+## Solutions Q3
 
 ```{r}
 #| echo: true
@@ -990,18 +988,12 @@ ggplot(data = price_by_cut) +
   geom_col(aes(y = mean_price, x = cut, fill = cut))
 ```
 
-
 ## Resources for learning more
 
 1.  R for data science (<https://r4ds.hadley.nz/>)
 
 2.  Data visualization: a practical introduction (<https://socviz.co/>)
 
+## Turn in your lab!
 
-## Turn in your lab! 
-
-Please turn in your Qmd file (whatever you have completed) on Canvas so you can get credit. 
-
-
-
-
+Please turn in your Qmd file (whatever you have completed) on Canvas so you can get credit.
